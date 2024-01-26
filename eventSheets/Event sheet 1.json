@@ -1,5 +1,152 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 328929138168144,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 257048820318066
+				}
+			],
+			"sid": 469549160200722
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 421643046102878
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "Focus",
+					"sid": 848815587235852,
+					"parameters": {
+						"y": "Guy.Y"
+					}
+				}
+			],
+			"sid": 409907240498396
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 125226714353217
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Focus",
+					"sid": 498392403784857,
+					"parameters": {
+						"x": "Guy.X + (ViewportWidth(0) / 3) "
+					}
+				}
+			],
+			"sid": 889225157273133,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "Guy",
+							"sid": 364721088371462,
+							"parameters": {
+								"object": "Ramp",
+								"offset-x": "0",
+								"offset-y": "36"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Focus",
+							"sid": 137985462319021,
+							"parameters": {
+								"y": "Guy.Y"
+							}
+						}
+					],
+					"sid": 713085770108110
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 495300270364056
+						},
+						{
+							"id": "is-on-floor",
+							"objectClass": "Guy",
+							"sid": 466803880141990,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Guy",
+							"sid": 595712451354100,
+							"parameters": {
+								"comparison": 1,
+								"y-co-ordinate": "Focus.Y"
+							}
+						},
+						{
+							"id": "is-playing",
+							"objectClass": "Focus",
+							"sid": 797003084385266,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"adjust\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "Focus",
+							"sid": 625359411697057,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"adjust\"",
+								"property": "offsetY",
+								"end-value": "Guy.Y",
+								"time": "0.5",
+								"ease": "easeoutbounce",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 761526649087795
+				}
+			]
+		}
+	],
 	"sid": 819818898747264
 }
