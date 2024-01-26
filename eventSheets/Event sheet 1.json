@@ -68,46 +68,15 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-overlapping-at-offset",
-							"objectClass": "Guy",
-							"sid": 364721088371462,
-							"parameters": {
-								"object": "Ramp",
-								"offset-x": "0",
-								"offset-y": "36"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-y",
-							"objectClass": "Focus",
-							"sid": 137985462319021,
-							"parameters": {
-								"y": "Guy.Y"
-							}
-						}
-					],
-					"sid": 713085770108110
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 495300270364056
-						},
-						{
 							"id": "is-on-floor",
 							"objectClass": "Guy",
-							"sid": 466803880141990,
+							"sid": 566607086299027,
 							"behaviorType": "Platform"
 						},
 						{
 							"id": "compare-y",
 							"objectClass": "Guy",
-							"sid": 595712451354100,
+							"sid": 953556804522037,
 							"parameters": {
 								"comparison": 1,
 								"y-co-ordinate": "Focus.Y"
@@ -116,7 +85,7 @@
 						{
 							"id": "is-playing",
 							"objectClass": "Focus",
-							"sid": 797003084385266,
+							"sid": 498978449078488,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"adjust\""
@@ -124,26 +93,65 @@
 							"isInverted": true
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 103333501863811,
+					"children": [
 						{
-							"id": "tween-one-property",
-							"objectClass": "Focus",
-							"sid": 625359411697057,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"adjust\"",
-								"property": "offsetY",
-								"end-value": "Guy.Y",
-								"time": "0.5",
-								"ease": "easeoutbounce",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Guy",
+									"sid": 189419977367882,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "Focus.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Focus",
+									"sid": 412814031472912,
+									"parameters": {
+										"y": "Focus.Y + clamp(Guy.Y - Focus.Y, dt * -200, 0)"
+									}
+								}
+							],
+							"sid": 527764378660822
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 687998457964313
+								}
+							],
+							"actions": [
+								{
+									"id": "tween-one-property",
+									"objectClass": "Focus",
+									"sid": 981695716702818,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"adjust\"",
+										"property": "offsetY",
+										"end-value": "Guy.Y",
+										"time": "0.8",
+										"ease": "easeoutbounce",
+										"destroy-on-complete": "no",
+										"loop": "no",
+										"ping-pong": "no",
+										"repeat-count": "1"
+									}
+								}
+							],
+							"sid": 218701342581007
 						}
-					],
-					"sid": 761526649087795
+					]
 				}
 			]
 		}
