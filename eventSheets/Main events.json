@@ -1,0 +1,239 @@
+{
+	"name": "Main events",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Scoring events"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Debug",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 697814851364255,
+							"parameters": {
+								"key": 82
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 224475032503496
+						}
+					],
+					"sid": 412191845180076
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 378252392639238,
+							"parameters": {
+								"key": 69
+							}
+						}
+					],
+					"actions": [
+						{
+							"customAction": "New Event",
+							"objectClass": "ScoringTable",
+							"sid": 374927815741917,
+							"parameters": [
+								"\"Scoring Event \" & random(100)"
+							]
+						}
+					],
+					"sid": 254977264045412
+				}
+			],
+			"sid": 976892483445359
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Setup",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 448103505888716
+						}
+					],
+					"actions": [
+						{
+							"customAction": "New Event",
+							"objectClass": "ScoringTable",
+							"sid": 443030933220101,
+							"parameters": [
+								"\"Make me laugh!\""
+							]
+						}
+					],
+					"sid": 771941109959129
+				}
+			],
+			"sid": 453320840946473
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Camera Focus",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 715724075127140
+						}
+					],
+					"actions": [
+						{
+							"id": "set-y",
+							"objectClass": "Focus",
+							"sid": 518819431036832,
+							"parameters": {
+								"y": "Guy.Y"
+							}
+						}
+					],
+					"sid": 321282864516555
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 381773231853150
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Focus",
+							"sid": 355849936930401,
+							"parameters": {
+								"x": "Guy.X + (ViewportWidth(0) / 3) "
+							}
+						}
+					],
+					"sid": 183531728151108,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-floor",
+									"objectClass": "Guy",
+									"sid": 884046343696340,
+									"behaviorType": "Platform"
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Guy",
+									"sid": 189951804592461,
+									"parameters": {
+										"comparison": 1,
+										"y-co-ordinate": "Focus.Y"
+									}
+								},
+								{
+									"id": "is-playing",
+									"objectClass": "Focus",
+									"sid": 891486877794193,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"adjust\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 975006136384786,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-y",
+											"objectClass": "Guy",
+											"sid": 893817597347165,
+											"parameters": {
+												"comparison": 2,
+												"y-co-ordinate": "Focus.Y"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "Focus",
+											"sid": 845780924936206,
+											"parameters": {
+												"y": "Focus.Y + clamp(Guy.Y - Focus.Y, dt * -200, 0)"
+											}
+										}
+									],
+									"sid": 394818771180718
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 672030155893043
+										}
+									],
+									"actions": [
+										{
+											"id": "tween-one-property",
+											"objectClass": "Focus",
+											"sid": 474379374944081,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"adjust\"",
+												"property": "offsetY",
+												"end-value": "Guy.Y",
+												"time": "0.8",
+												"ease": "easeoutbounce",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 397167021715285
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 675763177620255
+		}
+	],
+	"sid": 819818898747264
+}

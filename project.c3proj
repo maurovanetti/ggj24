@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -15,8 +22,29 @@
 		},
 		{
 			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -65,7 +93,19 @@
 			"Keyboard",
 			"Ramp"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"ScoringEvent",
+					"ScoringEventText",
+					"ScoringTable",
+					"ScoringEventArray",
+					"ScoringEventSpawnArea"
+				],
+				"subfolders": [],
+				"name": "GUI"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -75,13 +115,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Hyperuraneum"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Main events",
+			"Scoring events"
 		],
 		"subfolders": []
 	},
@@ -239,5 +281,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": null
+	"firstLayout": "Layout 1"
 }

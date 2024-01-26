@@ -1,0 +1,167 @@
+{
+	"name": "Scoring events",
+	"events": [
+		{
+			"aceType": "action",
+			"aceName": "New Event",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "Text",
+					"type": "string",
+					"initialValue": "Scoring Event",
+					"comment": "",
+					"sid": 770514341890714
+				}
+			],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "push",
+					"objectClass": "ScoringEventArray",
+					"sid": 772131043681320,
+					"parameters": {
+						"where": "back",
+						"value": "Text",
+						"axis": "y"
+					}
+				}
+			],
+			"sid": 686372778323697,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 385420220069437,
+							"parameters": {
+								"object": "ScoringEvent"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "ScoringEvent",
+							"sid": 711557099905008,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"scroll up\"",
+								"property": "offsetY",
+								"end-value": "ScoringEvent.Y - ScoringEvent.Height - 10",
+								"time": "0.5",
+								"ease": "easeoutbounce",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 323168345571975
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-empty",
+					"objectClass": "ScoringEventArray",
+					"sid": 744116945720800,
+					"isInverted": true
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "ScoringEventSpawnArea",
+					"sid": 543571710420086,
+					"parameters": {
+						"object": "ScoringEventText"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 287859763850479,
+					"parameters": {
+						"object-to-create": "ScoringEvent",
+						"layer": "\"GUI\"",
+						"x": "ScoringEventSpawnArea.X",
+						"y": "ScoringEventSpawnArea.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 733250975896946,
+					"parameters": {
+						"object-to-create": "ScoringEventText",
+						"layer": "\"GUI\"",
+						"x": "ScoringEventSpawnArea.X",
+						"y": "ScoringEventSpawnArea.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "ScoringEventText",
+					"sid": 811163798786731,
+					"parameters": {
+						"width": "ScoringEvent.Width",
+						"height": "ScoringEvent.Height"
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "ScoringEvent",
+					"sid": 737912616575013,
+					"parameters": {
+						"child": "ScoringEventText",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-o": true,
+						"transform-z-elevation": true,
+						"transform-visibility": true,
+						"destroy-with-parent": true
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ScoringEventText",
+					"sid": 114876523878145,
+					"parameters": {
+						"text": "ScoringEventArray.Front"
+					}
+				},
+				{
+					"id": "pop",
+					"objectClass": "ScoringEventArray",
+					"sid": 331540986269444,
+					"parameters": {
+						"where": "front",
+						"axis": "y"
+					}
+				}
+			],
+			"sid": 767628167298049
+		}
+	],
+	"sid": 759224197214942
+}
