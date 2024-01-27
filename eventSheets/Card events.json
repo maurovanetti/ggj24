@@ -1,0 +1,455 @@
+{
+	"name": "Card events",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Draw Cards",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "CardSpawnArea",
+							"sid": 832133479259161,
+							"parameters": {
+								"instance-variable": "Available"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 587578132144077,
+							"parameters": {
+								"object-to-create": "PandaCard",
+								"layer": "\"Top of GUI\"",
+								"x": "CardSpawnArea.X",
+								"y": "CardSpawnArea.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"customAction": "RegisterSpawnArea",
+							"objectClass": "PandaCard",
+							"customActionObjectClass": "Card",
+							"sid": 347035558030540,
+							"parameters": [
+								"CardSpawnArea.UID"
+							]
+						}
+					],
+					"sid": 701548968230344
+				},
+				{
+					"aceType": "action",
+					"aceName": "RegisterSpawnArea",
+					"objectClass": "Card",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "uid",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 838169824746395
+						}
+					],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Card",
+							"sid": 618920742866268,
+							"parameters": {
+								"instance-variable": "CardSpawnAreaUID",
+								"value": "uid"
+							}
+						}
+					],
+					"sid": 233659194031935,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "CardSpawnArea",
+									"sid": 724722525775291,
+									"parameters": {
+										"unique-id": "uid"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "CardSpawnArea",
+									"sid": 341009847104698,
+									"parameters": {
+										"instance-variable": "Available",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 404608348349544
+						}
+					]
+				}
+			],
+			"sid": 728536538628741
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Drag and Drop",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drag-start",
+							"objectClass": "Card",
+							"sid": 240808927891102,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Card",
+							"sid": 344293353270420,
+							"parameters": {
+								"instance-variable": "OriginalX",
+								"value": "Card.X"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Card",
+							"sid": 856055794014100,
+							"parameters": {
+								"instance-variable": "OriginalY",
+								"value": "Card.Y"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "Card",
+							"sid": 508904187083269,
+							"parameters": {
+								"layer": "\"In-World GUI\""
+							}
+						}
+					],
+					"sid": 574882652983957
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-dragging",
+							"objectClass": "Card",
+							"sid": 359151581988198,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Card",
+							"sid": 767722486139146,
+							"parameters": {
+								"x": "Touch.X",
+								"y": "Touch.Y"
+							}
+						}
+					],
+					"sid": 776132407625566
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Card",
+							"sid": 515420141143145,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [],
+					"sid": 185608364689916,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Card",
+									"sid": 360597725349657,
+									"parameters": {
+										"object": "CardSlot"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Card",
+									"sid": 736725489005035,
+									"parameters": {
+										"x": "CardSlot.BBoxMidX",
+										"y": "CardSlot.BBoxMidY"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Card",
+									"sid": 707692172301273,
+									"behaviorType": "DragDrop",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "CardSlot",
+									"sid": 468675428965171
+								},
+								{
+									"customAction": "UnregisterSpawnArea",
+									"objectClass": "Card",
+									"sid": 200782858527844
+								},
+								{
+									"customAction": "SpawnEffect",
+									"objectClass": "Card",
+									"sid": 892955600295769,
+									"parameters": [
+										"CardSlot.X",
+										"CardSlot.Y"
+									]
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Card",
+									"sid": 389335098878682,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 706273646720440
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 715334220832809
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-layer",
+									"objectClass": "Card",
+									"sid": 251256196388687,
+									"parameters": {
+										"layer": "\"Top of GUI\""
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Card",
+									"sid": 188316928576538,
+									"parameters": {
+										"x": "Card.OriginalX",
+										"y": "Card.OriginalY"
+									}
+								}
+							],
+							"sid": 781231869796032
+						}
+					]
+				},
+				{
+					"aceType": "action",
+					"aceName": "UnregisterSpawnArea",
+					"objectClass": "Card",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 227986951827876,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "CardSpawnArea",
+									"sid": 387896173359908,
+									"parameters": {
+										"unique-id": "Card.CardSpawnAreaUID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "CardSpawnArea",
+									"sid": 790865159845344,
+									"parameters": {
+										"instance-variable": "Available",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 606415599499501
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Card",
+									"sid": 190318699072804,
+									"parameters": {
+										"instance-variable": "CardSpawnAreaUID",
+										"value": "-1"
+									}
+								}
+							],
+							"sid": 866264404826313
+						}
+					]
+				}
+			],
+			"sid": 597653295021999
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Time Scale",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drag-start",
+							"objectClass": "Card",
+							"sid": 645406831420016,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 241122990708793,
+							"parameters": {
+								"time-scale": "0.2"
+							}
+						}
+					],
+					"sid": 954492198556250
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Card",
+							"sid": 130568818016558,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 623156019200912,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 299603960031476,
+							"parameters": {
+								"time-scale": "1"
+							}
+						}
+					],
+					"sid": 590887758342959
+				}
+			],
+			"sid": 847343651163707
+		},
+		{
+			"aceType": "action",
+			"aceName": "SpawnEffect",
+			"objectClass": "Card",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "X",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 867218475720442
+				},
+				{
+					"name": "Y",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 506669045751540
+				}
+			],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object-by-name",
+					"objectClass": "System",
+					"sid": 828766399116146,
+					"parameters": {
+						"object-name": "Card.Effect",
+						"layer": "\"Characters\"",
+						"x": "X",
+						"y": "Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 837144224025973
+		}
+	],
+	"sid": 736182713874103
+}

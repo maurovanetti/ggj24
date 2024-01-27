@@ -1,0 +1,51 @@
+{
+	"name": "Card",
+	"plugin-id": "Sprite",
+	"sid": 332495331296026,
+	"instanceVariables": [
+		{
+			"name": "OriginalX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 675694599396093
+		},
+		{
+			"name": "OriginalY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 832523609408144
+		},
+		{
+			"name": "CardSpawnAreaUID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 418404874907262
+		},
+		{
+			"name": "Effect",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 677649134861898
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 850811523123276
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 490558575373178
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"PandaCard"
+	]
+}

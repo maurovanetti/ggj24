@@ -1,0 +1,62 @@
+{
+	"name": "Panda",
+	"plugin-id": "Sprite",
+	"sid": 190654345550567,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 192,
+						"originX": 0,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 450134,
+						"collisionPoly": {
+							"points": [
+								0.6640625,
+								0.3489583333333333,
+								0.78125,
+								0.4270833333333333,
+								0.7578125,
+								0.7708333333333334,
+								0.6875,
+								0.8489583333333334,
+								0.359375,
+								1,
+								0.1328125,
+								0.890625,
+								0.125,
+								0.6041666666666666,
+								0.1484375,
+								0.5625,
+								0.2890625,
+								0.40625,
+								0.390625,
+								0.359375
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 785567465814229,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

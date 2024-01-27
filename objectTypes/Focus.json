@@ -3,7 +3,36 @@
 	"plugin-id": "Sprite",
 	"sid": 939960869047537,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "DeltaY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 732681282068163
+		},
+		{
+			"name": "ToleranceY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 257881932539771
+		},
+		{
+			"name": "UpwardSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 932514985955560
+		},
+		{
+			"name": "DownwardAdjustTime",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 216618444346741
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",

@@ -63,6 +63,20 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
@@ -103,11 +117,10 @@
 		"items": [
 			"Box",
 			"Focus",
-			"Keyboard",
-			"Tilemap",
-			"AJAX",
 			"Guy",
-			"TestTilemap"
+			"TestTilemap",
+			"Tilemap",
+			"Panda"
 		],
 		"subfolders": [
 			{
@@ -118,10 +131,30 @@
 					"ScoringEventArray",
 					"ScoringEventSpawnArea",
 					"ScoreForEvent",
-					"ScoringMap"
+					"ScoringMap",
+					"CardArea",
+					"CardSpawnArea",
+					"CardSlot"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"PandaCard"
+						],
+						"subfolders": [],
+						"name": "Cards"
+					}
+				],
+				"name": "GUI"
+			},
+			{
+				"items": [
+					"AJAX",
+					"Keyboard",
+					"Touch"
 				],
 				"subfolders": [],
-				"name": "GUI"
+				"name": "Singletons"
 			}
 		]
 	},
@@ -135,7 +168,9 @@
 		}
 	],
 	"families": {
-		"items": [],
+		"items": [
+			"Card"
+		],
 		"subfolders": []
 	},
 	"layouts": {
@@ -148,7 +183,8 @@
 	"eventSheets": {
 		"items": [
 			"Main events",
-			"Scoring events"
+			"Scoring events",
+			"Card events"
 		],
 		"subfolders": []
 	},
