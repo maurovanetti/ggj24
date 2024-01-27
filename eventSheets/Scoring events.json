@@ -232,6 +232,14 @@
 					}
 				},
 				{
+					"customAction": "Change",
+					"objectClass": "Score",
+					"sid": 594887149698628,
+					"parameters": [
+						"ScoreChange"
+					]
+				},
+				{
 					"id": "set-text",
 					"objectClass": "ScoringEventText",
 					"sid": 284593484167272,
@@ -596,6 +604,47 @@
 				}
 			],
 			"sid": 145396437345370
+		},
+		{
+			"aceType": "action",
+			"aceName": "Change",
+			"objectClass": "Score",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "delta",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 386142182299536
+				}
+			],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Score",
+					"sid": 692667856693261,
+					"parameters": {
+						"instance-variable": "Total",
+						"value": "delta"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Score",
+					"sid": 645231105726993,
+					"parameters": {
+						"text": "Score.Total"
+					}
+				}
+			],
+			"sid": 537522480254594
 		}
 	],
 	"sid": 759224197214942

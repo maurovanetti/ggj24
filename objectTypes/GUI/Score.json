@@ -1,0 +1,23 @@
+{
+	"name": "Score",
+	"plugin-id": "Text",
+	"sid": 720210512747944,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Total",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 434902810428934
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 576733930418351
+		}
+	],
+	"effectTypes": []
+}

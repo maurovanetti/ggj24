@@ -160,7 +160,8 @@
 					"CardSpawnArea",
 					"CardSlot",
 					"NegativeScoringEvent",
-					"Health"
+					"Health",
+					"Score"
 				],
 				"subfolders": [
 					{
