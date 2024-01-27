@@ -1,0 +1,15 @@
+{
+	"name": "DeckArray",
+	"plugin-id": "Arr",
+	"sid": 605638068152007,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "Index",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 336531558190559
+		}
+	]
+}

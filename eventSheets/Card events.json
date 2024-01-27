@@ -12,9 +12,90 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 931744644285487
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DeckArray",
+							"sid": 544174712775144,
+							"parameters": {
+								"instance-variable": "Index",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "CardSpawnArea",
+							"sid": 522664265568875,
+							"parameters": {
+								"instance-variable": "Available",
+								"value": "false"
+							}
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 524026707029497,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck.json"
+							}
+						}
+					],
+					"sid": 131067983032678
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 727808840877482,
+							"parameters": {
+								"tag": "\"Deck\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "DeckArray",
+							"sid": 643729049370048,
+							"parameters": {
+								"json": "AJAX.LastData"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "CardSpawnArea",
+							"sid": 109611288589117,
+							"parameters": {
+								"instance-variable": "Available",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 521739279925855
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 796929985449487,
+							"parameters": {
+								"object": "CardSpawnArea"
+							}
+						},
+						{
 							"id": "is-boolean-instance-variable-set",
 							"objectClass": "CardSpawnArea",
-							"sid": 832133479259161,
+							"sid": 213458509604502,
 							"parameters": {
 								"instance-variable": "Available"
 							}
@@ -22,29 +103,67 @@
 					],
 					"actions": [
 						{
-							"id": "create-object",
+							"id": "create-object-by-name",
 							"objectClass": "System",
-							"sid": 587578132144077,
+							"sid": 276278491250568,
 							"parameters": {
-								"object-to-create": "PandaCard",
+								"object-name": "DeckArray.At(0, DeckArray.Index % DeckArray.Height, 0)",
 								"layer": "\"Top of GUI\"",
-								"x": "CardSpawnArea.X",
-								"y": "CardSpawnArea.Y",
+								"x": "-100",
+								"y": "-100",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
 						},
 						{
-							"customAction": "RegisterSpawnArea",
-							"objectClass": "PandaCard",
-							"customActionObjectClass": "Card",
-							"sid": 347035558030540,
-							"parameters": [
-								"CardSpawnArea.UID"
-							]
+							"id": "add-to-instvar",
+							"objectClass": "DeckArray",
+							"sid": 575386206895660,
+							"parameters": {
+								"instance-variable": "Index",
+								"value": "1"
+							}
 						}
 					],
-					"sid": 701548968230344
+					"sid": 361156894708575,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 528590332885816,
+									"parameters": {
+										"first-value": "DeckArray.Index",
+										"comparison": 4,
+										"second-value": "0"
+									}
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 566951730436456,
+									"parameters": {
+										"first-value": "DeckArray.Index % 10",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"customAction": "New Event",
+									"objectClass": "ScoringTable",
+									"sid": 558615165348920,
+									"parameters": [
+										"DeckArray.Index & \" cards!\""
+									]
+								}
+							],
+							"sid": 332962422851842
+						}
+					]
 				},
 				{
 					"aceType": "action",
@@ -103,6 +222,72 @@
 								}
 							],
 							"sid": 404608348349544
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Card",
+							"sid": 539249566723296
+						}
+					],
+					"actions": [],
+					"sid": 801554494463945,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-evaluate",
+									"objectClass": "System",
+									"sid": 254777251852568,
+									"parameters": {
+										"object": "CardSpawnArea",
+										"expression": "CardSpawnArea.Available"
+									}
+								},
+								{
+									"id": "pick-random-instance",
+									"objectClass": "System",
+									"sid": 449829269054067,
+									"parameters": {
+										"object": "CardSpawnArea"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Card",
+									"sid": 232504699792195,
+									"parameters": {
+										"instance-variable": "CardSpawnAreaUID",
+										"value": "CardSpawnArea.UID"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Card",
+									"sid": 614378850549182,
+									"parameters": {
+										"x": "CardSpawnArea.X",
+										"y": "CardSpawnArea.Y"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "CardSpawnArea",
+									"sid": 765680477525075,
+									"parameters": {
+										"instance-variable": "Available",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 436118143486274
 						}
 					]
 				}

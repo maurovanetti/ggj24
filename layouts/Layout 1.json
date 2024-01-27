@@ -221,75 +221,6 @@
 					"subLayers": [],
 					"instances": [
 						{
-							"type": "Guy",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Walk",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 5,
-							"instanceVariables": {},
-							"behaviors": {
-								"Flash": {
-									"properties": {}
-								},
-								"Rotate": {
-									"properties": {
-										"speed": 200,
-										"acceleration": 500,
-										"enabled": false,
-										"live-preview": false
-									}
-								}
-							},
-							"sceneGraphData": {
-								"parent-uid": 2,
-								"uid": 5,
-								"flags": {
-									"x": true,
-									"y": true,
-									"z": true,
-									"w": false,
-									"h": false,
-									"a": true,
-									"o": false,
-									"v": false,
-									"d": true,
-									"sm": "normal"
-								},
-								"preview": {
-									"transformX": 0,
-									"transformY": 0,
-									"transformZElevation": 0,
-									"transformW": 2.220446049250313e-16,
-									"transformH": 2.220446049250313e-16,
-									"transformA": 0,
-									"transformSX": 0,
-									"transformSY": 0,
-									"transformO": 0,
-									"previewSceneGraph": false
-								}
-							},
-							"world": {
-								"x": 64,
-								"y": 448,
-								"width": 256,
-								"height": 256,
-								"originX": 0.4921875,
-								"originY": 0.7265625,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
 							"type": "Box",
 							"properties": {
 								"initially-visible": false,
@@ -384,6 +315,109 @@
 						}
 					],
 					"sid": 458897051338147,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						1,
+						1,
+						1,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
+				},
+				{
+					"name": "Avatar",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Guy",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Walk",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 5,
+							"instanceVariables": {},
+							"behaviors": {
+								"Flash": {
+									"properties": {}
+								},
+								"Rotate": {
+									"properties": {
+										"speed": 200,
+										"acceleration": 500,
+										"enabled": false,
+										"live-preview": false
+									}
+								}
+							},
+							"sceneGraphData": {
+								"parent-uid": 2,
+								"uid": 5,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": false,
+									"h": false,
+									"a": true,
+									"o": false,
+									"v": false,
+									"d": true,
+									"sm": "normal"
+								},
+								"preview": {
+									"transformX": 0,
+									"transformY": 0,
+									"transformZElevation": 0,
+									"transformW": 2.220446049250313e-16,
+									"transformH": 2.220446049250313e-16,
+									"transformA": 0,
+									"transformSX": 0,
+									"transformSY": 0,
+									"transformO": 0,
+									"previewSceneGraph": false
+								}
+							},
+							"world": {
+								"x": 64,
+								"y": 448,
+								"width": 256,
+								"height": 256,
+								"originX": 0.4921875,
+								"originY": 0.7265625,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 910199652485963,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -868,6 +902,18 @@
 			"properties": {},
 			"uid": 3,
 			"instanceVariables": {}
+		},
+		{
+			"type": "DeckArray",
+			"properties": {
+				"width": 1,
+				"height": 0,
+				"depth": 1
+			},
+			"uid": 21,
+			"instanceVariables": {
+				"Index": 0
+			}
 		}
 	],
 	"effectTypes": [],

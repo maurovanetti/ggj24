@@ -3,6 +3,16 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "Test",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 232588790279796
+		},
+		{
+			"eventType": "variable",
 			"name": "GameOverMessage",
 			"type": "string",
 			"initialValue": "GAME OVER",
@@ -29,22 +39,42 @@
 						"tag": "\"Scores\"",
 						"file": "Scores.json"
 					}
-				},
-				{
-					"id": "wait-for-previous-actions",
-					"objectClass": "System",
-					"sid": 465175150230941
-				},
-				{
-					"id": "load",
-					"objectClass": "ScoringMap",
-					"sid": 836438559072457,
-					"parameters": {
-						"json": "AJAX.LastData"
-					}
 				}
 			],
 			"sid": 908882220079312
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 501490269346185,
+					"parameters": {
+						"tag": "\"Scores\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "ScoringMap",
+					"sid": 112407335305167,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 415807008503323,
+					"parameters": {
+						"variable": "Test",
+						"value": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 726231120464375
 		},
 		{
 			"aceType": "action",
@@ -193,20 +223,20 @@
 					}
 				},
 				{
-					"id": "set-text",
-					"objectClass": "ScoringEventText",
-					"sid": 387344967112311,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 124169588273201,
 					"parameters": {
-						"text": "ScoringEventArray.Front"
+						"variable": "ScoreChange",
+						"value": "ScoringMap.GetDefault(ScoringEventArray.Front, 0)"
 					}
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 530862482066670,
+					"id": "set-text",
+					"objectClass": "ScoringEventText",
+					"sid": 284593484167272,
 					"parameters": {
-						"variable": "ScoreChange",
-						"value": "ScoringMap.GetDefault(str(ScoringEventText.Text), 0)"
+						"text": "ScoringEventArray.Front"
 					}
 				},
 				{
@@ -314,7 +344,7 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 748252969237919,
+							"sid": 328465561558796,
 							"parameters": {
 								"variable": "ScoreChange",
 								"comparison": 0,
@@ -326,13 +356,13 @@
 						{
 							"id": "set-visible",
 							"objectClass": "ScoreForEvent",
-							"sid": 439853327107061,
+							"sid": 441017277359660,
 							"parameters": {
 								"visibility": "invisible"
 							}
 						}
 					],
-					"sid": 257562910738488
+					"sid": 267930321964539
 				}
 			]
 		},
@@ -472,6 +502,30 @@
 		},
 		{
 			"aceType": "action",
+			"aceName": "ClumsyStumble",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 257055717668382,
+					"parameters": [
+						"\"Clumsy stumble\""
+					]
+				}
+			],
+			"sid": 243510661076124
+		},
+		{
+			"aceType": "action",
 			"aceName": "Setup",
 			"objectClass": "ScoringEvent",
 			"functionDescription": "",
@@ -484,11 +538,6 @@
 			"conditions": [],
 			"actions": [
 				{
-					"id": "move-to-bottom",
-					"objectClass": "ScoringEvent",
-					"sid": 737202142109750
-				},
-				{
 					"id": "set-size",
 					"objectClass": "ScoringEvent",
 					"sid": 421940124108073,
@@ -500,10 +549,10 @@
 				{
 					"id": "set-size",
 					"objectClass": "ScoringEventText",
-					"sid": 134089978390505,
+					"sid": 518456282169552,
 					"parameters": {
-						"width": "PositiveScoringEvent.Width",
-						"height": "PositiveScoringEvent.Height"
+						"width": "ScoringEvent.Width",
+						"height": "ScoringEvent.Height"
 					}
 				},
 				{
@@ -539,6 +588,11 @@
 						"transform-visibility": true,
 						"destroy-with-parent": true
 					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "ScoringEvent",
+					"sid": 473710241236750
 				}
 			],
 			"sid": 145396437345370

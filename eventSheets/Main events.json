@@ -10,6 +10,26 @@
 			"includeSheet": "Card events"
 		},
 		{
+			"eventType": "variable",
+			"name": "DefaultAcceleration",
+			"type": "number",
+			"initialValue": "1500",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 627404455582456
+		},
+		{
+			"eventType": "variable",
+			"name": "DefaultJumpStrength",
+			"type": "number",
+			"initialValue": "1200",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 238639515168405
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Debug",
@@ -343,6 +363,99 @@
 						}
 					],
 					"sid": 921765720910274
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Box",
+							"sid": 690382312430870,
+							"parameters": {
+								"object": "Cat"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Cat",
+							"sid": 209303587651571,
+							"parameters": {
+								"animation": "\"Idle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-jump-strength",
+							"objectClass": "Box",
+							"sid": 249537694467745,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "800"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Box",
+							"sid": 183530594240263,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Cat",
+							"sid": 533934953220732,
+							"parameters": {
+								"animation": "\"Angry\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 945982155319339,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "Box",
+							"sid": 546899574232245,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "DefaultJumpStrength"
+							}
+						}
+					],
+					"sid": 326275735448047
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Cat",
+							"sid": 405969999708197,
+							"parameters": {
+								"animation": "\"Angry\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Cat",
+							"sid": 597014032799977,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 541425206259452
 				}
 			],
 			"sid": 186776396655804
@@ -354,16 +467,6 @@
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"eventType": "variable",
-					"name": "DefaultAcceleration",
-					"type": "number",
-					"initialValue": "1500",
-					"comment": "",
-					"isStatic": false,
-					"isConstant": false,
-					"sid": 428923446448285
-				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -537,32 +640,79 @@
 							}
 						},
 						{
-							"id": "set-animation",
-							"objectClass": "Guy",
-							"sid": 686983658758537,
-							"parameters": {
-								"animation": "\"Jump\"",
-								"from": "beginning"
-							}
-						},
-						{
 							"id": "destroy",
 							"objectClass": "AltBox",
 							"sid": 561993202161190
-						},
-						{
-							"id": "spawn-another-object",
-							"objectClass": "Box",
-							"sid": 993794607676598,
-							"parameters": {
-								"object": "AltBox",
-								"layer": "\"Characters\"",
-								"image-point": "0",
-								"create-hierarchy": false
-							}
 						}
 					],
-					"sid": 993171863874101
+					"sid": 993171863874101,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 919857630253676,
+									"parameters": {
+										"first-value": "Box.Platform.JumpStrength",
+										"comparison": 2,
+										"second-value": "DefaultJumpStrength"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Guy",
+									"sid": 915810550643256,
+									"parameters": {
+										"animation": "\"Stumble\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"customAction": "ClumsyStumble",
+									"objectClass": "ScoringTable",
+									"sid": 316612870157119
+								}
+							],
+							"sid": 842901163514175
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 847303878069569
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Box",
+									"sid": 246544570530912,
+									"parameters": {
+										"object": "AltBox",
+										"layer": "\"Characters\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Guy",
+									"sid": 793739774259422,
+									"parameters": {
+										"animation": "\"Jump\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 269875323418715
+						}
+					]
 				},
 				{
 					"eventType": "block",

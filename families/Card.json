@@ -46,6 +46,7 @@
 	],
 	"effectTypes": [],
 	"members": [
-		"PandaCard"
+		"PandaCard",
+		"CatCard"
 	]
 }

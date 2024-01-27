@@ -136,7 +136,8 @@
 			"Tilemap",
 			"Panda",
 			"Abyss",
-			"AltBox"
+			"AltBox",
+			"Cat"
 		],
 		"subfolders": [
 			{
@@ -156,7 +157,9 @@
 				"subfolders": [
 					{
 						"items": [
-							"PandaCard"
+							"PandaCard",
+							"CatCard",
+							"DeckArray"
 						],
 						"subfolders": [],
 						"name": "Cards"
@@ -294,6 +297,14 @@
 					"name": "Scores.json",
 					"type": "application/json",
 					"sid": 862063261833673,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck.json",
+					"type": "application/json",
+					"sid": 407105012607628,
 					"file-info": {
 						"purpose": "none"
 					}
