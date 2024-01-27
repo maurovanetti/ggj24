@@ -82,12 +82,12 @@
 				{
 					"id": "flash",
 					"objectClass": "Guy",
-					"sid": 297933235651746,
+					"sid": 463015131534602,
 					"behaviorType": "Flash",
 					"parameters": {
 						"on-time": "0.1",
 						"off-time": "0.1",
-						"duration": "1.0"
+						"duration": "100"
 					}
 				},
 				{

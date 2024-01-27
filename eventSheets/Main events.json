@@ -493,6 +493,15 @@
 									"customAction": "Ouch",
 									"objectClass": "ScoringTable",
 									"sid": 172941749608742
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Health",
+									"sid": 204145477329862,
+									"parameters": {
+										"instance-variable": "HitPoints",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 997880744037829,
@@ -525,6 +534,15 @@
 									"customAction": "Ouch",
 									"objectClass": "ScoringTable",
 									"sid": 649634488414750
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Health",
+									"sid": 727456726646340,
+									"parameters": {
+										"instance-variable": "HitPoints",
+										"value": "1"
+									}
 								}
 							],
 							"sid": 651536620601591,
