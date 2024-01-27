@@ -24,6 +24,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 615118840682244
+		},
+		{
+			"name": "Rightward",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 956600050527153
 		}
 	],
 	"behaviorTypes": [
@@ -39,14 +46,14 @@
 			{
 				"frames": [
 					{
-						"width": 108,
+						"width": 64,
 						"height": 180,
 						"originX": 0.5,
 						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 8341984,
+						"imageSpriteId": 7533960,
 						"collisionPoly": {
 							"points": [
 								0,

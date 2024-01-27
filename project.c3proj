@@ -132,7 +132,6 @@
 			"Box",
 			"Focus",
 			"Guy",
-			"TestTilemap",
 			"Tilemap",
 			"Panda",
 			"Abyss",
@@ -152,7 +151,8 @@
 					"CardArea",
 					"CardSpawnArea",
 					"CardSlot",
-					"NegativeScoringEvent"
+					"NegativeScoringEvent",
+					"Health"
 				],
 				"subfolders": [
 					{
@@ -205,7 +205,8 @@
 		"items": [
 			"Main events",
 			"Scoring events",
-			"Card events"
+			"Card events",
+			"Health events"
 		],
 		"subfolders": []
 	},

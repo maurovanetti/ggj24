@@ -1,0 +1,111 @@
+{
+	"name": "Health events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 629287852530238
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Health",
+					"sid": 853031080270699,
+					"parameters": {
+						"instance-variable": "HitPoints",
+						"value": "3"
+					}
+				}
+			],
+			"sid": 981221806201560
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 272478106816330
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Health",
+					"sid": 407204106631806,
+					"parameters": {
+						"animation": "str(Health.HitPoints)",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 114583860860370
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Health",
+					"sid": 630047027743429,
+					"parameters": {
+						"instance-variable": "HitPoints",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 116642540666527
+				}
+			],
+			"actions": [
+				{
+					"customAction": "GameOver",
+					"objectClass": "ScoringTable",
+					"sid": 522561746916949
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "Box",
+					"sid": 902060863987583,
+					"behaviorType": "Platform",
+					"parameters": {
+						"max-speed": "0"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Guy",
+					"sid": 297933235651746,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 925029366664919,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 283691916854022
+				}
+			],
+			"sid": 497094464534749
+		}
+	],
+	"sid": 445927791774009
+}

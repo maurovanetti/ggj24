@@ -10,6 +10,10 @@
 			"includeSheet": "Card events"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "Health events"
+		},
+		{
 			"eventType": "variable",
 			"name": "DefaultAcceleration",
 			"type": "number",
@@ -275,32 +279,6 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-by-wall",
-							"objectClass": "Box",
-							"sid": 803367512230534,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "left"
-							}
-						},
-						{
-							"id": "is-by-wall",
-							"objectClass": "Box",
-							"sid": 582889043889124,
-							"behaviorType": "Platform",
-							"parameters": {
-								"side": "right"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 481714491544278,
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Box",
 							"sid": 754518890967179,
@@ -404,6 +382,15 @@
 							}
 						},
 						{
+							"id": "set-vector-x",
+							"objectClass": "Box",
+							"sid": 137333962282025,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-x": "0"
+							}
+						},
+						{
 							"id": "set-animation",
 							"objectClass": "Cat",
 							"sid": 533934953220732,
@@ -456,6 +443,94 @@
 						}
 					],
 					"sid": 541425206259452
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Box",
+							"sid": 774599559043223,
+							"parameters": {
+								"object": "Tilemap"
+							}
+						},
+						{
+							"id": "is-falling",
+							"objectClass": "Box",
+							"sid": 478518123371761,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 560948516175778,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-by-wall",
+									"objectClass": "Box",
+									"sid": 160122251810038,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Box",
+									"sid": 645301521698311,
+									"parameters": {
+										"instance-variable": "Rightward",
+										"value": "true"
+									}
+								},
+								{
+									"customAction": "Ouch",
+									"objectClass": "ScoringTable",
+									"sid": 172941749608742
+								}
+							],
+							"sid": 997880744037829,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-by-wall",
+									"objectClass": "Box",
+									"sid": 267270700622008,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Box",
+									"sid": 523674768165655,
+									"parameters": {
+										"instance-variable": "Rightward",
+										"value": "false"
+									}
+								},
+								{
+									"customAction": "Ouch",
+									"objectClass": "ScoringTable",
+									"sid": 649634488414750
+								}
+							],
+							"sid": 651536620601591,
+							"isOrBlock": true
+						}
+					]
 				}
 			],
 			"sid": 186776396655804
@@ -491,7 +566,16 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Box",
+							"sid": 983859359526258,
+							"parameters": {
+								"instance-variable": "Rightward"
+							}
+						}
+					],
 					"actions": [
 						{
 							"id": "simulate-control",
@@ -503,16 +587,63 @@
 							}
 						},
 						{
+							"id": "set-acceleration",
+							"objectClass": "Guy",
+							"sid": 849652364195890,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"acceleration": "abs(Guy.Rotate.Acceleration)"
+							}
+						}
+					],
+					"sid": 281172518607917
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 909165451785584
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Box",
+							"sid": 545050606539996,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Guy",
+							"sid": 727219825573592,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"acceleration": "-abs(Guy.Rotate.Acceleration)"
+							}
+						}
+					],
+					"sid": 730772259259835
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
 							"id": "set-vector-x",
 							"objectClass": "AltBox",
-							"sid": 638166735289049,
+							"sid": 346397885544421,
 							"behaviorType": "Platform",
 							"parameters": {
 								"vector-x": "Box.Platform.VectorX"
 							}
 						}
 					],
-					"sid": 281172518607917
+					"sid": 961807073278551
 				},
 				{
 					"eventType": "group",
@@ -722,6 +853,15 @@
 							"objectClass": "Box",
 							"sid": 496265633670305,
 							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Guy",
+							"sid": 444935438180434,
+							"parameters": {
+								"animation": "\"Stumble\""
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -742,18 +882,58 @@
 							"parameters": {
 								"state": "enabled"
 							}
-						},
-						{
-							"id": "set-speed",
-							"objectClass": "Guy",
-							"sid": 902939934079759,
-							"behaviorType": "Rotate",
-							"parameters": {
-								"speed": "200"
-							}
 						}
 					],
-					"sid": 604082814228049
+					"sid": 604082814228049,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Box",
+									"sid": 394783264631717,
+									"parameters": {
+										"instance-variable": "Rightward"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Guy",
+									"sid": 558906392180594,
+									"behaviorType": "Rotate",
+									"parameters": {
+										"speed": "200"
+									}
+								}
+							],
+							"sid": 297832170367835
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 814318861207861
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Guy",
+									"sid": 307692683418059,
+									"behaviorType": "Rotate",
+									"parameters": {
+										"speed": "-200"
+									}
+								}
+							],
+							"sid": 998325013094603
+						}
+					]
 				},
 				{
 					"eventType": "block",
@@ -776,18 +956,9 @@
 							}
 						},
 						{
-							"id": "set-animation",
-							"objectClass": "Guy",
-							"sid": 870076323798680,
-							"parameters": {
-								"animation": "\"Land\"",
-								"from": "beginning"
-							}
-						},
-						{
 							"id": "set-angle",
 							"objectClass": "Guy",
-							"sid": 869080118988828,
+							"sid": 633301891109256,
 							"parameters": {
 								"angle": "0"
 							}
@@ -795,7 +966,7 @@
 						{
 							"id": "set-vector-x",
 							"objectClass": "Box",
-							"sid": 107303464872595,
+							"sid": 520475049742742,
 							"behaviorType": "Platform",
 							"parameters": {
 								"vector-x": "0"
@@ -804,7 +975,7 @@
 						{
 							"id": "set-acceleration",
 							"objectClass": "Box",
-							"sid": 624074272307298,
+							"sid": 927741619698897,
 							"behaviorType": "Platform",
 							"parameters": {
 								"acceleration": "0"
@@ -813,7 +984,7 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "Guy",
-							"sid": 874699174044306,
+							"sid": 724265015870529,
 							"behaviorType": "Rotate",
 							"parameters": {
 								"state": "disabled"
@@ -822,6 +993,53 @@
 					],
 					"sid": 402209092154442,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Guy",
+									"sid": 361242167810841,
+									"parameters": {
+										"animation": "\"Stumble\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Guy",
+									"sid": 809072256422993,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 896068843625630
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 584110671185555
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Guy",
+									"sid": 919556905359725,
+									"parameters": {
+										"animation": "\"Land\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 172975855889142
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -940,8 +1158,13 @@
 							"conditions": [],
 							"actions": [
 								{
-									"callFunction": "Game Over",
-									"sid": 491748846101585
+									"id": "set-instvar-value",
+									"objectClass": "Health",
+									"sid": 781332610974495,
+									"parameters": {
+										"instance-variable": "HitPoints",
+										"value": "0"
+									}
 								}
 							],
 							"sid": 157967816595098
@@ -950,58 +1173,6 @@
 				}
 			],
 			"sid": 623056505591580
-		},
-		{
-			"functionName": "Game Over",
-			"functionDescription": "",
-			"functionCategory": "",
-			"functionReturnType": "none",
-			"functionCopyPicked": false,
-			"functionIsAsync": false,
-			"functionParameters": [],
-			"eventType": "function-block",
-			"conditions": [],
-			"actions": [
-				{
-					"customAction": "GameOver",
-					"objectClass": "ScoringTable",
-					"sid": 258880735530198
-				},
-				{
-					"id": "set-max-speed",
-					"objectClass": "Box",
-					"sid": 545056127639191,
-					"behaviorType": "Platform",
-					"parameters": {
-						"max-speed": "0"
-					}
-				},
-				{
-					"id": "flash",
-					"objectClass": "Guy",
-					"sid": 340645320880784,
-					"behaviorType": "Flash",
-					"parameters": {
-						"on-time": "0.1",
-						"off-time": "0.1",
-						"duration": "1.0"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 887240447100172,
-					"parameters": {
-						"seconds": "2"
-					}
-				},
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 477510875533646
-				}
-			],
-			"sid": 971759594944908
 		}
 	],
 	"sid": 819818898747264
