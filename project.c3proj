@@ -136,7 +136,8 @@
 			"Panda",
 			"Abyss",
 			"AltBox",
-			"Cat"
+			"Cat",
+			"CrashEffect"
 		],
 		"subfolders": [
 			{

@@ -6,95 +6,6 @@
 			"overriden": 0,
 			"subLayers": [
 				{
-					"name": "Environment",
-					"overriden": 0,
-					"subLayers": [],
-					"instances": [
-						{
-							"type": "Tilemap",
-							"properties": {
-								"initially-visible": true,
-								"tile-width": 128,
-								"tile-height": 128,
-								"tile-x-offset": 0,
-								"tile-y-offset": 0,
-								"tile-x-spacing": 0,
-								"tile-y-spacing": 0,
-								"tile-x-drawing-offset": 0,
-								"tile-y-drawing-offset": 0,
-								"drawing-mode": "top-to-right"
-							},
-							"uid": 13,
-							"instanceVariables": {},
-							"behaviors": {
-								"Solid": {
-									"properties": {
-										"enabled": true,
-										"tags": ""
-									}
-								}
-							},
-							"ownData": {
-								"tilemapData": {
-									"width": 78,
-									"height": 8,
-									"max-width": 351,
-									"max-height": 37,
-									"data": "4x0,73,89,105,89,33x0,74,108,90,108,33x0,75,107,2x108,33x0,74,108,106,92,33x0,75,90,2x108,33x0,76,108,91,90,33x0,74,3x108,33x0,75,90,108,106,33x0,77,93,109,93,107x0,73,89,105,121,33x0,76,2x90,124,33x0,76,2x90,124,33x0,76,2x90,124,33x0,76,2x90,124,33x0,77,93,109,125,36x0,74,33x0,41,2x0,75,33x0,42,2x0,76,33x0,43,2x0,76,36x0,74,36x0,75,36x0,76,36x0,76,36x0,76,35x0,73,89,35x0,74,92,35x0,75,90,35x0,74,108,35x0,75,108,33x0,73,2x105,121,33x0,74,2x108,122,33x0,75,2x108,122,11758x0"
-								},
-								"tile-width": 128,
-								"tile-height": 128,
-								"tile-x-offset": 0,
-								"tile-y-offset": 0,
-								"tile-x-spacing": 0,
-								"tile-y-spacing": 0
-							},
-							"world": {
-								"x": 0,
-								"y": 0,
-								"width": 10000,
-								"height": 1080,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"zElevation": 0
-							}
-						}
-					],
-					"sid": 821044627664763,
-					"effectTypes": [],
-					"isInitiallyVisible": true,
-					"isInitiallyInteractive": true,
-					"color": [
-						1,
-						1,
-						1,
-						1
-					],
-					"backgroundColor": [
-						1,
-						1,
-						1,
-						1
-					],
-					"isTransparent": true,
-					"parallaxX": 1,
-					"parallaxY": 1,
-					"scaleRate": 1,
-					"forceOwnTexture": false,
-					"renderingMode": "3d",
-					"drawOrder": "z-order",
-					"useRenderCells": false,
-					"blendMode": "normal",
-					"zElevation": 0,
-					"global": false
-				},
-				{
 					"name": "Card Slots",
 					"overriden": 0,
 					"subLayers": [],
@@ -402,11 +313,11 @@
 							},
 							"world": {
 								"x": 64,
-								"y": 448,
+								"y": 384,
 								"width": 256,
 								"height": 256,
-								"originX": 0.4921875,
-								"originY": 0.7265625,
+								"originX": 0.5,
+								"originY": 0.5,
 								"color": [
 									1,
 									1,
@@ -938,6 +849,95 @@
 					"blendMode": "normal",
 					"zElevation": 0,
 					"global": false
+				},
+				{
+					"name": "Environment",
+					"overriden": 0,
+					"subLayers": [],
+					"instances": [
+						{
+							"type": "Tilemap",
+							"properties": {
+								"initially-visible": true,
+								"tile-width": 128,
+								"tile-height": 128,
+								"tile-x-offset": 0,
+								"tile-y-offset": 0,
+								"tile-x-spacing": 0,
+								"tile-y-spacing": 0,
+								"tile-x-drawing-offset": 0,
+								"tile-y-drawing-offset": 0,
+								"drawing-mode": "top-to-right"
+							},
+							"uid": 13,
+							"instanceVariables": {},
+							"behaviors": {
+								"Solid": {
+									"properties": {
+										"enabled": true,
+										"tags": ""
+									}
+								}
+							},
+							"ownData": {
+								"tilemapData": {
+									"width": 78,
+									"height": 23,
+									"max-width": 351,
+									"max-height": 52,
+									"data": "4x0,73,89,105,4x89,45x0,74,108,90,4x108,45x0,75,107,2x108,2x106,108,45x0,74,108,106,92,0,106,108,45x0,75,90,2x108,106,0,106,45x0,76,108,91,90,0,106,108,45x0,74,3x108,106,108,106,45x0,75,90,108,106,0,106,108,45x0,77,93,109,2x93,2x109,149x0,73,89,105,121,48x0,76,2x90,124,48x0,76,2x90,124,108,47x0,76,2x90,124,108,47x0,76,2x90,124,108,47x0,77,93,109,125,108,50x0,74,108,47x0,41,2x0,75,108,47x0,42,2x0,76,108,47x0,43,2x0,76,108,50x0,74,108,50x0,75,108,50x0,76,108,50x0,76,108,50x0,76,108,49x0,73,89,105,49x0,74,92,108,49x0,75,90,108,49x0,74,2x108,49x0,75,2x108,47x0,73,2x105,121,108,47x0,74,2x108,122,108,47x0,75,2x108,122,108,16527x0"
+								},
+								"tile-width": 128,
+								"tile-height": 128,
+								"tile-x-offset": 0,
+								"tile-y-offset": 0,
+								"tile-x-spacing": 0,
+								"tile-y-spacing": 0
+							},
+							"world": {
+								"x": 0,
+								"y": 0,
+								"width": 10000,
+								"height": 3000,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"zElevation": 0
+							}
+						}
+					],
+					"sid": 821044627664763,
+					"effectTypes": [],
+					"isInitiallyVisible": true,
+					"isInitiallyInteractive": true,
+					"color": [
+						1,
+						1,
+						1,
+						1
+					],
+					"backgroundColor": [
+						1,
+						1,
+						1,
+						1
+					],
+					"isTransparent": true,
+					"parallaxX": 1,
+					"parallaxY": 1,
+					"scaleRate": 1,
+					"forceOwnTexture": false,
+					"renderingMode": "3d",
+					"drawOrder": "z-order",
+					"useRenderCells": false,
+					"blendMode": "normal",
+					"zElevation": 0,
+					"global": false
 				}
 			],
 			"instances": [
@@ -989,7 +989,7 @@
 				{
 					"type": "Abyss",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -1443,7 +1443,7 @@
 	],
 	"effectTypes": [],
 	"width": 10000,
-	"height": 1080,
+	"height": 3000,
 	"unboundedScrolling": true,
 	"vpX": 0.5,
 	"vpY": 0.5,

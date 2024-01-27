@@ -448,18 +448,19 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Box",
-							"sid": 774599559043223,
-							"parameters": {
-								"object": "Tilemap"
-							}
-						},
-						{
 							"id": "is-falling",
 							"objectClass": "Box",
-							"sid": 478518123371761,
+							"sid": 246500918021386,
 							"behaviorType": "Platform",
+							"isInverted": true
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Guy",
+							"sid": 512956465573811,
+							"parameters": {
+								"animation": "\"Crash\""
+							},
 							"isInverted": true
 						}
 					],
@@ -472,40 +473,29 @@
 								{
 									"id": "is-by-wall",
 									"objectClass": "Box",
-									"sid": 160122251810038,
+									"sid": 248693946903923,
 									"behaviorType": "Platform",
 									"parameters": {
-										"side": "left"
+										"side": "right"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Box",
+									"sid": 989672414255886,
+									"parameters": {
+										"instance-variable": "Rightward"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Box",
-									"sid": 645301521698311,
-									"parameters": {
-										"instance-variable": "Rightward",
-										"value": "true"
-									}
-								},
-								{
-									"customAction": "Ouch",
-									"objectClass": "ScoringTable",
-									"sid": 172941749608742
-								},
-								{
-									"id": "subtract-from-instvar",
-									"objectClass": "Health",
-									"sid": 204145477329862,
-									"parameters": {
-										"instance-variable": "HitPoints",
-										"value": "1"
-									}
+									"customAction": "Crash",
+									"objectClass": "Guy",
+									"sid": 640697350758007
 								}
 							],
-							"sid": 997880744037829,
-							"isOrBlock": true
+							"sid": 735772976358531
 						},
 						{
 							"eventType": "block",
@@ -513,42 +503,171 @@
 								{
 									"id": "is-by-wall",
 									"objectClass": "Box",
-									"sid": 267270700622008,
+									"sid": 726393151715488,
 									"behaviorType": "Platform",
 									"parameters": {
-										"side": "right"
+										"side": "left"
 									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Box",
+									"sid": 135282087369234,
+									"parameters": {
+										"instance-variable": "Rightward"
+									},
+									"isInverted": true
 								}
 							],
 							"actions": [
 								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Box",
-									"sid": 523674768165655,
-									"parameters": {
-										"instance-variable": "Rightward",
-										"value": "false"
-									}
-								},
+									"customAction": "Crash",
+									"objectClass": "Guy",
+									"sid": 145414345884021
+								}
+							],
+							"sid": 223767082522984
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Guy",
+							"sid": 813472271854812,
+							"parameters": {
+								"animation": "\"Crash\""
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Health",
+							"sid": 303556963070574,
+							"parameters": {
+								"instance-variable": "HitPoints",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Guy",
+							"sid": 108668266376161,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 288479950488683
+				},
+				{
+					"aceType": "action",
+					"aceName": "Crash",
+					"objectClass": "Guy",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "custom-ace-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Health",
+							"sid": 814231146928759,
+							"parameters": {
+								"instance-variable": "HitPoints",
+								"value": "1"
+							}
+						},
+						{
+							"id": "toggle-boolean-instvar",
+							"objectClass": "Box",
+							"sid": 253029404760376,
+							"parameters": {
+								"instance-variable": "Rightward"
+							}
+						},
+						{
+							"customAction": "Ouch",
+							"objectClass": "ScoringTable",
+							"sid": 285469996899215
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Guy",
+							"sid": 167293145676897,
+							"parameters": {
+								"animation": "\"Crash\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Guy",
+							"sid": 212678977461790,
+							"parameters": {
+								"object": "CrashEffect",
+								"layer": "\"Avatar\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "CrashEffect",
+							"sid": 595842630625188
+						}
+					],
+					"sid": 209966110023909,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
 								{
-									"customAction": "Ouch",
-									"objectClass": "ScoringTable",
-									"sid": 649634488414750
-								},
+									"id": "is-mirrored",
+									"objectClass": "Guy",
+									"sid": 525491777545217
+								}
+							],
+							"actions": [
 								{
-									"id": "subtract-from-instvar",
-									"objectClass": "Health",
-									"sid": 727456726646340,
+									"id": "set-mirrored",
+									"objectClass": "CrashEffect",
+									"sid": 566430676967642,
 									"parameters": {
-										"instance-variable": "HitPoints",
-										"value": "1"
+										"state": "mirrored"
 									}
 								}
 							],
-							"sid": 651536620601591,
-							"isOrBlock": true
+							"sid": 382176655052126
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-animation-finished",
+							"objectClass": "CrashEffect",
+							"sid": 868224576702010
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "CrashEffect",
+							"sid": 775018035240458
+						}
+					],
+					"sid": 536276326436703
 				}
 			],
 			"sid": 186776396655804
@@ -586,66 +705,84 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "Box",
-							"sid": 983859359526258,
+							"id": "is-animation-playing",
+							"objectClass": "Guy",
+							"sid": 576390772418436,
 							"parameters": {
-								"instance-variable": "Rightward"
-							}
+								"animation": "\"Crash\""
+							},
+							"isInverted": true
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 170473010165521,
+					"children": [
 						{
-							"id": "simulate-control",
-							"objectClass": "Box",
-							"sid": 830943695698848,
-							"behaviorType": "Platform",
-							"parameters": {
-								"control": "right"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Box",
+									"sid": 453731376962132,
+									"parameters": {
+										"instance-variable": "Rightward"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Box",
+									"sid": 496097518859606,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-acceleration",
+									"objectClass": "Guy",
+									"sid": 677608328061174,
+									"behaviorType": "Rotate",
+									"parameters": {
+										"acceleration": "abs(Guy.Rotate.Acceleration)"
+									}
+								}
+							],
+							"sid": 521492381601308
 						},
 						{
-							"id": "set-acceleration",
-							"objectClass": "Guy",
-							"sid": 849652364195890,
-							"behaviorType": "Rotate",
-							"parameters": {
-								"acceleration": "abs(Guy.Rotate.Acceleration)"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 877550641115718
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Box",
+									"sid": 281024705176336,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-acceleration",
+									"objectClass": "Guy",
+									"sid": 878518410663210,
+									"behaviorType": "Rotate",
+									"parameters": {
+										"acceleration": "-abs(Guy.Rotate.Acceleration)"
+									}
+								}
+							],
+							"sid": 764392953070089
 						}
-					],
-					"sid": 281172518607917
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "else",
-							"objectClass": "System",
-							"sid": 909165451785584
-						}
-					],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "Box",
-							"sid": 545050606539996,
-							"behaviorType": "Platform",
-							"parameters": {
-								"control": "left"
-							}
-						},
-						{
-							"id": "set-acceleration",
-							"objectClass": "Guy",
-							"sid": 727219825573592,
-							"behaviorType": "Rotate",
-							"parameters": {
-								"acceleration": "-abs(Guy.Rotate.Acceleration)"
-							}
-						}
-					],
-					"sid": 730772259259835
+					]
 				},
 				{
 					"eventType": "block",
@@ -991,15 +1128,6 @@
 							}
 						},
 						{
-							"id": "set-acceleration",
-							"objectClass": "Box",
-							"sid": 927741619698897,
-							"behaviorType": "Platform",
-							"parameters": {
-								"acceleration": "0"
-							}
-						},
-						{
 							"id": "set-enabled",
 							"objectClass": "Guy",
 							"sid": 724265015870529,
@@ -1053,6 +1181,15 @@
 									"parameters": {
 										"animation": "\"Land\"",
 										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-acceleration",
+									"objectClass": "Box",
+									"sid": 927741619698897,
+									"behaviorType": "Platform",
+									"parameters": {
+										"acceleration": "0"
 									}
 								}
 							],
