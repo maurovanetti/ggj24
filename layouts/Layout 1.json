@@ -27,11 +27,11 @@
 							"behaviors": {
 								"Platform": {
 									"properties": {
-										"max-speed": 660,
+										"max-speed": 350,
 										"acceleration": 1500,
 										"deceleration": 1500,
 										"jump-strength": 800,
-										"gravity": 2500,
+										"gravity": 1500,
 										"max-fall-speed": 1000,
 										"double-jump": true,
 										"jump-sustain": 0,
@@ -99,6 +99,61 @@
 									1
 								],
 								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Tilemap",
+							"properties": {
+								"initially-visible": true,
+								"tile-width": 128,
+								"tile-height": 128,
+								"tile-x-offset": 0,
+								"tile-y-offset": 0,
+								"tile-x-spacing": 0,
+								"tile-y-spacing": 0,
+								"tile-x-drawing-offset": 0,
+								"tile-y-drawing-offset": 0,
+								"drawing-mode": "top-to-right"
+							},
+							"uid": 13,
+							"instanceVariables": {},
+							"behaviors": {
+								"Solid": {
+									"properties": {
+										"enabled": true,
+										"tags": ""
+									}
+								}
+							},
+							"ownData": {
+								"tilemapData": {
+									"width": 78,
+									"height": 8,
+									"max-width": 351,
+									"max-height": 37,
+									"data": "4x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,76x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,34x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,35x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,76x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,11610x0"
+								},
+								"tile-width": 128,
+								"tile-height": 128,
+								"tile-x-offset": 0,
+								"tile-y-offset": 0,
+								"tile-x-spacing": 0,
+								"tile-y-spacing": 0
+							},
+							"world": {
+								"x": 0,
+								"y": 0,
+								"width": 10000,
+								"height": 1080,
+								"originX": 0,
+								"originY": 0,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
 								"zElevation": 0
 							}
 						}
@@ -178,8 +233,8 @@
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
-								"x": 1024,
-								"y": 768,
+								"x": 1152,
+								"y": 896,
 								"width": 128,
 								"height": 192,
 								"originX": 0,
@@ -387,61 +442,6 @@
 							1
 						],
 						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Tilemap",
-					"properties": {
-						"initially-visible": true,
-						"tile-width": 128,
-						"tile-height": 128,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0,
-						"tile-x-drawing-offset": 0,
-						"tile-y-drawing-offset": 0,
-						"drawing-mode": "top-to-right"
-					},
-					"uid": 13,
-					"instanceVariables": {},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						}
-					},
-					"ownData": {
-						"tilemapData": {
-							"width": 78,
-							"height": 8,
-							"max-width": 351,
-							"max-height": 37,
-							"data": "4x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,75x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,35x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,35x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,76x0,1,36x0,2,36x0,1,36x0,2,36x0,1,36x0,2,11610x0"
-						},
-						"tile-width": 128,
-						"tile-height": 128,
-						"tile-x-offset": 0,
-						"tile-y-offset": 0,
-						"tile-x-spacing": 0,
-						"tile-y-spacing": 0
-					},
-					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 10000,
-						"height": 1080,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
 						"zElevation": 0
 					}
 				}

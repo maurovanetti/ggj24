@@ -247,6 +247,32 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Box",
+							"sid": 517699038569388,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 956401534018704
+				}
+			],
+			"sid": 248085820523100
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Collisions",
 			"description": "",
 			"isActiveOnStart": true,
@@ -279,8 +305,27 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
-					"actions": [],
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Box",
+							"sid": 754518890967179,
+							"parameters": {
+								"object": "Panda"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Box",
+							"sid": 721599350933769,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
 					"sid": 280276469849331
 				}
 			],
