@@ -213,8 +213,9 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1",
-			"Hyperuranion"
+			"Common",
+			"Hyperuranion",
+			"Level 1"
 		],
 		"subfolders": []
 	},
@@ -398,5 +399,5 @@
 	},
 	"viewportWidth": 1920,
 	"viewportHeight": 1080,
-	"firstLayout": "Layout 1"
+	"firstLayout": "Common"
 }
