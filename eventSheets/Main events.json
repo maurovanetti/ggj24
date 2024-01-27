@@ -27,11 +27,21 @@
 			"eventType": "variable",
 			"name": "DefaultJumpStrength",
 			"type": "number",
-			"initialValue": "1200",
+			"initialValue": "1400",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 238639515168405
+		},
+		{
+			"eventType": "variable",
+			"name": "LesserJumpStrength",
+			"type": "number",
+			"initialValue": "1000",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 528134578398021
 		},
 		{
 			"eventType": "group",
@@ -366,10 +376,10 @@
 						{
 							"id": "set-jump-strength",
 							"objectClass": "Box",
-							"sid": 249537694467745,
+							"sid": 693328787064979,
 							"behaviorType": "Platform",
 							"parameters": {
-								"jump-strength": "800"
+								"jump-strength": "LesserJumpStrength"
 							}
 						},
 						{
@@ -696,6 +706,15 @@
 							"behaviorType": "Platform",
 							"parameters": {
 								"acceleration": "DefaultAcceleration"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "Box",
+							"sid": 313298778784331,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "DefaultJumpStrength"
 							}
 						}
 					],
