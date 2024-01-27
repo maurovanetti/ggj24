@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Guy",
+					"type": "Box",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -16,7 +16,10 @@
 						"live-preview": false
 					},
 					"uid": 2,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"LastX": 0,
+						"DeltaX": 0
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -24,13 +27,58 @@
 								"acceleration": 1500,
 								"deceleration": 1500,
 								"jump-strength": 800,
-								"gravity": 1500,
+								"gravity": 2500,
 								"max-fall-speed": 1000,
 								"double-jump": true,
 								"jump-sustain": 0,
 								"default-controls": true,
 								"enabled": true
 							}
+						}
+					},
+					"sceneGraphData": {
+						"parent-uid": null,
+						"uid": 2,
+						"children": [
+							{
+								"uid": 5,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": false,
+									"h": false,
+									"a": true,
+									"o": true,
+									"v": true,
+									"d": true,
+									"sm": "normal"
+								}
+							}
+						],
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
 						}
 					},
 					"world": {
@@ -144,6 +192,63 @@
 						],
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Guy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 5,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 2,
+						"uid": 5,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": false,
+							"h": false,
+							"a": true,
+							"o": true,
+							"v": true,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 108,
+						"y": 432,
+						"width": 256,
+						"height": 256,
+						"originX": 0.5,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 815266771769080,
@@ -196,10 +301,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1448,
-						"y": -18,
+						"x": 1449,
+						"y": -62,
 						"width": 425,
-						"height": 223,
+						"height": 491,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -225,8 +330,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1461,
-						"y": 149,
+						"x": 1462,
+						"y": 373,
 						"width": 401,
 						"height": 47,
 						"originX": 0,
@@ -281,6 +386,12 @@
 				"depth": 1
 			},
 			"uid": 87,
+			"instanceVariables": {}
+		},
+		{
+			"type": "ScoringMap",
+			"properties": {},
+			"uid": 3,
 			"instanceVariables": {}
 		}
 	],

@@ -8,8 +8,22 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Arr",
 			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -87,10 +101,13 @@
 	"uniqueId": "vmhqzlfpdef",
 	"objectTypes": {
 		"items": [
-			"Guy",
+			"Box",
 			"Focus",
 			"Keyboard",
-			"Tilemap"
+			"Tilemap",
+			"AJAX",
+			"Guy",
+			"TestTilemap"
 		],
 		"subfolders": [
 			{
@@ -100,7 +117,8 @@
 					"ScoringTable",
 					"ScoringEventArray",
 					"ScoringEventSpawnArea",
-					"ScoreForEvent"
+					"ScoreForEvent",
+					"ScoringMap"
 				],
 				"subfolders": [],
 				"name": "GUI"
@@ -108,7 +126,14 @@
 		]
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"Box",
+				"Guy"
+			]
+		}
+	],
 	"families": {
 		"items": [],
 		"subfolders": []
@@ -210,7 +235,16 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "Scores.json",
+					"type": "application/json",
+					"sid": 862063261833673,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},

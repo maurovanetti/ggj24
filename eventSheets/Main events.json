@@ -49,9 +49,9 @@
 						{
 							"customAction": "New Event",
 							"objectClass": "ScoringTable",
-							"sid": 374927815741917,
+							"sid": 852588585391674,
 							"parameters": [
-								"\"Scoring Event \" & random(100)"
+								"\"Test Event\""
 							]
 						}
 					],
@@ -113,7 +113,7 @@
 							"objectClass": "Focus",
 							"sid": 518819431036832,
 							"parameters": {
-								"y": "Guy.Y"
+								"y": "Box.Y"
 							}
 						}
 					],
@@ -134,7 +134,7 @@
 							"objectClass": "Focus",
 							"sid": 355849936930401,
 							"parameters": {
-								"x": "Guy.X + (ViewportWidth(0) / 3) "
+								"x": "Box.X + (ViewportWidth(0) / 3) "
 							}
 						}
 					],
@@ -145,13 +145,13 @@
 							"conditions": [
 								{
 									"id": "is-on-floor",
-									"objectClass": "Guy",
+									"objectClass": "Box",
 									"sid": 884046343696340,
 									"behaviorType": "Platform"
 								},
 								{
 									"id": "compare-y",
-									"objectClass": "Guy",
+									"objectClass": "Box",
 									"sid": 189951804592461,
 									"parameters": {
 										"comparison": 1,
@@ -177,11 +177,11 @@
 									"conditions": [
 										{
 											"id": "compare-y",
-											"objectClass": "Guy",
-											"sid": 893817597347165,
+											"objectClass": "Box",
+											"sid": 646246516597834,
 											"parameters": {
 												"comparison": 2,
-												"y-co-ordinate": "Focus.Y"
+												"y-co-ordinate": "Focus.Y + 20"
 											}
 										}
 									],
@@ -191,7 +191,7 @@
 											"objectClass": "Focus",
 											"sid": 845780924936206,
 											"parameters": {
-												"y": "Focus.Y + clamp(Guy.Y - Focus.Y, dt * -200, 0)"
+												"y": "Focus.Y + clamp(Box.Y - Focus.Y, dt * -200, 0)"
 											}
 										}
 									],
@@ -215,7 +215,7 @@
 											"parameters": {
 												"tags": "\"adjust\"",
 												"property": "offsetY",
-												"end-value": "Guy.Y",
+												"end-value": "Box.Y",
 												"time": "0.8",
 												"ease": "easeoutbounce",
 												"destroy-on-complete": "no",
@@ -223,6 +223,11 @@
 												"ping-pong": "no",
 												"repeat-count": "1"
 											}
+										},
+										{
+											"customAction": "Ouch",
+											"objectClass": "ScoringTable",
+											"sid": 375421155644885
 										}
 									],
 									"sid": 397167021715285
@@ -233,6 +238,150 @@
 				}
 			],
 			"sid": 675763177620255
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collisions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-by-wall",
+							"objectClass": "Box",
+							"sid": 803367512230534,
+							"behaviorType": "Platform",
+							"parameters": {
+								"side": "left"
+							}
+						},
+						{
+							"id": "is-by-wall",
+							"objectClass": "Box",
+							"sid": 582889043889124,
+							"behaviorType": "Platform",
+							"parameters": {
+								"side": "right"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 481714491544278,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 280276469849331
+				}
+			],
+			"sid": 186776396655804
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Animations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "This event must come first in this group"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Box",
+							"sid": 538835017195920,
+							"parameters": {
+								"instance-variable": "DeltaX",
+								"value": "Box.X - Box.LastX"
+							}
+						}
+					],
+					"sid": 834971193755605
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Box",
+							"sid": 539693176458258,
+							"parameters": {
+								"instance-variable": "DeltaX",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Guy",
+							"sid": 133851715157289,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 494596445232717
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Box",
+							"sid": 745222155385631,
+							"parameters": {
+								"instance-variable": "DeltaX",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Guy",
+							"sid": 702818070560534,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 943773273409452
+				},
+				{
+					"eventType": "comment",
+					"text": "This event must come last in this group"
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Box",
+							"sid": 570730800068072,
+							"parameters": {
+								"instance-variable": "LastX",
+								"value": "Box.X"
+							}
+						}
+					],
+					"sid": 794664155669316
+				}
+			],
+			"sid": 316166508963736
 		}
 	],
 	"sid": 819818898747264

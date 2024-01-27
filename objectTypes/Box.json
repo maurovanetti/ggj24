@@ -1,0 +1,71 @@
+{
+	"name": "Box",
+	"plugin-id": "Sprite",
+	"sid": 484185859877943,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "LastX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 536730995811546
+		},
+		{
+			"name": "DeltaX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 111587789091545
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 458590793918034
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 108,
+						"height": 180,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8341984,
+						"collisionPoly": {
+							"points": [
+								0,
+								1,
+								0,
+								0,
+								1,
+								0,
+								1,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 194624252626969,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

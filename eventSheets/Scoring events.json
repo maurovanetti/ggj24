@@ -2,6 +2,41 @@
 	"name": "Scoring events",
 	"events": [
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 417357403782500
+				}
+			],
+			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 780357320629875,
+					"parameters": {
+						"tag": "\"Scores\"",
+						"file": "Scores.json"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 465175150230941
+				},
+				{
+					"id": "load",
+					"objectClass": "ScoringMap",
+					"sid": 836438559072457,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 908882220079312
+		},
+		{
 			"aceType": "action",
 			"aceName": "New Event",
 			"objectClass": "ScoringTable",
@@ -71,6 +106,16 @@
 			]
 		},
 		{
+			"eventType": "variable",
+			"name": "ScoreChange",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 100633111472916
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -106,12 +151,25 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 733250975896946,
+					"sid": 858248871719574,
 					"parameters": {
 						"object-to-create": "ScoringEventText",
 						"layer": "\"GUI\"",
 						"x": "ScoringEventSpawnArea.X",
-						"y": "ScoringEventSpawnArea.Y",
+						"y": "ScoringEventSpawnArea.Y + 3",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 727897230660807,
+					"parameters": {
+						"object-to-create": "ScoreForEvent",
+						"layer": "\"GUI\"",
+						"x": "ScoringEventSpawnArea.X + ScoringEventSpawnArea.Width",
+						"y": "ScoringEventSpawnArea.Y + 3",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -143,11 +201,45 @@
 					}
 				},
 				{
+					"id": "add-child",
+					"objectClass": "ScoringEvent",
+					"sid": 380157172569679,
+					"parameters": {
+						"child": "ScoreForEvent",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-o": true,
+						"transform-z-elevation": true,
+						"transform-visibility": true,
+						"destroy-with-parent": true
+					}
+				},
+				{
 					"id": "set-text",
 					"objectClass": "ScoringEventText",
 					"sid": 114876523878145,
 					"parameters": {
 						"text": "ScoringEventArray.Front"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 895996472426739,
+					"parameters": {
+						"variable": "ScoreChange",
+						"value": "ScoringMap.GetDefault(str(ScoringEventText.Text), 0)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ScoreForEvent",
+					"sid": 476170329281609,
+					"parameters": {
+						"text": "ScoreChange"
 					}
 				},
 				{
@@ -160,7 +252,96 @@
 					}
 				}
 			],
-			"sid": 767628167298049
+			"sid": 767628167298049,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-text",
+							"objectClass": "ScoreForEvent",
+							"sid": 440050880395925,
+							"parameters": {
+								"text-to-compare": "\"0\"",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ScoreForEvent",
+							"sid": 439853327107061,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 257562910738488
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "ScoreForEvent",
+					"sid": 363767984173254
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 441855361135090,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "ScoreForEvent",
+					"sid": 266323865817142,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"roll\"",
+						"property": "offsetScaleX",
+						"end-value": "1.5",
+						"time": "0.3",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 341150108788350
+		},
+		{
+			"aceType": "action",
+			"aceName": "Ouch",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 744982356115777,
+					"parameters": [
+						"\"Ouch\""
+					]
+				}
+			],
+			"sid": 522901465579890
 		}
 	],
 	"sid": 759224197214942

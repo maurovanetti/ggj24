@@ -172,7 +172,7 @@
 					},
 					"world": {
 						"x": 228,
-						"y": 114,
+						"y": 117,
 						"width": 376,
 						"height": 40,
 						"originX": 0,
@@ -213,7 +213,13 @@
 					},
 					"uid": 89,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
 					"sceneGraphData": {
 						"parent-uid": 39,
 						"uid": 89,
