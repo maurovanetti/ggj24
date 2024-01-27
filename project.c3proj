@@ -135,7 +135,8 @@
 			"TestTilemap",
 			"Tilemap",
 			"Panda",
-			"Abyss"
+			"Abyss",
+			"AltBox"
 		],
 		"subfolders": [
 			{

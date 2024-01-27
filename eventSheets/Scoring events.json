@@ -448,6 +448,30 @@
 		},
 		{
 			"aceType": "action",
+			"aceName": "UselessJump",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 476461063103371,
+					"parameters": [
+						"\"Useless jump\""
+					]
+				}
+			],
+			"sid": 593264146120802
+		},
+		{
+			"aceType": "action",
 			"aceName": "Setup",
 			"objectClass": "ScoringEvent",
 			"functionDescription": "",

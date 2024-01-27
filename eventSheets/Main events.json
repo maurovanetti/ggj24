@@ -398,6 +398,15 @@
 							"parameters": {
 								"control": "right"
 							}
+						},
+						{
+							"id": "set-vector-x",
+							"objectClass": "AltBox",
+							"sid": 638166735289049,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-x": "Box.Platform.VectorX"
+							}
 						}
 					],
 					"sid": 281172518607917
@@ -535,6 +544,22 @@
 								"animation": "\"Jump\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "AltBox",
+							"sid": 561993202161190
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Box",
+							"sid": 993794607676598,
+							"parameters": {
+								"object": "AltBox",
+								"layer": "\"Characters\"",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
 						}
 					],
 					"sid": 993171863874101
@@ -643,35 +668,76 @@
 							"parameters": {
 								"state": "disabled"
 							}
-						},
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 734552841011461,
-							"parameters": {
-								"seconds": "0.3"
-							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "Guy",
-							"sid": 734016611984016,
-							"parameters": {
-								"animation": "\"Walk\"",
-								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-acceleration",
-							"objectClass": "Box",
-							"sid": 742552981084924,
-							"behaviorType": "Platform",
-							"parameters": {
-								"acceleration": "DefaultAcceleration"
-							}
 						}
 					],
-					"sid": 402209092154442
+					"sid": 402209092154442,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Box",
+									"sid": 158996953546959,
+									"parameters": {
+										"object": "AltBox"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "AltBox",
+									"sid": 452240433592780,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"customAction": "UselessJump",
+									"objectClass": "ScoringTable",
+									"sid": 665551237285527
+								}
+							],
+							"sid": 207009674496662
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "AltBox",
+									"sid": 544554371666338
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 202293822899137,
+									"parameters": {
+										"seconds": "0.3"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Guy",
+									"sid": 867227442399366,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-acceleration",
+									"objectClass": "Box",
+									"sid": 869243136160004,
+									"behaviorType": "Platform",
+									"parameters": {
+										"acceleration": "DefaultAcceleration"
+									}
+								}
+							],
+							"sid": 116212773770361
+						}
+					]
 				}
 			],
 			"sid": 316166508963736
