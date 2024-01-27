@@ -313,6 +313,14 @@
 							"parameters": {
 								"object": "Panda"
 							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Panda",
+							"sid": 764534708702443,
+							"parameters": {
+								"animation": "\"Idle\""
+							}
 						}
 					],
 					"actions": [
@@ -324,9 +332,43 @@
 							"parameters": {
 								"control": "jump"
 							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Panda",
+							"sid": 710257214650372,
+							"parameters": {
+								"animation": "\"Angry\"",
+								"from": "beginning"
+							}
 						}
 					],
 					"sid": 280276469849331
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Panda",
+							"sid": 690169457359393,
+							"parameters": {
+								"animation": "\"Angry\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Panda",
+							"sid": 680856301389643,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 921765720910274
 				}
 			],
 			"sid": 186776396655804
@@ -442,6 +484,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Box",
+							"sid": 838894750575959,
+							"parameters": {
+								"instance-variable": "JustJumped",
+								"value": "true"
+							}
+						},
+						{
 							"id": "shake",
 							"objectClass": "Focus",
 							"sid": 307175714552449,
@@ -451,9 +502,108 @@
 								"duration": "0.1",
 								"mode": "reducing-magnitude"
 							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Guy",
+							"sid": 686983658758537,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
 						}
 					],
 					"sid": 993171863874101
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-fall",
+							"objectClass": "Box",
+							"sid": 496265633670305,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Guy",
+							"sid": 388399267956553,
+							"parameters": {
+								"animation": "\"Fall\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Guy",
+							"sid": 137113142631110,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "Guy",
+							"sid": 902939934079759,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"speed": "200"
+							}
+						}
+					],
+					"sid": 604082814228049
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Box",
+							"sid": 435069943213893,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Box",
+							"sid": 908171262229070,
+							"parameters": {
+								"instance-variable": "JustJumped",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Guy",
+							"sid": 828892275215811,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Guy",
+							"sid": 869080118988828,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Guy",
+							"sid": 874699174044306,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 402209092154442
 				}
 			],
 			"sid": 316166508963736
@@ -477,13 +627,42 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 741588280995075,
+					"children": [
 						{
-							"callFunction": "Game Over",
-							"sid": 690144878637204
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Box",
+									"sid": 207143318094205,
+									"parameters": {
+										"instance-variable": "JustJumped"
+									}
+								}
+							],
+							"actions": [
+								{
+									"customAction": "Ouch",
+									"objectClass": "ScoringTable",
+									"sid": 410047851402957
+								}
+							],
+							"sid": 729193540170669
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"callFunction": "Game Over",
+									"sid": 491748846101585
+								}
+							],
+							"sid": 157967816595098
 						}
-					],
-					"sid": 741588280995075
+					]
 				}
 			],
 			"sid": 623056505591580

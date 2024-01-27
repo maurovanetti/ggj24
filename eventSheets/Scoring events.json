@@ -86,9 +86,9 @@
 						{
 							"id": "pick-all",
 							"objectClass": "System",
-							"sid": 385420220069437,
+							"sid": 964724652921518,
 							"parameters": {
-								"object": "PositiveScoringEvent"
+								"object": "AbstractScoringEvent"
 							}
 						}
 					],
@@ -114,6 +114,21 @@
 					"sid": 323168345571975
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 631578987039383,
+					"parameters": {
+						"interval-seconds": "0.5"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 774296604357683
 		},
 		{
 			"eventType": "variable",

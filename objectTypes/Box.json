@@ -17,6 +17,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 111587789091545
+		},
+		{
+			"name": "JustJumped",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 615118840682244
 		}
 	],
 	"behaviorTypes": [
