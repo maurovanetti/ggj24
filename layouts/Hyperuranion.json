@@ -1,5 +1,5 @@
 {
-	"name": "Hyperuraneum",
+	"name": "Hyperuranion",
 	"layers": [
 		{
 			"name": "Layer 0",
@@ -53,6 +53,21 @@
 									"a": true,
 									"o": true,
 									"v": true,
+									"d": true,
+									"sm": "normal"
+								}
+							},
+							{
+								"uid": 89,
+								"flags": {
+									"x": true,
+									"y": true,
+									"z": true,
+									"w": true,
+									"h": true,
+									"a": true,
+									"o": false,
+									"v": false,
 									"d": true,
 									"sm": "normal"
 								}
@@ -171,6 +186,78 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "ScoreForEvent",
+					"properties": {
+						"text": "50",
+						"enable-bbcode": true,
+						"font": "Buran USSR",
+						"size": 25,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.984313725490196,
+							1,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "top-right",
+						"read-aloud": false
+					},
+					"uid": 89,
+					"instanceVariables": {},
+					"behaviors": {},
+					"sceneGraphData": {
+						"parent-uid": 39,
+						"uid": 89,
+						"flags": {
+							"x": true,
+							"y": true,
+							"z": true,
+							"w": true,
+							"h": true,
+							"a": true,
+							"o": false,
+							"v": false,
+							"d": true,
+							"sm": "normal"
+						},
+						"preview": {
+							"transformX": 0,
+							"transformY": 0,
+							"transformZElevation": 0,
+							"transformW": 0,
+							"transformH": 0,
+							"transformA": 0,
+							"transformSX": 0,
+							"transformSY": 0,
+							"transformO": 0,
+							"previewSceneGraph": false
+						}
+					},
+					"world": {
+						"x": 617,
+						"y": 110,
+						"width": 63,
+						"height": 46,
+						"originX": 1,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 449736934054648,
@@ -205,8 +292,8 @@
 	"sid": 437289230514669,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 2560,
-	"height": 1440,
+	"width": 1920,
+	"height": 1080,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,

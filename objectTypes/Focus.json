@@ -6,14 +6,14 @@
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 854225619804128
-		},
-		{
 			"behaviorId": "Tween",
 			"name": "Tween",
 			"sid": 844795109424344
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 809707764712078
 		}
 	],
 	"effectTypes": [],

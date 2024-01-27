@@ -42,6 +42,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Fade",
 			"name": "Fade",
@@ -64,13 +71,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "jumpthru",
-			"name": "Jump-thru",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
@@ -88,10 +88,9 @@
 	"objectTypes": {
 		"items": [
 			"Guy",
-			"Platform",
 			"Focus",
 			"Keyboard",
-			"Ramp"
+			"Tilemap"
 		],
 		"subfolders": [
 			{
@@ -100,7 +99,8 @@
 					"ScoringEventText",
 					"ScoringTable",
 					"ScoringEventArray",
-					"ScoringEventSpawnArea"
+					"ScoringEventSpawnArea",
+					"ScoreForEvent"
 				],
 				"subfolders": [],
 				"name": "GUI"
@@ -116,7 +116,7 @@
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"Hyperuraneum"
+			"Hyperuranion"
 		],
 		"subfolders": []
 	},
@@ -279,7 +279,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 1280,
-	"viewportHeight": 720,
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
 	"firstLayout": "Layout 1"
 }
