@@ -457,6 +457,88 @@
 				}
 			],
 			"sid": 316166508963736
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Game Over",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Box",
+							"sid": 537058501952452,
+							"parameters": {
+								"object": "Abyss"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Game Over",
+							"sid": 690144878637204
+						}
+					],
+					"sid": 741588280995075
+				}
+			],
+			"sid": 623056505591580
+		},
+		{
+			"functionName": "Game Over",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "GameOver",
+					"objectClass": "ScoringTable",
+					"sid": 258880735530198
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "Box",
+					"sid": 545056127639191,
+					"behaviorType": "Platform",
+					"parameters": {
+						"max-speed": "0"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Guy",
+					"sid": 340645320880784,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 887240447100172,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 477510875533646
+				}
+			],
+			"sid": 971759594944908
 		}
 	],
 	"sid": 819818898747264

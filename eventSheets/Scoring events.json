@@ -2,6 +2,16 @@
 	"name": "Scoring events",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "GameOverMessage",
+			"type": "string",
+			"initialValue": "GAME OVER",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 848888260289422
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -78,20 +88,20 @@
 							"objectClass": "System",
 							"sid": 385420220069437,
 							"parameters": {
-								"object": "ScoringEvent"
+								"object": "PositiveScoringEvent"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "tween-one-property",
-							"objectClass": "ScoringEvent",
+							"objectClass": "PositiveScoringEvent",
 							"sid": 711557099905008,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"scroll up\"",
 								"property": "offsetY",
-								"end-value": "ScoringEvent.Y - ScoringEvent.Height - 10",
+								"end-value": "PositiveScoringEvent.Y - PositiveScoringEvent.Height - 10",
 								"time": "0.5",
 								"ease": "easeoutbounce",
 								"destroy-on-complete": "no",
@@ -138,20 +148,7 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 287859763850479,
-					"parameters": {
-						"object-to-create": "ScoringEvent",
-						"layer": "\"GUI\"",
-						"x": "ScoringEventSpawnArea.X",
-						"y": "ScoringEventSpawnArea.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 858248871719574,
+					"sid": 786637904035780,
 					"parameters": {
 						"object-to-create": "ScoringEventText",
 						"layer": "\"GUI\"",
@@ -164,63 +161,20 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 727897230660807,
+					"sid": 346014194247574,
 					"parameters": {
 						"object-to-create": "ScoreForEvent",
 						"layer": "\"GUI\"",
 						"x": "ScoringEventSpawnArea.X + ScoringEventSpawnArea.Width",
-						"y": "ScoringEventSpawnArea.Y + 3",
+						"y": "ScoringEventSpawnArea.Y + 10",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
 				},
 				{
-					"id": "set-size",
-					"objectClass": "ScoringEventText",
-					"sid": 811163798786731,
-					"parameters": {
-						"width": "ScoringEvent.Width",
-						"height": "ScoringEvent.Height"
-					}
-				},
-				{
-					"id": "add-child",
-					"objectClass": "ScoringEvent",
-					"sid": 737912616575013,
-					"parameters": {
-						"child": "ScoringEventText",
-						"transform-x": true,
-						"transform-y": true,
-						"transform-w": true,
-						"transform-h": true,
-						"transform-a": true,
-						"transform-o": true,
-						"transform-z-elevation": true,
-						"transform-visibility": true,
-						"destroy-with-parent": true
-					}
-				},
-				{
-					"id": "add-child",
-					"objectClass": "ScoringEvent",
-					"sid": 380157172569679,
-					"parameters": {
-						"child": "ScoreForEvent",
-						"transform-x": true,
-						"transform-y": true,
-						"transform-w": false,
-						"transform-h": false,
-						"transform-a": false,
-						"transform-o": true,
-						"transform-z-elevation": true,
-						"transform-visibility": true,
-						"destroy-with-parent": true
-					}
-				},
-				{
 					"id": "set-text",
 					"objectClass": "ScoringEventText",
-					"sid": 114876523878145,
+					"sid": 387344967112311,
 					"parameters": {
 						"text": "ScoringEventArray.Front"
 					}
@@ -228,7 +182,7 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 895996472426739,
+					"sid": 530862482066670,
 					"parameters": {
 						"variable": "ScoreChange",
 						"value": "ScoringMap.GetDefault(str(ScoringEventText.Text), 0)"
@@ -237,7 +191,7 @@
 				{
 					"id": "set-text",
 					"objectClass": "ScoreForEvent",
-					"sid": 476170329281609,
+					"sid": 769678764577628,
 					"parameters": {
 						"text": "ScoreChange"
 					}
@@ -245,7 +199,7 @@
 				{
 					"id": "pop",
 					"objectClass": "ScoringEventArray",
-					"sid": 331540986269444,
+					"sid": 562327009334170,
 					"parameters": {
 						"where": "front",
 						"axis": "y"
@@ -258,12 +212,92 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-text",
-							"objectClass": "ScoreForEvent",
-							"sid": 440050880395925,
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 136385707902549,
 							"parameters": {
-								"text-to-compare": "\"0\"",
-								"case-sensitivity": "ignore-case"
+								"variable": "ScoreChange",
+								"comparison": 5,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 274795824141712,
+							"parameters": {
+								"first-value": "ScoringEventText.Text",
+								"comparison": 1,
+								"second-value": "GameOverMessage"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 140256620256422,
+							"parameters": {
+								"object-to-create": "PositiveScoringEvent",
+								"layer": "\"GUI\"",
+								"x": "ScoringEventSpawnArea.X",
+								"y": "ScoringEventSpawnArea.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"customAction": "Setup",
+							"objectClass": "PositiveScoringEvent",
+							"customActionObjectClass": "AbstractScoringEvent",
+							"sid": 351078968881503
+						}
+					],
+					"sid": 395660523133412
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 131724228633815
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 441393017631158,
+							"parameters": {
+								"object-to-create": "NegativeScoringEvent",
+								"layer": "\"GUI\"",
+								"x": "ScoringEventSpawnArea.X",
+								"y": "ScoringEventSpawnArea.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"customAction": "Setup",
+							"objectClass": "NegativeScoringEvent",
+							"customActionObjectClass": "AbstractScoringEvent",
+							"sid": 551025193347001
+						}
+					],
+					"sid": 815861593222366
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 748252969237919,
+							"parameters": {
+								"variable": "ScoreChange",
+								"comparison": 0,
+								"value": "0"
 							}
 						}
 					],
@@ -342,6 +376,103 @@
 				}
 			],
 			"sid": 522901465579890
+		},
+		{
+			"aceType": "action",
+			"aceName": "GameOver",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 516362942395751,
+					"parameters": [
+						"GameOverMessage"
+					]
+				}
+			],
+			"sid": 402543542547180
+		},
+		{
+			"aceType": "action",
+			"aceName": "Setup",
+			"objectClass": "AbstractScoringEvent",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": true,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "move-to-bottom",
+					"objectClass": "AbstractScoringEvent",
+					"sid": 737202142109750
+				},
+				{
+					"id": "set-size",
+					"objectClass": "AbstractScoringEvent",
+					"sid": 421940124108073,
+					"parameters": {
+						"width": "ScoringEventSpawnArea.Width",
+						"height": "ScoringEventSpawnArea.Height"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "ScoringEventText",
+					"sid": 134089978390505,
+					"parameters": {
+						"width": "PositiveScoringEvent.Width",
+						"height": "PositiveScoringEvent.Height"
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "AbstractScoringEvent",
+					"sid": 899762989445508,
+					"parameters": {
+						"child": "ScoringEventText",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": true,
+						"transform-h": true,
+						"transform-a": true,
+						"transform-o": true,
+						"transform-z-elevation": true,
+						"transform-visibility": true,
+						"destroy-with-parent": true
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "AbstractScoringEvent",
+					"sid": 902923301346158,
+					"parameters": {
+						"child": "ScoreForEvent",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-o": true,
+						"transform-z-elevation": true,
+						"transform-visibility": true,
+						"destroy-with-parent": true
+					}
+				}
+			],
+			"sid": 145396437345370
 		}
 	],
 	"sid": 759224197214942

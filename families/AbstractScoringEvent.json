@@ -1,0 +1,12 @@
+{
+	"name": "AbstractScoringEvent",
+	"plugin-id": "NinePatch",
+	"sid": 692801141626017,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"PositiveScoringEvent",
+		"NegativeScoringEvent"
+	]
+}

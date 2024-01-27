@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "ScoringEvent",
+					"type": "PositiveScoringEvent",
 					"properties": {
 						"left-margin": 4,
 						"right-margin": 4,
@@ -101,8 +101,8 @@
 					"world": {
 						"x": 217,
 						"y": 109,
-						"width": 402,
-						"height": 47,
+						"width": 572,
+						"height": 69,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -121,7 +121,7 @@
 						"text": "Twist of Fate",
 						"enable-bbcode": true,
 						"font": "Buran USSR",
-						"size": 25,
+						"size": 40,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -171,10 +171,10 @@
 						}
 					},
 					"world": {
-						"x": 228,
-						"y": 117,
-						"width": 376,
-						"height": 40,
+						"x": 219,
+						"y": 115,
+						"width": 568,
+						"height": 68,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -193,7 +193,7 @@
 						"text": "50",
 						"enable-bbcode": true,
 						"font": "Buran USSR",
-						"size": 25,
+						"size": 40,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -249,8 +249,8 @@
 						}
 					},
 					"world": {
-						"x": 617,
-						"y": 110,
+						"x": 786,
+						"y": 124,
 						"width": 63,
 						"height": 46,
 						"originX": 1,
