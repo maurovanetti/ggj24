@@ -4,18 +4,7 @@
 	"sid": 373285832082951,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Tween",
-			"name": "Tween",
-			"sid": 553519169384515
-		},
-		{
-			"behaviorId": "Fade",
-			"name": "Fade",
-			"sid": 298480219407315
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"image": {
 		"width": 72,

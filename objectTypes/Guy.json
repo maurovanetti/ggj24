@@ -348,6 +348,46 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 256,
+						"height": 256,
+						"originX": 0.4921875,
+						"originY": 0.7265625,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1365395,
+						"collisionPoly": {
+							"points": [
+								0.6328125,
+								0.55859375,
+								0.77734375,
+								0.5859375,
+								0.83984375,
+								0.6328125,
+								0.91796875,
+								0.99609375,
+								0.28125,
+								0.984375,
+								0.28515625,
+								0.69921875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 130153174431397,
+				"name": "Land",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 1
 			}
 		],
 		"subfolders": []

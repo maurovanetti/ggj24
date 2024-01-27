@@ -78,42 +78,7 @@
 					}
 				}
 			],
-			"sid": 686372778323697,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-all",
-							"objectClass": "System",
-							"sid": 964724652921518,
-							"parameters": {
-								"object": "AbstractScoringEvent"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "tween-one-property",
-							"objectClass": "PositiveScoringEvent",
-							"sid": 711557099905008,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"scroll up\"",
-								"property": "offsetY",
-								"end-value": "PositiveScoringEvent.Y - PositiveScoringEvent.Height - 10",
-								"time": "0.5",
-								"ease": "easeoutbounce",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
-							}
-						}
-					],
-					"sid": 323168345571975
-				}
-			]
+			"sid": 686372778323697
 		},
 		{
 			"eventType": "block",
@@ -125,10 +90,51 @@
 					"parameters": {
 						"interval-seconds": "0.5"
 					}
+				},
+				{
+					"id": "is-empty",
+					"objectClass": "ScoringEventArray",
+					"sid": 812246875188695,
+					"isInverted": true
 				}
 			],
 			"actions": [],
-			"sid": 774296604357683
+			"sid": 774296604357683,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 950465613801779,
+							"parameters": {
+								"object": "ScoringEvent"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "ScoringEvent",
+							"sid": 438645819873303,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"scroll up\"",
+								"property": "offsetY",
+								"end-value": "ScoringEvent.Y - ScoringEvent.Height - 10",
+								"time": "0.3",
+								"ease": "easeoutbounce",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 126204705795981
+				}
+			]
 		},
 		{
 			"eventType": "variable",
@@ -264,7 +270,7 @@
 						{
 							"customAction": "Setup",
 							"objectClass": "PositiveScoringEvent",
-							"customActionObjectClass": "AbstractScoringEvent",
+							"customActionObjectClass": "ScoringEvent",
 							"sid": 351078968881503
 						}
 					],
@@ -296,7 +302,7 @@
 						{
 							"customAction": "Setup",
 							"objectClass": "NegativeScoringEvent",
-							"customActionObjectClass": "AbstractScoringEvent",
+							"customActionObjectClass": "ScoringEvent",
 							"sid": 551025193347001
 						}
 					],
@@ -394,6 +400,30 @@
 		},
 		{
 			"aceType": "action",
+			"aceName": "LeapOfFaith",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 521841646698092,
+					"parameters": [
+						"\"Leap of faith\""
+					]
+				}
+			],
+			"sid": 779242612196034
+		},
+		{
+			"aceType": "action",
 			"aceName": "GameOver",
 			"objectClass": "ScoringTable",
 			"functionDescription": "",
@@ -419,7 +449,7 @@
 		{
 			"aceType": "action",
 			"aceName": "Setup",
-			"objectClass": "AbstractScoringEvent",
+			"objectClass": "ScoringEvent",
 			"functionDescription": "",
 			"functionCategory": "",
 			"functionReturnType": "none",
@@ -431,12 +461,12 @@
 			"actions": [
 				{
 					"id": "move-to-bottom",
-					"objectClass": "AbstractScoringEvent",
+					"objectClass": "ScoringEvent",
 					"sid": 737202142109750
 				},
 				{
 					"id": "set-size",
-					"objectClass": "AbstractScoringEvent",
+					"objectClass": "ScoringEvent",
 					"sid": 421940124108073,
 					"parameters": {
 						"width": "ScoringEventSpawnArea.Width",
@@ -454,7 +484,7 @@
 				},
 				{
 					"id": "add-child",
-					"objectClass": "AbstractScoringEvent",
+					"objectClass": "ScoringEvent",
 					"sid": 899762989445508,
 					"parameters": {
 						"child": "ScoringEventText",
@@ -471,7 +501,7 @@
 				},
 				{
 					"id": "add-child",
-					"objectClass": "AbstractScoringEvent",
+					"objectClass": "ScoringEvent",
 					"sid": 902923301346158,
 					"parameters": {
 						"child": "ScoreForEvent",

@@ -186,7 +186,7 @@
 	"families": {
 		"items": [
 			"Card",
-			"AbstractScoringEvent"
+			"ScoringEvent"
 		],
 		"subfolders": []
 	},

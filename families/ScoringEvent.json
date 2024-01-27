@@ -1,0 +1,23 @@
+{
+	"name": "ScoringEvent",
+	"plugin-id": "NinePatch",
+	"sid": 692801141626017,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 283857736084009
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 917814415580864
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"PositiveScoringEvent",
+		"NegativeScoringEvent"
+	]
+}

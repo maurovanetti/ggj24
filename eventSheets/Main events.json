@@ -247,32 +247,6 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Movement",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "simulate-control",
-							"objectClass": "Box",
-							"sid": 517699038569388,
-							"behaviorType": "Platform",
-							"parameters": {
-								"control": "right"
-							}
-						}
-					],
-					"sid": 956401534018704
-				}
-			],
-			"sid": 248085820523100
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
 			"title": "Collisions",
 			"description": "",
 			"isActiveOnStart": true,
@@ -381,96 +355,146 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "comment",
-					"text": "This event must come first in this group"
+					"eventType": "variable",
+					"name": "DefaultAcceleration",
+					"type": "number",
+					"initialValue": "1500",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 428923446448285
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 477040879765778
+						}
+					],
+					"actions": [
+						{
+							"id": "set-acceleration",
+							"objectClass": "Box",
+							"sid": 255488661474538,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "DefaultAcceleration"
+							}
+						}
+					],
+					"sid": 776989112249136
 				},
 				{
 					"eventType": "block",
 					"conditions": [],
 					"actions": [
 						{
-							"id": "set-instvar-value",
+							"id": "simulate-control",
 							"objectClass": "Box",
-							"sid": 538835017195920,
+							"sid": 830943695698848,
+							"behaviorType": "Platform",
 							"parameters": {
-								"instance-variable": "DeltaX",
-								"value": "Box.X - Box.LastX"
+								"control": "right"
 							}
 						}
 					],
-					"sid": 834971193755605
+					"sid": 281172518607917
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "Mirroring",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "compare-instance-variable",
-							"objectClass": "Box",
-							"sid": 539693176458258,
-							"parameters": {
-								"instance-variable": "DeltaX",
-								"comparison": 4,
-								"value": "0"
-							}
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Box",
+									"sid": 292538067797479,
+									"parameters": {
+										"instance-variable": "DeltaX",
+										"value": "Box.X - Box.LastX"
+									}
+								}
+							],
+							"sid": 729124513323817
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Box",
+									"sid": 670319786816570,
+									"parameters": {
+										"instance-variable": "DeltaX",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Guy",
+									"sid": 822888774821578,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 615351923037124
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Box",
+									"sid": 286064975675828,
+									"parameters": {
+										"instance-variable": "DeltaX",
+										"comparison": 2,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-mirrored",
+									"objectClass": "Guy",
+									"sid": 179299540040134,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 412660816758472
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Box",
+									"sid": 729316177638264,
+									"parameters": {
+										"instance-variable": "LastX",
+										"value": "Box.X"
+									}
+								}
+							],
+							"sid": 568193303008862
 						}
 					],
-					"actions": [
-						{
-							"id": "set-mirrored",
-							"objectClass": "Guy",
-							"sid": 133851715157289,
-							"parameters": {
-								"state": "not-mirrored"
-							}
-						}
-					],
-					"sid": 494596445232717
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-instance-variable",
-							"objectClass": "Box",
-							"sid": 745222155385631,
-							"parameters": {
-								"instance-variable": "DeltaX",
-								"comparison": 2,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-mirrored",
-							"objectClass": "Guy",
-							"sid": 702818070560534,
-							"parameters": {
-								"state": "mirrored"
-							}
-						}
-					],
-					"sid": 943773273409452
-				},
-				{
-					"eventType": "comment",
-					"text": "This event must come last in this group"
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
-					"actions": [
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Box",
-							"sid": 570730800068072,
-							"parameters": {
-								"instance-variable": "LastX",
-								"value": "Box.X"
-							}
-						}
-					],
-					"sid": 794664155669316
+					"sid": 898159491276483
 				},
 				{
 					"eventType": "block",
@@ -579,9 +603,9 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Guy",
-							"sid": 828892275215811,
+							"sid": 870076323798680,
 							"parameters": {
-								"animation": "\"Walk\"",
+								"animation": "\"Land\"",
 								"from": "beginning"
 							}
 						},
@@ -594,12 +618,56 @@
 							}
 						},
 						{
+							"id": "set-vector-x",
+							"objectClass": "Box",
+							"sid": 107303464872595,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-x": "0"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Box",
+							"sid": 624074272307298,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "0"
+							}
+						},
+						{
 							"id": "set-enabled",
 							"objectClass": "Guy",
 							"sid": 874699174044306,
 							"behaviorType": "Rotate",
 							"parameters": {
 								"state": "disabled"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 734552841011461,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Guy",
+							"sid": 734016611984016,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Box",
+							"sid": 742552981084924,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "DefaultAcceleration"
 							}
 						}
 					],
@@ -644,9 +712,9 @@
 							],
 							"actions": [
 								{
-									"customAction": "Ouch",
+									"customAction": "LeapOfFaith",
 									"objectClass": "ScoringTable",
-									"sid": 410047851402957
+									"sid": 821639969238588
 								}
 							],
 							"sid": 729193540170669

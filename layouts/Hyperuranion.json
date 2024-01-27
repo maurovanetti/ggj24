@@ -22,11 +22,6 @@
 					"uid": 39,
 					"instanceVariables": {},
 					"behaviors": {
-						"Tween": {
-							"properties": {
-								"enabled": true
-							}
-						},
 						"Fade": {
 							"properties": {
 								"fade-in-time": 0.5,
@@ -35,6 +30,11 @@
 								"destroy": false,
 								"enabled": true,
 								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
 							}
 						}
 					},
@@ -239,8 +239,8 @@
 							"transformX": 0,
 							"transformY": 0,
 							"transformZElevation": 0,
-							"transformW": 0,
-							"transformH": 0,
+							"transformW": 2.220446049250313e-16,
+							"transformH": 2.220446049250313e-16,
 							"transformA": 0,
 							"transformSX": 0,
 							"transformSY": 0,
