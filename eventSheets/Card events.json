@@ -35,18 +35,60 @@
 								"instance-variable": "Available",
 								"value": "false"
 							}
-						},
-						{
-							"id": "request-project-file",
-							"objectClass": "AJAX",
-							"sid": 524026707029497,
-							"parameters": {
-								"tag": "\"Deck\"",
-								"file": "Deck.json"
-							}
 						}
 					],
-					"sid": 131067983032678
+					"sid": 131067983032678,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 576206975491553,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Level 1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "request-project-file",
+									"objectClass": "AJAX",
+									"sid": 156042526008844,
+									"parameters": {
+										"tag": "\"Deck\"",
+										"file": "Deck1.json"
+									}
+								}
+							],
+							"sid": 277170886254106
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 182430070153914
+								}
+							],
+							"actions": [
+								{
+									"id": "request-project-file",
+									"objectClass": "AJAX",
+									"sid": 249758516012936,
+									"parameters": {
+										"tag": "\"Deck\"",
+										"file": "Deck0.json"
+									}
+								}
+							],
+							"sid": 697254889748534
+						}
+					]
 				},
 				{
 					"eventType": "block",

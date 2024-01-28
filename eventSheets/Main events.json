@@ -1347,6 +1347,60 @@
 				}
 			],
 			"sid": 623056505591580
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Automata",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame-tag",
+							"objectClass": "Cannon",
+							"sid": 137298598945550,
+							"parameters": {
+								"comparison": 0,
+								"tag": "\"Boom\""
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 188030433832205
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Cannon",
+							"sid": 532713999896583,
+							"parameters": {
+								"object": "Bomb",
+								"layer": "\"Characters\"",
+								"image-point": "\"Mouth\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "apply-impulse-at-angle",
+							"objectClass": "Bomb",
+							"sid": 999252963472708,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse": "25",
+								"angle": "-45",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 772595591354519
+				}
+			],
+			"sid": 779305399672281
 		}
 	],
 	"sid": 819818898747264

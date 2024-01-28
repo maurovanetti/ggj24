@@ -99,6 +99,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -168,7 +175,8 @@
 						"items": [
 							"PandaCard",
 							"CatCard",
-							"DeckArray"
+							"DeckArray",
+							"FishCard"
 						],
 						"subfolders": [],
 						"name": "Cards"
@@ -188,7 +196,9 @@
 			{
 				"items": [
 					"Cat",
-					"Panda"
+					"Panda",
+					"Cannon",
+					"Bomb"
 				],
 				"subfolders": [],
 				"name": "Card effects"
@@ -322,9 +332,33 @@
 					}
 				},
 				{
-					"name": "Deck.json",
+					"name": "Deck1.json",
 					"type": "application/json",
 					"sid": 407105012607628,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck2.json",
+					"type": "application/json",
+					"sid": 841695182114804,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck3.json",
+					"type": "application/json",
+					"sid": 797712589491330,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck0.json",
+					"type": "application/json",
+					"sid": 892298518059435,
 					"file-info": {
 						"purpose": "none"
 					}

@@ -1,0 +1,30 @@
+{
+    "c2array": true,
+    "size": [
+        1,
+        6,
+        1
+    ],
+    "data": [
+        [
+            [
+                "CatCard"
+            ],
+            [
+                "PandaCard"
+            ],
+            [
+                "FishCard"
+            ],
+            [
+                "FishCard"
+            ],
+            [
+                "PandaCard"
+            ],
+            [
+                "CatCard"
+            ]
+        ]
+    ]
+}
