@@ -39,14 +39,14 @@
 			{
 				"frames": [
 					{
-						"width": 80,
+						"width": 64,
 						"height": 180,
 						"originX": 0.5,
 						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4993913,
+						"imageSpriteId": 2315823,
 						"collisionPoly": {
 							"points": [
 								0,

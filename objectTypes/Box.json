@@ -31,6 +31,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 956600050527153
+		},
+		{
+			"name": "OnFire",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 419039253281424
 		}
 	],
 	"behaviorTypes": [

@@ -86,10 +86,10 @@
 								{
 									"id": "request-project-file",
 									"objectClass": "AJAX",
-									"sid": 156042526008844,
+									"sid": 132441415478798,
 									"parameters": {
 										"tag": "\"Deck\"",
-										"file": "Deck1.json"
+										"file": "Deck2.json"
 									}
 								}
 							],
@@ -603,7 +603,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Time Scale",
+			"title": "Slow Motion",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -619,11 +619,12 @@
 					],
 					"actions": [
 						{
-							"id": "set-time-scale",
+							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 241122990708793,
+							"sid": 165306423744231,
 							"parameters": {
-								"time-scale": "0.2"
+								"variable": "SlowMotion",
+								"value": "true"
 							}
 						}
 					],
@@ -649,11 +650,12 @@
 							}
 						},
 						{
-							"id": "set-time-scale",
+							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 299603960031476,
+							"sid": 589213323976389,
 							"parameters": {
-								"time-scale": "1"
+								"variable": "SlowMotion",
+								"value": "false"
 							}
 						}
 					],

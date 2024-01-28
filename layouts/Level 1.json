@@ -438,7 +438,8 @@
 								"LastX": 0,
 								"DeltaX": 0,
 								"JustJumped": false,
-								"Rightward": true
+								"Rightward": true,
+								"OnFire": false
 							},
 							"behaviors": {
 								"Platform": {
@@ -1000,7 +1001,7 @@
 							"type": "Start",
 							"properties": {
 								"initially-visible": false,
-								"initial-animation": "In Use",
+								"initial-animation": "Not In Use",
 								"initial-frame": 0,
 								"enable-collisions": true,
 								"live-preview": false
@@ -1013,6 +1014,37 @@
 							"world": {
 								"x": 4000,
 								"y": 1792,
+								"width": 116,
+								"height": 119,
+								"originX": 0.4396551724137931,
+								"originY": 0.4369747899159664,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Start",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "In Use",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 116,
+							"instanceVariables": {
+								"SkipCards": 0
+							},
+							"behaviors": {},
+							"world": {
+								"x": 64,
+								"y": 1536,
 								"width": 116,
 								"height": 119,
 								"originX": 0.4396551724137931,
@@ -1404,8 +1436,15 @@
 								"seams": "overlap"
 							},
 							"uid": 72,
-							"instanceVariables": {},
-							"behaviors": {},
+							"instanceVariables": {
+								"BoredomFirstInterval": 10,
+								"BoredomInterval": 7.5
+							},
+							"behaviors": {
+								"Timer": {
+									"properties": {}
+								}
+							},
 							"world": {
 								"x": 555,
 								"y": -163,

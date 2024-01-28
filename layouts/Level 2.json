@@ -438,7 +438,8 @@
 								"LastX": 0,
 								"DeltaX": 0,
 								"JustJumped": false,
-								"Rightward": true
+								"Rightward": true,
+								"OnFire": false
 							},
 							"behaviors": {
 								"Platform": {
@@ -1168,8 +1169,15 @@
 								"seams": "overlap"
 							},
 							"uid": 102,
-							"instanceVariables": {},
-							"behaviors": {},
+							"instanceVariables": {
+								"BoredomFirstInterval": 10,
+								"BoredomInterval": 7.5
+							},
+							"behaviors": {
+								"Timer": {
+									"properties": {}
+								}
+							},
 							"world": {
 								"x": 555,
 								"y": -163,

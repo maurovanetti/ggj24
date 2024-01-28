@@ -319,7 +319,7 @@
 				{
 					"type": "AltBox",
 					"properties": {
-						"initially-visible": false,
+						"initially-visible": true,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -350,7 +350,7 @@
 					"world": {
 						"x": 911,
 						"y": 298,
-						"width": 80,
+						"width": 64,
 						"height": 180,
 						"originX": 0.5,
 						"originY": 1,
@@ -494,12 +494,63 @@
 						}
 					},
 					"world": {
-						"x": 825,
-						"y": 419,
+						"x": 931,
+						"y": 467,
 						"width": 80,
 						"height": 114,
 						"originX": 0.5875,
 						"originY": 0.6403508771929824,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "DogCard",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 114,
+					"instanceVariables": {
+						"OriginalX": 0,
+						"OriginalY": 0,
+						"CardSpawnAreaUID": -1,
+						"Effect": "Dog"
+					},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0.1,
+								"destroy": true,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 763,
+						"y": 435,
+						"width": 128,
+						"height": 192,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

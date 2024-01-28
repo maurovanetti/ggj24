@@ -316,7 +316,8 @@
 								"LastX": 0,
 								"DeltaX": 0,
 								"JustJumped": false,
-								"Rightward": true
+								"Rightward": true,
+								"OnFire": false
 							},
 							"behaviors": {
 								"Platform": {
@@ -506,6 +507,35 @@
 								"height": 256,
 								"originX": 0.5,
 								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Fire",
+							"properties": {
+								"initially-visible": false,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 117,
+							"instanceVariables": {},
+							"behaviors": {},
+							"world": {
+								"x": 31.732811225425763,
+								"y": 455.0581169267768,
+								"width": 115,
+								"height": 108,
+								"originX": 0.8782608695652174,
+								"originY": 0.5185185185185185,
 								"color": [
 									1,
 									1,

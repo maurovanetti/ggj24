@@ -15,6 +15,26 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "DefaultMaxSpeed",
+			"type": "number",
+			"initialValue": "350",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 629118523963290
+		},
+		{
+			"eventType": "variable",
+			"name": "HigherMaxSpeed",
+			"type": "number",
+			"initialValue": "1050",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 912876283382397
+		},
+		{
+			"eventType": "variable",
 			"name": "DefaultAcceleration",
 			"type": "number",
 			"initialValue": "1500",
@@ -35,7 +55,27 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "LesserJumpStrength",
+			"name": "SlowMotion",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 837886221049221
+		},
+		{
+			"eventType": "variable",
+			"name": "BaseTimeScale",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 519383110728474
+		},
+		{
+			"eventType": "variable",
+			"name": "LowerJumpStrength",
 			"type": "number",
 			"initialValue": "1000",
 			"comment": "",
@@ -437,7 +477,7 @@
 							"sid": 693328787064979,
 							"behaviorType": "Platform",
 							"parameters": {
-								"jump-strength": "LesserJumpStrength"
+								"jump-strength": "LowerJumpStrength"
 							}
 						},
 						{
@@ -664,11 +704,6 @@
 							}
 						},
 						{
-							"customAction": "Ouch",
-							"objectClass": "ScoringTable",
-							"sid": 285469996899215
-						},
-						{
 							"id": "set-animation",
 							"objectClass": "Guy",
 							"sid": 167293145676897,
@@ -716,6 +751,54 @@
 								}
 							],
 							"sid": 382176655052126
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Box",
+									"sid": 178716415045362,
+									"parameters": {
+										"instance-variable": "OnFire"
+									}
+								}
+							],
+							"actions": [
+								{
+									"customAction": "DumbRush",
+									"objectClass": "ScoringTable",
+									"sid": 718006306452983
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Box",
+									"sid": 765833714629770,
+									"parameters": {
+										"instance-variable": "OnFire",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 606496837094477
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 436340591233104
+								}
+							],
+							"actions": [
+								{
+									"customAction": "Ouch",
+									"objectClass": "ScoringTable",
+									"sid": 377617774062120
+								}
+							],
+							"sid": 228071442427352
 						}
 					]
 				},
@@ -736,6 +819,36 @@
 						}
 					],
 					"sid": 536276326436703
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Box",
+							"sid": 945581352867628,
+							"parameters": {
+								"object": "Dog"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Box",
+							"sid": 645908928673095,
+							"parameters": {
+								"instance-variable": "OnFire",
+								"value": "true"
+							}
+						},
+						{
+							"id": "move-to-bottom",
+							"objectClass": "Fire",
+							"sid": 382519032295528
+						}
+					],
+					"sid": 734184577754486
 				}
 			],
 			"sid": 186776396655804
@@ -748,6 +861,106 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "On Fire",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Box",
+									"sid": 310506422587883,
+									"parameters": {
+										"instance-variable": "OnFire"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "Fire",
+									"sid": 911799044356220,
+									"parameters": {
+										"object": "Guy",
+										"image-point-optional": "\"Backside\""
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Fire",
+									"sid": 493188484962215,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-max-speed",
+									"objectClass": "Box",
+									"sid": 484907833408234,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "HigherMaxSpeed"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 592467319247877,
+									"parameters": {
+										"variable": "BaseTimeScale",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 329336702453359
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 121855359983140
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Fire",
+									"sid": 821426150454629,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-max-speed",
+									"objectClass": "Box",
+									"sid": 468547786933549,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "DefaultMaxSpeed"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 615341765560323,
+									"parameters": {
+										"variable": "BaseTimeScale",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 746770760357889
+						}
+					],
+					"sid": 260904839065469
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -757,6 +970,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "Box",
+							"sid": 143534329461628,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "DefaultMaxSpeed"
+							}
+						},
 						{
 							"id": "set-acceleration",
 							"objectClass": "Box",
@@ -866,9 +1088,36 @@
 					"conditions": [],
 					"actions": [
 						{
+							"id": "set-max-speed",
+							"objectClass": "AltBox",
+							"sid": 659337087137198,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "Box.Platform.MaxSpeed"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "AltBox",
+							"sid": 736249683123119,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "Box.Platform.Acceleration"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "AltBox",
+							"sid": 658385785771410,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "Box.Platform.JumpStrength"
+							}
+						},
+						{
 							"id": "set-vector-x",
 							"objectClass": "AltBox",
-							"sid": 346397885544421,
+							"sid": 322715340777070,
 							"behaviorType": "Platform",
 							"parameters": {
 								"vector-x": "Box.Platform.VectorX"
@@ -922,6 +1171,14 @@
 									"parameters": {
 										"state": "not-mirrored"
 									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Fire",
+									"sid": 641289292479614,
+									"parameters": {
+										"state": "not-mirrored"
+									}
 								}
 							],
 							"sid": 615351923037124
@@ -945,6 +1202,14 @@
 									"id": "set-mirrored",
 									"objectClass": "Guy",
 									"sid": 179299540040134,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Fire",
+									"sid": 643801295282344,
 									"parameters": {
 										"state": "mirrored"
 									}
@@ -1276,28 +1541,46 @@
 							"eventType": "block",
 							"conditions": [
 								{
+									"id": "is-on-floor",
+									"objectClass": "AltBox",
+									"sid": 945939127443304,
+									"behaviorType": "Platform"
+								},
+								{
 									"id": "is-overlapping-another-object",
 									"objectClass": "Box",
 									"sid": 158996953546959,
 									"parameters": {
 										"object": "AltBox"
 									}
-								},
-								{
-									"id": "is-on-floor",
-									"objectClass": "AltBox",
-									"sid": 452240433592780,
-									"behaviorType": "Platform"
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 207009674496662,
+							"children": [
 								{
-									"customAction": "UselessJump",
-									"objectClass": "ScoringTable",
-									"sid": 665551237285527
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Box",
+											"sid": 634513333954292,
+											"parameters": {
+												"instance-variable": "OnFire"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"customAction": "UselessJump",
+											"objectClass": "ScoringTable",
+											"sid": 567919505087869
+										}
+									],
+									"sid": 988506783817903
 								}
-							],
-							"sid": 207009674496662
+							]
 						},
 						{
 							"eventType": "block",
@@ -1314,14 +1597,32 @@
 									"behaviorType": "Platform"
 								}
 							],
-							"actions": [
+							"actions": [],
+							"sid": 676242392933089,
+							"children": [
 								{
-									"customAction": "UsefulJump",
-									"objectClass": "ScoringTable",
-									"sid": 769243312913434
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Box",
+											"sid": 636140455449988,
+											"parameters": {
+												"instance-variable": "OnFire"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"customAction": "UsefulJump",
+											"objectClass": "ScoringTable",
+											"sid": 940342162065369
+										}
+									],
+									"sid": 914906738608171
 								}
-							],
-							"sid": 676242392933089
+							]
 						},
 						{
 							"eventType": "block",
@@ -1356,6 +1657,15 @@
 									"behaviorType": "Platform",
 									"parameters": {
 										"acceleration": "DefaultAcceleration"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Box",
+									"sid": 547082064237441,
+									"parameters": {
+										"instance-variable": "OnFire",
+										"value": "false"
 									}
 								}
 							],
@@ -1754,6 +2064,61 @@
 				}
 			],
 			"sid": 779305399672281
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Time Scale",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 556516067394135,
+							"parameters": {
+								"variable": "SlowMotion"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 108861970533689,
+							"parameters": {
+								"time-scale": "0.2 * BaseTimeScale"
+							}
+						}
+					],
+					"sid": 830636868200376
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 106826068846282
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 815230790350521,
+							"parameters": {
+								"time-scale": "BaseTimeScale"
+							}
+						}
+					],
+					"sid": 442870776055627
+				}
+			],
+			"sid": 843918540569206
 		}
 	],
 	"sid": 819818898747264

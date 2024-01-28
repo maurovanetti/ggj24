@@ -43,6 +43,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.41796875,
+								"y": 0.7734375
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -70,6 +77,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.421875,
+								"y": 0.80078125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -99,6 +113,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.45703125,
+								"y": 0.73828125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -126,6 +147,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.44140625,
+								"y": 0.70703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -151,6 +179,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.4140625,
+								"y": 0.7734375
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -178,6 +213,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.41015625,
+								"y": 0.7890625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -209,6 +251,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.42578125,
+								"y": 0.76953125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -236,6 +285,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.4375,
+								"y": 0.7109375
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -276,6 +332,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.48046875,
+								"y": 0.59765625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -303,6 +366,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.46875,
+								"y": 0.6171875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -334,6 +404,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.46875,
+								"y": 0.62109375
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -367,6 +444,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.45703125,
+								"y": 0.640625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -400,6 +484,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.4609375,
+								"y": 0.66015625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -433,6 +524,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.47265625,
+								"y": 0.640625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -466,6 +564,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.53125,
+								"y": 0.5703125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -497,6 +602,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.51171875,
+								"y": 0.5625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -541,6 +653,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.5625,
+								"y": 0.453125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -581,6 +700,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.70703125,
+								"y": 0.94921875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -612,6 +738,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.71875,
+								"y": 0.9375
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -645,6 +778,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.71875,
+								"y": 0.92578125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -680,6 +820,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.71484375,
+								"y": 0.94140625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -716,6 +863,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.5546875,
+								"y": 0.671875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -743,6 +897,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.59765625,
+								"y": 0.6875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -776,6 +937,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.43359375,
+								"y": 0.50390625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -803,6 +971,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.48828125,
+								"y": 0.43359375
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -834,6 +1009,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.5625,
+								"y": 0.49609375
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -865,6 +1047,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.54296875,
+								"y": 0.640625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}
@@ -901,6 +1090,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.57421875,
+								"y": 0.67578125
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -928,6 +1124,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.609375,
+								"y": 0.68359375
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -965,6 +1168,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.69140625,
+								"y": 0.73046875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -996,6 +1206,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.6484375,
+								"y": 0.72265625
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -1033,6 +1250,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.62109375,
+								"y": 0.71484375
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					},
@@ -1064,6 +1288,13 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Backside",
+								"x": 0.58984375,
+								"y": 0.73046875
+							}
+						],
 						"duration": 1,
 						"tag": ""
 					}

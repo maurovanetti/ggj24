@@ -11,6 +11,7 @@
         "Repeat 2x": 250,
         "Repeat 3x": 500,
         "Enough!": -100,
-        "Silly hazard": 1000
+        "Silly hazard": 1000,
+        "Dumb rush": 1000
     }
 }

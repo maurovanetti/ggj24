@@ -184,7 +184,8 @@
 							"PandaCard",
 							"CatCard",
 							"DeckArray",
-							"FishCard"
+							"FishCard",
+							"DogCard"
 						],
 						"subfolders": [],
 						"name": "Cards"
@@ -206,7 +207,9 @@
 					"Cat",
 					"Panda",
 					"Cannon",
-					"Bomb"
+					"Bomb",
+					"Dog",
+					"Fire"
 				],
 				"subfolders": [],
 				"name": "Card effects"
@@ -218,6 +221,7 @@
 		{
 			"members": [
 				"Box",
+				"Fire",
 				"Guy"
 			]
 		}

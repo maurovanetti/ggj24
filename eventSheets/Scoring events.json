@@ -472,6 +472,37 @@
 		},
 		{
 			"aceType": "action",
+			"aceName": "DumbRush",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 175257959979814,
+					"parameters": [
+						"\"Dumb rush\""
+					]
+				},
+				{
+					"callFunction": "CheckCombo",
+					"sid": 415397729335696,
+					"parameters": [
+						"\"Dumb rush\""
+					]
+				}
+			],
+			"sid": 535388027115870
+		},
+		{
+			"aceType": "action",
 			"aceName": "LeapOfFaith",
 			"objectClass": "ScoringTable",
 			"functionDescription": "",
