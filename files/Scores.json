@@ -4,8 +4,13 @@
         "Test Event": 10,
         "Ouch": 50,
         "Leap of faith": 500,
-        "Useless jump": 20,
+        "Useless jump": 50,
+        "Useful jump": -10,
         "Clumsy stumble": 100,
-        "Boooring": -500
+        "Boooring": -500,
+        "Repeat 2x": 250,
+        "Repeat 3x": 500,
+        "Enough!": -100,
+        "Silly hazard": 1000
     }
 }

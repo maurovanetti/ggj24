@@ -1301,6 +1301,30 @@
 						},
 						{
 							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 735249537888773
+								},
+								{
+									"id": "is-enabled",
+									"objectClass": "AltBox",
+									"sid": 478655582792248,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"customAction": "UsefulJump",
+									"objectClass": "ScoringTable",
+									"sid": 769243312913434
+								}
+							],
+							"sid": 676242392933089
+						},
+						{
+							"eventType": "block",
 							"conditions": [],
 							"actions": [
 								{
@@ -1518,6 +1542,11 @@
 								"animation": "\"Fall\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"customAction": "SillyHazard",
+							"objectClass": "ScoringTable",
+							"sid": 685472938867756
 						}
 					],
 					"sid": 157604261428727,

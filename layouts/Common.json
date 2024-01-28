@@ -559,7 +559,7 @@
 					"uid": 19,
 					"instanceVariables": {
 						"DeltaY": -256,
-						"MaxVerticalSpeedInSlope": 400,
+						"MaxVerticalSpeedInSlope": 1000,
 						"DownwardAdjustTime": 0.3
 					},
 					"behaviors": {

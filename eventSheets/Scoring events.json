@@ -3,6 +3,26 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "ComboCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 710924989840414
+		},
+		{
+			"eventType": "variable",
+			"name": "ComboName",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 840257307386786
+		},
+		{
+			"eventType": "variable",
 			"name": "GameOverMessage",
 			"type": "string",
 			"initialValue": "GAME OVER",
@@ -21,6 +41,10 @@
 				}
 			],
 			"actions": [
+				{
+					"callFunction": "ResetCombo",
+					"sid": 492123893935358
+				},
 				{
 					"id": "request-project-file",
 					"objectClass": "AJAX",
@@ -97,16 +121,6 @@
 						"where": "back",
 						"value": "Text",
 						"axis": "y"
-					}
-				},
-				{
-					"id": "stop-timer",
-					"objectClass": "ScoringTable",
-					"sid": 816556290219524,
-					"disabled": true,
-					"behaviorType": "Timer",
-					"parameters": {
-						"tag": "\"boredom\""
 					}
 				},
 				{
@@ -445,6 +459,13 @@
 					"parameters": [
 						"\"Ouch\""
 					]
+				},
+				{
+					"callFunction": "CheckCombo",
+					"sid": 810547792157216,
+					"parameters": [
+						"\"Ouch\""
+					]
 				}
 			],
 			"sid": 522901465579890
@@ -475,6 +496,78 @@
 		},
 		{
 			"aceType": "action",
+			"aceName": "Repeat2x",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 233710660122572,
+					"parameters": [
+						"\"Repeat 2x\""
+					]
+				}
+			],
+			"sid": 477012226720202
+		},
+		{
+			"aceType": "action",
+			"aceName": "Repeat3x",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 265368005216603,
+					"parameters": [
+						"\"Repeat 3x\""
+					]
+				}
+			],
+			"sid": 866233311411886
+		},
+		{
+			"aceType": "action",
+			"aceName": "Enough",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 815875363072447,
+					"parameters": [
+						"\"Enough!\""
+					]
+				}
+			],
+			"sid": 671730839199516
+		},
+		{
+			"aceType": "action",
 			"aceName": "GameOver",
 			"objectClass": "ScoringTable",
 			"functionDescription": "",
@@ -486,6 +579,10 @@
 			"eventType": "custom-ace-block",
 			"conditions": [],
 			"actions": [
+				{
+					"callFunction": "ResetCombo",
+					"sid": 766018045690405
+				},
 				{
 					"customAction": "New Event",
 					"objectClass": "ScoringTable",
@@ -517,9 +614,47 @@
 					"parameters": [
 						"\"Useless jump\""
 					]
+				},
+				{
+					"callFunction": "CheckCombo",
+					"sid": 994744978666158,
+					"parameters": [
+						"\"Jump\""
+					]
 				}
 			],
 			"sid": 593264146120802
+		},
+		{
+			"aceType": "action",
+			"aceName": "UsefulJump",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 448945326296335,
+					"parameters": [
+						"\"Useful jump\""
+					]
+				},
+				{
+					"callFunction": "CheckCombo",
+					"sid": 221586135889722,
+					"parameters": [
+						"\"Jump\""
+					]
+				}
+			],
+			"sid": 227912756225332
 		},
 		{
 			"aceType": "action",
@@ -541,9 +676,47 @@
 					"parameters": [
 						"\"Clumsy stumble\""
 					]
+				},
+				{
+					"callFunction": "CheckCombo",
+					"sid": 667513366436306,
+					"parameters": [
+						"\"Clumsy stumble\""
+					]
 				}
 			],
 			"sid": 243510661076124
+		},
+		{
+			"aceType": "action",
+			"aceName": "SillyHazard",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 371672155855887,
+					"parameters": [
+						"\"Silly hazard\""
+					]
+				},
+				{
+					"callFunction": "CheckCombo",
+					"sid": 699537032798986,
+					"parameters": [
+						"\"Silly hazard\""
+					]
+				}
+			],
+			"sid": 714152138245481
 		},
 		{
 			"aceType": "action",
@@ -558,6 +731,10 @@
 			"eventType": "custom-ace-block",
 			"conditions": [],
 			"actions": [
+				{
+					"callFunction": "ResetCombo",
+					"sid": 983443520471427
+				},
 				{
 					"customAction": "New Event",
 					"objectClass": "ScoringTable",
@@ -704,6 +881,190 @@
 				}
 			],
 			"sid": 687778754371917
+		},
+		{
+			"functionName": "ResetCombo",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 202795397624008,
+					"parameters": {
+						"variable": "ComboName",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 236785321047456,
+					"parameters": {
+						"variable": "ComboCount",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 237877817540364
+		},
+		{
+			"functionName": "CheckCombo",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "Name",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 781657710703600
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 663283036956617,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 994832840618061,
+							"parameters": {
+								"variable": "ComboName",
+								"comparison": 0,
+								"value": "Name"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 992309086111386,
+							"parameters": {
+								"variable": "ComboCount",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 102315617743103,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 897089545681455,
+									"parameters": {
+										"variable": "ComboCount",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"customAction": "Repeat2x",
+									"objectClass": "ScoringTable",
+									"sid": 839194623243831
+								}
+							],
+							"sid": 634613797958299
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 672661508602524,
+									"parameters": {
+										"variable": "ComboCount",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"customAction": "Repeat3x",
+									"objectClass": "ScoringTable",
+									"sid": 416931797967277
+								}
+							],
+							"sid": 390876231970359
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 950159764667057,
+									"parameters": {
+										"variable": "ComboCount",
+										"comparison": 4,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"customAction": "Enough",
+									"objectClass": "ScoringTable",
+									"sid": 277354146121044
+								}
+							],
+							"sid": 127322326654831
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 142762271661471
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 316021186718719,
+							"parameters": {
+								"variable": "ComboName",
+								"value": "Name"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 925823057121069,
+							"parameters": {
+								"variable": "ComboCount",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 149353321909156
+				}
+			]
 		}
 	],
 	"sid": 759224197214942
