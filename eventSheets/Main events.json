@@ -687,6 +687,10 @@
 					"conditions": [],
 					"actions": [
 						{
+							"callFunction": "HurtSFX",
+							"sid": 854533240509511
+						},
+						{
 							"id": "subtract-from-instvar",
 							"objectClass": "Health",
 							"sid": 814231146928759,
@@ -1257,6 +1261,10 @@
 							}
 						},
 						{
+							"callFunction": "LeapSFX",
+							"sid": 787095199544113
+						},
+						{
 							"id": "shake",
 							"objectClass": "Focus",
 							"sid": 307175714552449,
@@ -1451,6 +1459,10 @@
 								"instance-variable": "JustJumped",
 								"value": "false"
 							}
+						},
+						{
+							"callFunction": "HurtSFX",
+							"sid": 221587554365721
 						},
 						{
 							"id": "set-angle",
@@ -1805,6 +1817,10 @@
 					],
 					"actions": [
 						{
+							"callFunction": "HurtSFX",
+							"sid": 678278030905529
+						},
+						{
 							"id": "set-enabled",
 							"objectClass": "Box",
 							"sid": 648569904842280,
@@ -2144,6 +2160,298 @@
 				}
 			],
 			"sid": 843918540569206
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Audio",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "RandomSFX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 370395813718218
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 987117948003951
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 681085458105796
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 110799464905312,
+							"parameters": {
+								"audio-file": "soundtrack",
+								"loop": "looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 791718065598551
+				},
+				{
+					"functionName": "LeapSFX",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 198698676299950,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 943897369459866,
+									"parameters": {
+										"variable": "RandomSFX",
+										"value": "int(random(3))"
+									}
+								}
+							],
+							"sid": 693871513577855
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 617068518456703,
+									"parameters": {
+										"variable": "RandomSFX",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 753381635533478,
+									"parameters": {
+										"audio-file": "SFX_JUMP",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 450772748570929
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 417084916444099,
+									"parameters": {
+										"variable": "RandomSFX",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 868359541528173,
+									"parameters": {
+										"audio-file": "SFX_Jump1",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 688338137745347
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 319078382373337,
+									"parameters": {
+										"variable": "RandomSFX",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 581273318127328,
+									"parameters": {
+										"audio-file": "SFX_JUMP2",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 996121161560600
+						}
+					]
+				},
+				{
+					"functionName": "HurtSFX",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 646682546968517,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 514513497810526,
+									"parameters": {
+										"variable": "RandomSFX",
+										"value": "int(random(3))"
+									}
+								}
+							],
+							"sid": 763846718990021
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 399769563930764,
+									"parameters": {
+										"variable": "RandomSFX",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 591602564065349,
+									"parameters": {
+										"audio-file": "SFX_FALL",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 455624824799779
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 738379736618723,
+									"parameters": {
+										"variable": "RandomSFX",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 458273619897278,
+									"parameters": {
+										"audio-file": "SFX_FALL1",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 318003363220097
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 699990503376015,
+									"parameters": {
+										"variable": "RandomSFX",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 793601485180136,
+									"parameters": {
+										"audio-file": "SFX_FALL3",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 741123848814993
+						}
+					]
+				}
+			],
+			"sid": 777195395030070
 		}
 	],
 	"sid": 819818898747264

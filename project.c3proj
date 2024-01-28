@@ -22,6 +22,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Dictionary",
 			"name": "Dictionary",
 			"author": "Scirra",
@@ -201,7 +208,8 @@
 				"items": [
 					"AJAX",
 					"Keyboard",
-					"Touch"
+					"Touch",
+					"Audio"
 				],
 				"subfolders": [],
 				"name": "Singletons"
@@ -270,11 +278,69 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "SFX_FALL.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 630342351864759,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_FALL1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 992999924447398,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_FALL3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 619068848225724,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_JUMP.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 387140088371402,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_Jump1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 423333388743050,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "SFX_JUMP2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 976129613109613,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "soundtrack.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 319525978856692,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
@@ -459,5 +525,5 @@
 	},
 	"viewportWidth": 1920,
 	"viewportHeight": 1080,
-	"firstLayout": "Common"
+	"firstLayout": "Title Screen"
 }
