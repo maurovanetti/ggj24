@@ -107,12 +107,56 @@
 					}
 				],
 				"sid": 277033486625255,
-				"name": "Animation 1",
+				"name": "Idle",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 80,
+						"height": 114,
+						"originX": 0.5875,
+						"originY": 0.6403508771929824,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1482465,
+						"collisionPoly": {
+							"points": [
+								0.3375,
+								0.05263157894736842,
+								0.9875,
+								0.6052631578947368,
+								0.9000000000000004,
+								0.8771929824561403,
+								0.625,
+								0.9912280701754386,
+								0.4625,
+								0.9912280701754386,
+								0.275,
+								0.9473684210526315,
+								0.1625,
+								0.868421052631579,
+								0.08749999999999983,
+								0.7368421052631582
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 789779534005187,
+				"name": "Explode",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 2
 			}
 		],
 		"subfolders": []

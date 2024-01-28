@@ -1,0 +1,68 @@
+{
+	"name": "Title Screen events",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "Card",
+					"sid": 766895167046096,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Card",
+					"sid": 913205726142116,
+					"parameters": {
+						"object": "CardSlot"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "Card",
+					"sid": 956142583630188,
+					"parameters": {
+						"object": "CardSlot",
+						"image-point-optional": "\"Center\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Card",
+					"sid": 284003555300089,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "DragHere",
+					"sid": 142988894411533,
+					"parameters": {
+						"animation": "\"Dragged\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 392606972336380,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 422074727719769,
+					"parameters": {
+						"layout": "Level 1"
+					}
+				}
+			],
+			"sid": 402078881455043
+		}
+	],
+	"sid": 167530721222815
+}

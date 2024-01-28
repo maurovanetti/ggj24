@@ -93,15 +93,18 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 925029366664919,
+					"sid": 612641515180449,
 					"parameters": {
-						"seconds": "2"
+						"seconds": "3.5"
 					}
 				},
 				{
-					"id": "restart-layout",
+					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 283691916854022
+					"sid": 468431232656381,
+					"parameters": {
+						"layout": "Title Screen"
+					}
 				}
 			],
 			"sid": 497094464534749

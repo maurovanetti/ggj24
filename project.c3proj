@@ -177,7 +177,9 @@
 					"Health",
 					"Score",
 					"CardArea",
-					"TotalScoreLabel"
+					"TotalScoreLabel",
+					"TitleBackground",
+					"DragHere"
 				],
 				"subfolders": [
 					{
@@ -186,7 +188,8 @@
 							"CatCard",
 							"DeckArray",
 							"FishCard",
-							"DogCard"
+							"DogCard",
+							"StartCard"
 						],
 						"subfolders": [],
 						"name": "Cards"
@@ -236,19 +239,28 @@
 	},
 	"layouts": {
 		"items": [
-			"Common",
-			"Hyperuranion",
 			"Level 1",
-			"Level 2"
+			"Title Screen"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Common",
+					"Hyperuranion",
+					"Level 2"
+				],
+				"subfolders": [],
+				"name": "Private"
+			}
+		]
 	},
 	"eventSheets": {
 		"items": [
 			"Main events",
 			"Scoring events",
 			"Card events",
-			"Health events"
+			"Health events",
+			"Title Screen events"
 		],
 		"subfolders": []
 	},

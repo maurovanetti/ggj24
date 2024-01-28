@@ -49,6 +49,7 @@
 		"PandaCard",
 		"CatCard",
 		"FishCard",
-		"DogCard"
+		"DogCard",
+		"StartCard"
 	]
 }

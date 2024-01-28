@@ -1875,9 +1875,13 @@
 							],
 							"actions": [
 								{
-									"id": "destroy",
+									"id": "set-animation",
 									"objectClass": "Bomb",
-									"sid": 274350276601998
+									"sid": 406521656943145,
+									"parameters": {
+										"animation": "\"Explode\"",
+										"from": "beginning"
+									}
 								}
 							],
 							"sid": 657332881128064
@@ -2061,6 +2065,27 @@
 							"sid": 172197045707053
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "Bomb",
+							"sid": 788408541727932,
+							"parameters": {
+								"animation": "\"Explode\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Bomb",
+							"sid": 393015844689894
+						}
+					],
+					"sid": 634685927608436
 				}
 			],
 			"sid": 779305399672281
