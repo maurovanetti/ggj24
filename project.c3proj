@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 36802,
-	"name": "Global Game Jam 2024",
+	"name": "The Art of Falling",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -196,7 +196,8 @@
 							"DeckArray",
 							"FishCard",
 							"DogCard",
-							"StartCard"
+							"StartCard",
+							"DebugCard"
 						],
 						"subfolders": [],
 						"name": "Cards"
@@ -248,7 +249,8 @@
 	"layouts": {
 		"items": [
 			"Level 1",
-			"Title Screen"
+			"Title Screen",
+			"Debug"
 		],
 		"subfolders": [
 			{
@@ -348,7 +350,16 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "Buran USSR.ttf",
+					"type": "application/font-sfnt",
+					"sid": 247661143677305,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
@@ -472,10 +483,10 @@
 	"properties": {
 		"description": "",
 		"version": "1.0.0.0",
-		"author": "Mauro Vanetti",
+		"author": "Mauro Vanetti & Francesco Di Pietro",
 		"authorEmail": "posta@maurovanetti.info",
-		"authorWebsite": "https://maurovanetti.itch.io/",
-		"appId": "",
+		"authorWebsite": "https://maurovanetti.itch.io/taof",
+		"appId": "info.maurovanetti.falling",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
@@ -515,7 +526,7 @@
 		"zNear": 1,
 		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "splash",
+		"loaderStyle": "progress-logo",
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",

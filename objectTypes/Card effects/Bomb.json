@@ -117,14 +117,14 @@
 			{
 				"frames": [
 					{
-						"width": 80,
-						"height": 114,
-						"originX": 0.5875,
-						"originY": 0.6403508771929824,
+						"width": 301,
+						"height": 299,
+						"originX": 0.5,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1482465,
+						"imageSpriteId": 2555217,
 						"collisionPoly": {
 							"points": [
 								0.3375,
@@ -148,6 +148,147 @@
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
+					},
+					{
+						"width": 301,
+						"height": 299,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2542287,
+						"collisionPoly": {
+							"points": [
+								0.30564784053156147,
+								0.06354515050167224,
+								0.9169435215946844,
+								0.391304347826087,
+								0.5980066445182725,
+								0.9565217391304348,
+								0.04318936877076412,
+								0.7424749163879598
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 301,
+						"height": 299,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 333205,
+						"collisionPoly": {
+							"points": [
+								0.3089700996677741,
+								0.06354515050167224,
+								0.920265780730897,
+								0.391304347826087,
+								0.6013289036544851,
+								0.9531772575250836,
+								0.06312292358803986,
+								0.7357859531772575
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 301,
+						"height": 299,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8496752,
+						"collisionPoly": {
+							"points": [
+								0.3122923588039867,
+								0.06688963210702341,
+								0.6710963455149501,
+								0.12709030100334448,
+								0.9069767441860465,
+								0.39464882943143814,
+								0.8538205980066446,
+								0.7290969899665551,
+								0.5980066445182725,
+								0.9531772575250836,
+								0.3023255813953488,
+								0.919732441471572,
+								0.05647840531561462,
+								0.7391304347826086,
+								0.07973421926910298,
+								0.411371237458194
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 301,
+						"height": 299,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5071093,
+						"collisionPoly": {
+							"points": [
+								0.6943521594684385,
+								0.13377926421404682,
+								0.8538205980066446,
+								0.7190635451505016,
+								0.28903654485049834,
+								0.919732441471572,
+								0.059800664451827246,
+								0.411371237458194
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 301,
+						"height": 299,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4236656,
+						"collisionPoly": {
+							"points": [
+								0.3122923588039867,
+								0.06688963210702341,
+								0.6976744186046512,
+								0.11371237458193979,
+								0.9102990033222591,
+								0.3979933110367893,
+								0.8737541528239202,
+								0.7290969899665551,
+								0.6046511627906976,
+								0.959866220735786,
+								0.28903654485049834,
+								0.9364548494983278,
+								0.05647840531561462,
+								0.7357859531772575,
+								0.04318936877076412,
+								0.4080267558528428
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
 					}
 				],
 				"sid": 789779534005187,
@@ -156,7 +297,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 2
+				"speed": 12
 			}
 		],
 		"subfolders": []

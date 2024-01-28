@@ -136,7 +136,7 @@
 						"OriginalX": 0,
 						"OriginalY": 0,
 						"CardSpawnAreaUID": -1,
-						"Effect": "Panda"
+						"Effect": "Level 1"
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -187,7 +187,7 @@
 						"OriginalX": 0,
 						"OriginalY": 0,
 						"CardSpawnAreaUID": -1,
-						"Effect": "Panda"
+						"Effect": "Level 1"
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -225,7 +225,7 @@
 					}
 				},
 				{
-					"type": "StartCard",
+					"type": "DebugCard",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -238,7 +238,7 @@
 						"OriginalX": 0,
 						"OriginalY": 0,
 						"CardSpawnAreaUID": -1,
-						"Effect": "Panda"
+						"Effect": "Debug"
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -259,8 +259,8 @@
 						}
 					},
 					"world": {
-						"x": 1740,
-						"y": 931,
+						"x": 1747,
+						"y": 934,
 						"width": 128,
 						"height": 192,
 						"originX": 0.5,

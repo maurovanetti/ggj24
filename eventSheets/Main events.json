@@ -75,6 +75,26 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "BombImpulse",
+			"type": "number",
+			"initialValue": "350",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 899314244754295
+		},
+		{
+			"eventType": "variable",
+			"name": "BombImpulseAngle",
+			"type": "number",
+			"initialValue": "55",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 674815005257489
+		},
+		{
+			"eventType": "variable",
 			"name": "LowerJumpStrength",
 			"type": "number",
 			"initialValue": "1000",
@@ -1841,10 +1861,10 @@
 						{
 							"id": "start-timer",
 							"objectClass": "Box",
-							"sid": 201909164743078,
+							"sid": 218482733280981,
 							"behaviorType": "Timer",
 							"parameters": {
-								"duration": "5",
+								"duration": "3",
 								"type": "once",
 								"tag": "\"bullet\""
 							}
@@ -1852,11 +1872,11 @@
 						{
 							"id": "apply-impulse-at-angle",
 							"objectClass": "Box",
-							"sid": 788442365381632,
+							"sid": 732654713414303,
 							"behaviorType": "Physics",
 							"parameters": {
-								"impulse": "500",
-								"angle": "45",
+								"impulse": "BombImpulse",
+								"angle": "BombImpulseAngle",
 								"image-point": "0"
 							}
 						},
@@ -1890,6 +1910,15 @@
 								}
 							],
 							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "Bomb",
+									"sid": 514363234935210,
+									"behaviorType": "Physics",
+									"parameters": {
+										"mode": "disabled"
+									}
+								},
 								{
 									"id": "set-animation",
 									"objectClass": "Bomb",

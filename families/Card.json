@@ -50,6 +50,7 @@
 		"CatCard",
 		"FishCard",
 		"DogCard",
-		"StartCard"
+		"StartCard",
+		"DebugCard"
 	]
 }

@@ -53,11 +53,11 @@
 					}
 				},
 				{
-					"id": "go-to-layout",
+					"id": "go-to-layout-by-name",
 					"objectClass": "System",
-					"sid": 422074727719769,
+					"sid": 187782843875627,
 					"parameters": {
-						"layout": "Level 1"
+						"layout": "Card.Effect"
 					}
 				}
 			],

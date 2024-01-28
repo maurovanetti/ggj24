@@ -155,7 +155,7 @@
 								"y": 0.6254180602006689
 							}
 						],
-						"duration": 1,
+						"duration": 6,
 						"tag": ""
 					},
 					{
@@ -419,7 +419,7 @@
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
-				"repeatCount": 5,
+				"repeatCount": 10,
 				"repeatTo": 0,
 				"speed": 10
 			}
