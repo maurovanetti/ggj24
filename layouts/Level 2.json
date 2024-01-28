@@ -427,7 +427,7 @@
 						{
 							"type": "Box",
 							"properties": {
-								"initially-visible": true,
+								"initially-visible": false,
 								"initial-animation": "Animation 1",
 								"initial-frame": 0,
 								"enable-collisions": true,
@@ -1225,39 +1225,6 @@
 							}
 						},
 						{
-							"type": "CardArea",
-							"properties": {
-								"left-margin": 8,
-								"right-margin": 8,
-								"top-margin": 8,
-								"bottom-margin": 8,
-								"edges": "stretch",
-								"fill": "stretch",
-								"initially-visible": true,
-								"origin": "top-left",
-								"seams": "overlap"
-							},
-							"uid": 104,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 1248,
-								"y": 896,
-								"width": 725,
-								"height": 541.8483591267077,
-								"originX": 0,
-								"originY": 0,
-								"color": [
-									1,
-									1,
-									1,
-									0.95
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
 							"type": "CardSpawnArea",
 							"properties": {
 								"left-margin": 16,
@@ -1379,8 +1346,8 @@
 							"world": {
 								"x": 192,
 								"y": 96,
-								"width": 256,
-								"height": 64,
+								"width": 290,
+								"height": 70,
 								"originX": 0.5,
 								"originY": 0.5,
 								"color": [

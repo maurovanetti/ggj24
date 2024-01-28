@@ -42,6 +42,16 @@
 			],
 			"actions": [
 				{
+					"id": "set-size",
+					"objectClass": "ScoringEventArray",
+					"sid": 193728017218502,
+					"parameters": {
+						"width": "1",
+						"height": "0",
+						"depth": "1"
+					}
+				},
+				{
 					"callFunction": "ResetCombo",
 					"sid": 492123893935358
 				},
@@ -174,12 +184,12 @@
 						{
 							"id": "tween-one-property",
 							"objectClass": "ScoringEvent",
-							"sid": 438645819873303,
+							"sid": 258790538431598,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"scroll up\"",
 								"property": "offsetY",
-								"end-value": "ScoringEvent.Y - ScoringEvent.Height - 10",
+								"end-value": "ScoringEvent.Y - ScoringEvent.Height - 12",
 								"time": "0.3",
 								"ease": "easeoutbounce",
 								"destroy-on-complete": "no",
@@ -192,6 +202,26 @@
 					"sid": 126204705795981
 				}
 			]
+		},
+		{
+			"eventType": "variable",
+			"name": "EventYAdjustment",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 109578154290731
+		},
+		{
+			"eventType": "variable",
+			"name": "ScoreYAdjustment",
+			"type": "number",
+			"initialValue": "15",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 134081368640250
 		},
 		{
 			"eventType": "variable",
@@ -226,12 +256,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 786637904035780,
+					"sid": 664566790516809,
 					"parameters": {
 						"object-to-create": "ScoringEventText",
 						"layer": "\"GUI\"",
 						"x": "ScoringEventSpawnArea.X",
-						"y": "ScoringEventSpawnArea.Y + 3",
+						"y": "ScoringEventSpawnArea.Y + EventYAdjustment",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -239,12 +269,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 346014194247574,
+					"sid": 250732507793864,
 					"parameters": {
 						"object-to-create": "ScoreForEvent",
 						"layer": "\"GUI\"",
 						"x": "ScoringEventSpawnArea.X + ScoringEventSpawnArea.Width",
-						"y": "ScoringEventSpawnArea.Y + 10",
+						"y": "ScoringEventSpawnArea.Y + ScoreYAdjustment",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -769,9 +799,9 @@
 				{
 					"customAction": "New Event",
 					"objectClass": "ScoringTable",
-					"sid": 609757421285775,
+					"sid": 549395526225932,
 					"parameters": [
-						"\"Boooring\""
+						"\"Bo-o-o-ring\""
 					]
 				}
 			],

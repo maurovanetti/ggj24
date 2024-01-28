@@ -1,7 +1,7 @@
 {
-	"name": "CardArea",
+	"name": "TotalScoreLabel",
 	"plugin-id": "Sprite",
-	"sid": 359433067424421,
+	"sid": 841984048805905,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,26 +11,32 @@
 			{
 				"frames": [
 					{
-						"width": 618,
-						"height": 222,
+						"width": 253,
+						"height": 84,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 867242,
+						"imageSpriteId": 5571299,
 						"collisionPoly": {
 							"points": [
+								0.13043478260869565,
+								0,
 								1,
-								0.013513513513513514,
-								1,
+								0.03571428571428571,
+								0.9446640316205533,
+								0.9523809523809523,
+								0.8616600790513834,
+								0.9761904761904762,
+								0.4426877470355731,
 								1,
 								0,
-								0.9819819819819819,
-								0.11974110032362459,
-								0.35585585585585583,
-								0.22330097087378642,
-								0.15315315315315314
+								0.9404761904761905,
+								0.03557312252964427,
+								0.11904761904761904,
+								0.09090909090909091,
+								0.011904761904761904
 							]
 						},
 						"useCollisionPoly": true,
@@ -38,7 +44,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 160646379971491,
+				"sid": 300283840853042,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

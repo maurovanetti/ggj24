@@ -171,12 +171,13 @@
 					"ScoringEventSpawnArea",
 					"ScoreForEvent",
 					"ScoringMap",
-					"CardArea",
 					"CardSpawnArea",
 					"CardSlot",
 					"NegativeScoringEvent",
 					"Health",
-					"Score"
+					"Score",
+					"CardArea",
+					"TotalScoreLabel"
 				],
 				"subfolders": [
 					{

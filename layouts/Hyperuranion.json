@@ -9,10 +9,10 @@
 				{
 					"type": "PositiveScoringEvent",
 					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
+						"left-margin": 16,
+						"right-margin": 16,
+						"top-margin": 16,
+						"bottom-margin": 16,
 						"edges": "tile",
 						"fill": "tile",
 						"initially-visible": true,
@@ -100,9 +100,9 @@
 					},
 					"world": {
 						"x": 217,
-						"y": 109,
+						"y": 87,
 						"width": 572,
-						"height": 69,
+						"height": 91,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -121,7 +121,7 @@
 						"text": "Twist of Fate",
 						"enable-bbcode": true,
 						"font": "Buran USSR",
-						"size": 40,
+						"size": 38,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
@@ -171,8 +171,8 @@
 						}
 					},
 					"world": {
-						"x": 219,
-						"y": 115,
+						"x": 202,
+						"y": 103,
 						"width": 568,
 						"height": 68,
 						"originX": 0,
@@ -203,7 +203,7 @@
 							0,
 							1
 						],
-						"horizontal-alignment": "center",
+						"horizontal-alignment": "left",
 						"vertical-alignment": "center",
 						"wrapping": "word",
 						"icon-set": -1,
@@ -251,7 +251,7 @@
 					"world": {
 						"x": 786,
 						"y": 124,
-						"width": 63,
+						"width": 79,
 						"height": 46,
 						"originX": 1,
 						"originY": 0,
@@ -319,7 +319,7 @@
 				{
 					"type": "AltBox",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -551,6 +551,55 @@
 						"height": 192,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "NegativeScoringEvent",
+					"properties": {
+						"left-margin": 16,
+						"right-margin": 16,
+						"top-margin": 16,
+						"bottom-margin": 16,
+						"edges": "tile",
+						"fill": "tile",
+						"initially-visible": true,
+						"origin": "top-left",
+						"seams": "overlap"
+					},
+					"uid": 120,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0.5,
+								"wait-time": 0,
+								"fade-out-time": 0,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 190,
+						"y": 201,
+						"width": 492,
+						"height": 100,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
