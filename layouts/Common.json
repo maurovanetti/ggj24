@@ -305,7 +305,7 @@
 						{
 							"type": "Box",
 							"properties": {
-								"initially-visible": false,
+								"initially-visible": true,
 								"initial-animation": "Animation 1",
 								"initial-frame": 0,
 								"enable-collisions": true,
@@ -329,8 +329,25 @@
 										"max-fall-speed": 1000,
 										"double-jump": true,
 										"jump-sustain": 0,
-										"default-controls": true,
+										"default-controls": false,
 										"enabled": true
+									}
+								},
+								"Timer": {
+									"properties": {}
+								},
+								"Physics": {
+									"properties": {
+										"immovable": false,
+										"collision-mask": "use-collision-polygon",
+										"prevent-rotation": true,
+										"density": 1,
+										"friction": 0.5,
+										"elasticity": 0.2,
+										"linear-damping": 0,
+										"angular-damping": 0.01,
+										"bullet": false,
+										"enabled": false
 									}
 								}
 							},
@@ -383,7 +400,7 @@
 								"x": 64,
 								"y": 512,
 								"width": 64,
-								"height": 180,
+								"height": 160,
 								"originX": 0.5,
 								"originY": 1,
 								"color": [
@@ -542,8 +559,7 @@
 					"uid": 19,
 					"instanceVariables": {
 						"DeltaY": -256,
-						"ToleranceY": 64,
-						"UpwardSpeed": 200,
+						"MaxVerticalSpeedInSlope": 400,
 						"DownwardAdjustTime": 0.3
 					},
 					"behaviors": {
@@ -1407,8 +1423,15 @@
 								"seams": "overlap"
 							},
 							"uid": 86,
-							"instanceVariables": {},
-							"behaviors": {},
+							"instanceVariables": {
+								"BoredomFirstInterval": 10,
+								"BoredomInterval": 7.5
+							},
+							"behaviors": {
+								"Timer": {
+									"properties": {}
+								}
+							},
 							"world": {
 								"x": 555,
 								"y": -163,

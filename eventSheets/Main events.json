@@ -124,7 +124,34 @@
 							]
 						}
 					],
-					"sid": 771941109959129
+					"sid": 771941109959129,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Start",
+									"sid": 540215916764265,
+									"parameters": {
+										"animation": "\"In Use\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "Box",
+									"sid": 467459914707932,
+									"parameters": {
+										"object": "Start",
+										"image-point-optional": "0"
+									}
+								}
+							],
+							"sid": 833589242793861
+						}
+					]
 				}
 			],
 			"sid": 453320840946473
@@ -216,11 +243,11 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 430816125873957,
+											"sid": 665206249538548,
 											"parameters": {
 												"first-value": "Box.Y + Focus.DeltaY",
 												"comparison": 2,
-												"second-value": "Focus.Y + Focus.ToleranceY"
+												"second-value": "Focus.Y"
 											}
 										}
 									],
@@ -230,11 +257,42 @@
 											"objectClass": "Focus",
 											"sid": 117916855119936,
 											"parameters": {
-												"y": "Focus.Y + clamp(Box.Y + Focus.DeltaY - Focus.Y, dt * -abs(Focus.UpwardSpeed), 0)"
+												"y": "Focus.Y + clamp(Box.Y + Focus.DeltaY - Focus.Y, dt * -abs(Focus.MaxVerticalSpeedInSlope), 0)"
 											}
 										}
 									],
 									"sid": 394818771180718
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 720354325156550
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 796118819934033,
+											"parameters": {
+												"first-value": "Box.Y + Focus.DeltaY",
+												"comparison": 2,
+												"second-value": "Focus.Y + Focus.MaxVerticalSpeedInSlope * dt"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "Focus",
+											"sid": 276992933611786,
+											"parameters": {
+												"y": "Focus.Y + clamp(Box.Y + Focus.DeltaY - Focus.Y, 0, dt *abs(Focus.MaxVerticalSpeedInSlope))"
+											}
+										}
+									],
+									"sid": 738521238966780
 								},
 								{
 									"eventType": "block",
@@ -1398,6 +1456,272 @@
 						}
 					],
 					"sid": 772595591354519
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bomb",
+							"sid": 950863640660743,
+							"parameters": {
+								"object": "Box"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Box",
+							"sid": 648569904842280,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Box",
+							"sid": 365170295627809,
+							"behaviorType": "Physics",
+							"parameters": {
+								"mode": "enabled"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Box",
+							"sid": 201909164743078,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "5",
+								"type": "once",
+								"tag": "\"bullet\""
+							}
+						},
+						{
+							"id": "apply-impulse-at-angle",
+							"objectClass": "Box",
+							"sid": 788442365381632,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse": "500",
+								"angle": "45",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Guy",
+							"sid": 898247752263695,
+							"parameters": {
+								"animation": "\"Fall\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 157604261428727,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-all",
+									"objectClass": "System",
+									"sid": 681527561681706,
+									"parameters": {
+										"object": "Bomb"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Bomb",
+									"sid": 274350276601998
+								}
+							],
+							"sid": 657332881128064
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-timer-running",
+							"objectClass": "Box",
+							"sid": 545350890524823,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"bullet\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 591000706367088,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-velocity",
+									"objectClass": "Box",
+									"sid": 341993285920020,
+									"behaviorType": "Physics",
+									"parameters": {
+										"which": "x-velocity",
+										"comparison": 5,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Box",
+									"sid": 652653476433911,
+									"parameters": {
+										"instance-variable": "Rightward",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 950029062300588
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 709848661205533
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Box",
+									"sid": 704463603118620,
+									"parameters": {
+										"instance-variable": "Rightward",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 613492280393286
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-velocity",
+									"objectClass": "Box",
+									"sid": 215741113687171,
+									"behaviorType": "Physics",
+									"parameters": {
+										"which": "overall-velocity",
+										"comparison": 2,
+										"value": "20"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-timer",
+									"objectClass": "Box",
+									"sid": 736789676093021,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"bullet\""
+									}
+								},
+								{
+									"callFunction": "ResetGuy",
+									"sid": 639582903243304
+								}
+							],
+							"sid": 503590023574036
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "Box",
+							"sid": 857565560676518,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"bullet\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "ResetGuy",
+							"sid": 826479352997515
+						}
+					],
+					"sid": 621571276160589
+				},
+				{
+					"functionName": "ResetGuy",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Box",
+							"sid": 329240367817827,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Box",
+							"sid": 634092440581345,
+							"behaviorType": "Physics",
+							"parameters": {
+								"mode": "disabled"
+							}
+						}
+					],
+					"sid": 525771488265641,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-floor",
+									"objectClass": "Box",
+									"sid": 540233075160433,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Guy",
+									"sid": 812336073728844,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 172197045707053
+						}
+					]
 				}
 			],
 			"sid": 779305399672281

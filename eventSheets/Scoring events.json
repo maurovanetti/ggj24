@@ -3,16 +3,6 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "Test",
-			"type": "string",
-			"initialValue": "",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 232588790279796
-		},
-		{
-			"eventType": "variable",
 			"name": "GameOverMessage",
 			"type": "string",
 			"initialValue": "GAME OVER",
@@ -65,12 +55,14 @@
 					}
 				},
 				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 415807008503323,
+					"id": "start-timer",
+					"objectClass": "ScoringTable",
+					"sid": 608958132534928,
+					"behaviorType": "Timer",
 					"parameters": {
-						"variable": "Test",
-						"value": "AJAX.LastData"
+						"duration": "ScoringTable.BoredomFirstInterval",
+						"type": "once",
+						"tag": "\"boredom\""
 					}
 				}
 			],
@@ -105,6 +97,27 @@
 						"where": "back",
 						"value": "Text",
 						"axis": "y"
+					}
+				},
+				{
+					"id": "stop-timer",
+					"objectClass": "ScoringTable",
+					"sid": 816556290219524,
+					"disabled": true,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"boredom\""
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "ScoringTable",
+					"sid": 895493670652989,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "ScoringTable.BoredomInterval",
+						"type": "once",
+						"tag": "\"boredom\""
 					}
 				}
 			],
@@ -534,6 +547,30 @@
 		},
 		{
 			"aceType": "action",
+			"aceName": "Boring",
+			"objectClass": "ScoringTable",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"customAction": "New Event",
+					"objectClass": "ScoringTable",
+					"sid": 609757421285775,
+					"parameters": [
+						"\"Boooring\""
+					]
+				}
+			],
+			"sid": 285441704214244
+		},
+		{
+			"aceType": "action",
 			"aceName": "Setup",
 			"objectClass": "ScoringEvent",
 			"functionDescription": "",
@@ -645,6 +682,28 @@
 				}
 			],
 			"sid": 537522480254594
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "ScoringTable",
+					"sid": 918867423351914,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"boredom\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"customAction": "Boring",
+					"objectClass": "ScoringTable",
+					"sid": 367186049030659
+				}
+			],
+			"sid": 687778754371917
 		}
 	],
 	"sid": 759224197214942

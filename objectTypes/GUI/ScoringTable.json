@@ -3,8 +3,29 @@
 	"plugin-id": "NinePatch",
 	"sid": 609063210826325,
 	"isGlobal": false,
-	"instanceVariables": [],
-	"behaviorTypes": [],
+	"instanceVariables": [
+		{
+			"name": "BoredomFirstInterval",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 889929176490522
+		},
+		{
+			"name": "BoredomInterval",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 521080890094064
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 477438079077985
+		}
+	],
 	"effectTypes": [],
 	"image": {
 		"width": 72,

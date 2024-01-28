@@ -105,6 +105,37 @@
 				}
 			],
 			"sid": 497094464534749
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "Box",
+					"sid": 644528957561797
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "Box",
+					"sid": 264611157542253,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "LayoutHeight * 1.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Health",
+					"sid": 935739178979364,
+					"parameters": {
+						"instance-variable": "HitPoints",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 475850349628325
 		}
 	],
 	"sid": 445927791774009

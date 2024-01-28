@@ -2,7 +2,7 @@
     "c2array": true,
     "size": [
         1,
-        6,
+        10,
         1
     ],
     "data": [
@@ -11,19 +11,31 @@
                 "CatCard"
             ],
             [
-                "PandaCard"
-            ],
-            [
-                "FishCard"
-            ],
-            [
-                "FishCard"
+                "CatCard"
             ],
             [
                 "PandaCard"
             ],
             [
                 "CatCard"
+            ],
+            [
+                "CatCard"
+            ],
+            [
+                "PandaCard"
+            ],
+            [
+                "CatCard"
+            ],
+            [
+                "PandaCard"
+            ],
+            [
+                "FishCard"
+            ],
+            [
+                "PandaCard"
             ]
         ]
     ]

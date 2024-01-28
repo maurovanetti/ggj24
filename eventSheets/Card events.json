@@ -19,15 +19,6 @@
 					],
 					"actions": [
 						{
-							"id": "set-instvar-value",
-							"objectClass": "DeckArray",
-							"sid": 544174712775144,
-							"parameters": {
-								"instance-variable": "Index",
-								"value": "0"
-							}
-						},
-						{
 							"id": "set-boolean-instvar",
 							"objectClass": "CardSpawnArea",
 							"sid": 522664265568875,
@@ -35,10 +26,48 @@
 								"instance-variable": "Available",
 								"value": "false"
 							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DeckArray",
+							"sid": 950837205291790,
+							"parameters": {
+								"instance-variable": "Index",
+								"value": "0"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "By default, the deck starts from 0, but this can be ovverriden by the Start object for testing purposes"
 						}
 					],
 					"sid": 131067983032678,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Start",
+									"sid": 517794959491951,
+									"parameters": {
+										"animation": "\"In Use\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "DeckArray",
+									"sid": 332172302821659,
+									"parameters": {
+										"instance-variable": "Index",
+										"value": "Start.SkipCards"
+									}
+								}
+							],
+							"sid": 478921376452225
+						},
 						{
 							"eventType": "block",
 							"conditions": [

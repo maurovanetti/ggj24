@@ -12,14 +12,7 @@
 			"sid": 732681282068163
 		},
 		{
-			"name": "ToleranceY",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 257881932539771
-		},
-		{
-			"name": "UpwardSpeed",
+			"name": "MaxVerticalSpeedInSlope",
 			"type": "number",
 			"desc": "",
 			"show": true,

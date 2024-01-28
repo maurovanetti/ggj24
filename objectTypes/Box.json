@@ -38,6 +38,16 @@
 			"behaviorId": "Platform",
 			"name": "Platform",
 			"sid": 458590793918034
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 406389830076062
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 255652962479767
 		}
 	],
 	"effectTypes": [],
@@ -47,22 +57,28 @@
 				"frames": [
 					{
 						"width": 64,
-						"height": 180,
+						"height": 160,
 						"originX": 0.5,
 						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7533960,
+						"imageSpriteId": 8401134,
 						"collisionPoly": {
 							"points": [
+								0.1145833333333333,
+								1,
+								0,
+								0.95625,
+								0,
 								0,
 								1,
 								0,
-								0,
 								1,
-								0,
+								0.9625000000000001,
+								0.8958333333333338,
 								1,
+								0.5,
 								1
 							]
 						},
