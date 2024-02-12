@@ -315,9 +315,9 @@
 										{
 											"id": "set-y",
 											"objectClass": "Focus",
-											"sid": 117916855119936,
+											"sid": 825782876228581,
 											"parameters": {
-												"y": "Focus.Y + clamp(Box.Y + Focus.DeltaY - Focus.Y, dt * -abs(Focus.MaxVerticalSpeedInSlope), 0)"
+												"y": "Box.Y + Focus.DeltaY"
 											}
 										}
 									],
@@ -346,9 +346,9 @@
 										{
 											"id": "set-y",
 											"objectClass": "Focus",
-											"sid": 276992933611786,
+											"sid": 744883328308351,
 											"parameters": {
-												"y": "Focus.Y + clamp(Box.Y + Focus.DeltaY - Focus.Y, 0, dt *abs(Focus.MaxVerticalSpeedInSlope))"
+												"y": "Box.Y + Focus.DeltaY"
 											}
 										}
 									],
