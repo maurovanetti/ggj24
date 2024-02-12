@@ -452,90 +452,109 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-overlapping-another-object",
-									"objectClass": "Card",
-									"sid": 360597725349657,
-									"parameters": {
-										"object": "CardSlot"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-position",
-									"objectClass": "Card",
-									"sid": 736725489005035,
-									"parameters": {
-										"x": "CardSlot.BBoxMidX",
-										"y": "CardSlot.BBoxMidY"
-									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "Card",
-									"sid": 707692172301273,
-									"behaviorType": "DragDrop",
-									"parameters": {
-										"state": "disabled"
-									}
-								},
-								{
-									"id": "destroy",
+									"id": "pick-nearestfurthest",
 									"objectClass": "CardSlot",
-									"sid": 468675428965171
-								},
-								{
-									"customAction": "UnregisterSpawnArea",
-									"objectClass": "Card",
-									"sid": 200782858527844
-								},
-								{
-									"customAction": "SpawnEffect",
-									"objectClass": "Card",
-									"sid": 892955600295769,
-									"parameters": [
-										"CardSlot.X",
-										"CardSlot.Y"
-									]
-								},
-								{
-									"id": "start-fade",
-									"objectClass": "Card",
-									"sid": 389335098878682,
-									"behaviorType": "Fade"
-								}
-							],
-							"sid": 706273646720440
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 715334220832809
-								}
-							],
-							"actions": [
-								{
-									"id": "move-to-layer",
-									"objectClass": "Card",
-									"sid": 251256196388687,
+									"sid": 158619183766150,
 									"parameters": {
-										"layer": "\"Top of GUI\""
-									}
-								},
-								{
-									"id": "set-position",
-									"objectClass": "Card",
-									"sid": 188316928576538,
-									"parameters": {
-										"x": "Card.OriginalX",
-										"y": "Card.OriginalY"
+										"which": "nearest",
+										"x": "Card.X",
+										"y": "Card.Y"
 									}
 								}
 							],
-							"sid": 781231869796032
+							"actions": [],
+							"sid": 622334236615388,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "Card",
+											"sid": 970659445013522,
+											"parameters": {
+												"object": "CardSlot"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "Card",
+											"sid": 311999188350934,
+											"parameters": {
+												"x": "CardSlot.BBoxMidX",
+												"y": "CardSlot.BBoxMidY"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Card",
+											"sid": 270094314174304,
+											"behaviorType": "DragDrop",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "destroy",
+											"objectClass": "CardSlot",
+											"sid": 714587754518752
+										},
+										{
+											"customAction": "UnregisterSpawnArea",
+											"objectClass": "Card",
+											"sid": 829487282698835
+										},
+										{
+											"customAction": "SpawnEffect",
+											"objectClass": "Card",
+											"sid": 435445043453403,
+											"parameters": [
+												"CardSlot.X",
+												"CardSlot.Y"
+											]
+										},
+										{
+											"id": "start-fade",
+											"objectClass": "Card",
+											"sid": 398353790620294,
+											"behaviorType": "Fade"
+										}
+									],
+									"sid": 853980183593266
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 156501402938347
+										}
+									],
+									"actions": [
+										{
+											"id": "move-to-layer",
+											"objectClass": "Card",
+											"sid": 597984491014987,
+											"parameters": {
+												"layer": "\"Top of GUI\""
+											}
+										},
+										{
+											"id": "set-position",
+											"objectClass": "Card",
+											"sid": 440602413169257,
+											"parameters": {
+												"x": "Card.OriginalX",
+												"y": "Card.OriginalY"
+											}
+										}
+									],
+									"sid": 556073280171689
+								}
+							]
 						}
 					]
 				},
