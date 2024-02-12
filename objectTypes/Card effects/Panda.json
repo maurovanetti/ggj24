@@ -243,7 +243,7 @@
 							]
 						},
 						"useCollisionPoly": true,
-						"duration": 1,
+						"duration": 2,
 						"tag": ""
 					},
 					{
@@ -268,7 +268,7 @@
 							]
 						},
 						"useCollisionPoly": true,
-						"duration": 1,
+						"duration": 2,
 						"tag": ""
 					},
 					{
@@ -293,7 +293,7 @@
 							]
 						},
 						"useCollisionPoly": true,
-						"duration": 1,
+						"duration": 2,
 						"tag": ""
 					},
 					{
@@ -318,7 +318,7 @@
 							]
 						},
 						"useCollisionPoly": true,
-						"duration": 1,
+						"duration": 2,
 						"tag": ""
 					},
 					{
@@ -343,7 +343,7 @@
 							]
 						},
 						"useCollisionPoly": true,
-						"duration": 1,
+						"duration": 2,
 						"tag": ""
 					},
 					{
@@ -368,7 +368,7 @@
 							]
 						},
 						"useCollisionPoly": true,
-						"duration": 1,
+						"duration": 2,
 						"tag": ""
 					}
 				],
@@ -378,7 +378,7 @@
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 10
+				"speed": 20
 			}
 		],
 		"subfolders": []
