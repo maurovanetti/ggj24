@@ -12,18 +12,39 @@
 			"sid": 732681282068163
 		},
 		{
-			"name": "MaxVerticalSpeedInSlope",
-			"type": "number",
-			"desc": "",
-			"show": true,
-			"sid": 932514985955560
-		},
-		{
 			"name": "DownwardAdjustTime",
 			"type": "number",
 			"desc": "",
 			"show": true,
 			"sid": 216618444346741
+		},
+		{
+			"name": "DeltaXAsViewportFraction",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 380890605803692
+		},
+		{
+			"name": "MaxVerticalSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 595296034045333
+		},
+		{
+			"name": "MirrorTransition",
+			"type": "number",
+			"desc": "1 to -1",
+			"show": true,
+			"sid": 273486156197262
+		},
+		{
+			"name": "MirrorTransitionDuration",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 335448223538248
 		}
 	],
 	"behaviorTypes": [

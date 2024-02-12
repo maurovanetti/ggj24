@@ -248,6 +248,53 @@
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Box",
+							"sid": 831785668953152,
+							"parameters": {
+								"instance-variable": "Rightward"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Focus",
+							"sid": 862678372881389,
+							"parameters": {
+								"instance-variable": "MirrorTransition",
+								"value": "clamp(Focus.MirrorTransition + (dt / (2 * Focus.MirrorTransitionDuration)), -1, 1) "
+							}
+						}
+					],
+					"sid": 420550881129078
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 596963235081269
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Focus",
+							"sid": 134943579466278,
+							"parameters": {
+								"instance-variable": "MirrorTransition",
+								"value": "clamp(Focus.MirrorTransition - (dt / (2 * Focus.MirrorTransitionDuration)), -1, 1) "
+							}
+						}
+					],
+					"sid": 185754060063307
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
 							"id": "every-tick",
 							"objectClass": "System",
 							"sid": 381773231853150
@@ -257,9 +304,9 @@
 						{
 							"id": "set-x",
 							"objectClass": "Focus",
-							"sid": 355849936930401,
+							"sid": 738780830751442,
 							"parameters": {
-								"x": "Box.X + (ViewportWidth(0) / 3) "
+								"x": "Box.X + Focus.MirrorTransition * ViewportWidth(0) * Focus.DeltaXAsViewportFraction"
 							}
 						}
 					],
@@ -269,33 +316,14 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "is-on-floor",
+									"id": "on-landed",
 									"objectClass": "Box",
-									"sid": 884046343696340,
+									"sid": 223361783482800,
 									"behaviorType": "Platform"
-								},
-								{
-									"id": "compare-y",
-									"objectClass": "Box",
-									"sid": 785621553817444,
-									"parameters": {
-										"comparison": 1,
-										"y-co-ordinate": "Focus.Y - Focus.DeltaY"
-									}
-								},
-								{
-									"id": "is-playing",
-									"objectClass": "Focus",
-									"sid": 891486877794193,
-									"behaviorType": "Tween",
-									"parameters": {
-										"tags": "\"adjust\""
-									},
-									"isInverted": true
 								}
 							],
 							"actions": [],
-							"sid": 975006136384786,
+							"sid": 283839089795770,
 							"children": [
 								{
 									"eventType": "block",
@@ -303,71 +331,19 @@
 										{
 											"id": "compare-two-values",
 											"objectClass": "System",
-											"sid": 665206249538548,
+											"sid": 456616748055540,
 											"parameters": {
-												"first-value": "Box.Y + Focus.DeltaY",
-												"comparison": 2,
-												"second-value": "Focus.Y"
+												"first-value": "Box.Y + Focus.DeltaY - Focus.Y",
+												"comparison": 4,
+												"second-value": "Box.MinOuchDrop"
 											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-y",
-											"objectClass": "Focus",
-											"sid": 825782876228581,
-											"parameters": {
-												"y": "Box.Y + Focus.DeltaY"
-											}
-										}
-									],
-									"sid": 394818771180718
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 720354325156550
-										},
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 796118819934033,
-											"parameters": {
-												"first-value": "Box.Y + Focus.DeltaY",
-												"comparison": 2,
-												"second-value": "Focus.Y + Focus.MaxVerticalSpeedInSlope * dt"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-y",
-											"objectClass": "Focus",
-											"sid": 744883328308351,
-											"parameters": {
-												"y": "Box.Y + Focus.DeltaY"
-											}
-										}
-									],
-									"sid": 738521238966780
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 672030155893043
 										}
 									],
 									"actions": [
 										{
 											"id": "tween-one-property",
 											"objectClass": "Focus",
-											"sid": 710563780644649,
+											"sid": 999696637329755,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"adjust\"",
@@ -384,12 +360,44 @@
 										{
 											"customAction": "Ouch",
 											"objectClass": "ScoringTable",
-											"sid": 375421155644885
+											"sid": 870884568283258
 										}
 									],
-									"sid": 397167021715285
+									"sid": 307532196011757
 								}
 							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-floor",
+									"objectClass": "Box",
+									"sid": 857517982243227,
+									"behaviorType": "Platform"
+								},
+								{
+									"id": "is-playing",
+									"objectClass": "Focus",
+									"sid": 575575997384249,
+									"behaviorType": "Tween",
+									"parameters": {
+										"tags": "\"adjust\""
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-y",
+									"objectClass": "Focus",
+									"sid": 603159761691182,
+									"parameters": {
+										"y": "clamp(Box.Y + Focus.DeltaY, Focus.Y - Focus.MaxVerticalSpeed * dt, Focus.Y + Focus.MaxVerticalSpeed * dt)"
+									}
+								}
+							],
+							"sid": 983889319168883
 						}
 					]
 				}

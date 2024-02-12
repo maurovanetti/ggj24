@@ -38,6 +38,13 @@
 			"desc": "",
 			"show": true,
 			"sid": 419039253281424
+		},
+		{
+			"name": "MinOuchDrop",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 536188695303751
 		}
 	],
 	"behaviorTypes": [

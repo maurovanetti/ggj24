@@ -317,7 +317,8 @@
 								"DeltaX": 0,
 								"JustJumped": false,
 								"Rightward": true,
-								"OnFire": false
+								"OnFire": false,
+								"MinOuchDrop": 100
 							},
 							"behaviors": {
 								"Platform": {
@@ -589,8 +590,11 @@
 					"uid": 19,
 					"instanceVariables": {
 						"DeltaY": -256,
-						"MaxVerticalSpeedInSlope": 1000,
-						"DownwardAdjustTime": 0.3
+						"DownwardAdjustTime": 0.3,
+						"DeltaXAsViewportFraction": 0.2,
+						"MaxVerticalSpeed": 1000,
+						"MirrorTransition": 1,
+						"MirrorTransitionDuration": 0.5
 					},
 					"behaviors": {
 						"Tween": {
