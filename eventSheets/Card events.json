@@ -687,7 +687,71 @@
 							}
 						}
 					],
-					"sid": 233647120354261
+					"sid": 233647120354261,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "ScoreToUnlock",
+									"sid": 258642628326875,
+									"parameters": {
+										"instance-variable": "Threshold",
+										"comparison": 3,
+										"value": "Score.Total"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "ScoreToUnlock",
+									"sid": 298859404135606,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "LockedCard",
+									"sid": 600245117487310,
+									"parameters": {
+										"animation": "\"Unlocked\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 284221412855043
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-animation-finished",
+							"objectClass": "LockedCard",
+							"sid": 312601158684019,
+							"parameters": {
+								"animation": "\"Unlocked\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"customAction": "UnregisterSpawnArea",
+							"objectClass": "LockedCard",
+							"customActionObjectClass": "Card",
+							"sid": 761205362970437
+						},
+						{
+							"id": "destroy",
+							"objectClass": "LockedCard",
+							"sid": 404007610839507
+						}
+					],
+					"sid": 446866319102369
 				}
 			],
 			"sid": 689409671664945

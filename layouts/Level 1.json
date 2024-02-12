@@ -685,7 +685,9 @@
 						"DeltaY": -256,
 						"DownwardAdjustTime": 0.3,
 						"DeltaXAsViewportFraction": 0.2,
-						"MaxVerticalSpeed": 100
+						"MaxVerticalSpeed": 100,
+						"MirrorTransition": 1,
+						"MirrorTransitionDuration": 1
 					},
 					"behaviors": {
 						"Tween": {
@@ -1114,6 +1116,37 @@
 									1,
 									1,
 									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Rainbow",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 192,
+							"instanceVariables": {
+								"Destination": "Debug"
+							},
+							"behaviors": {},
+							"world": {
+								"x": 8843,
+								"y": 1098,
+								"width": 971,
+								"height": 256,
+								"originX": 0.6640625,
+								"originY": 0.33203125,
+								"color": [
+									1,
+									1,
+									1,
+									0.5
 								],
 								"angle": 0,
 								"zElevation": 0

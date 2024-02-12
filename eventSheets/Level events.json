@@ -136,6 +136,114 @@
 					"sid": 436156516832413
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Box",
+					"sid": 149885959196624,
+					"parameters": {
+						"object": "Rainbow"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-one-property",
+					"objectClass": "Focus",
+					"sid": 436424999004022,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"adjust\"",
+						"property": "offsetY",
+						"end-value": "Box.Y + Focus.DeltaY",
+						"time": "Focus.DownwardAdjustTime * 3",
+						"ease": "easeoutbounce",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 886539603291093,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Box",
+							"sid": 660746361806438,
+							"parameters": {
+								"instance-variable": "JustJumped"
+							}
+						}
+					],
+					"actions": [
+						{
+							"customAction": "LeapOfFaith",
+							"objectClass": "ScoringTable",
+							"sid": 126935151071156
+						}
+					],
+					"sid": 261432520843129
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Box",
+							"sid": 225920800392796,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Guy",
+							"sid": 894750163333800,
+							"behaviorType": "Rotate",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Guy",
+							"sid": 301757516357064,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 560185470825617,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 760709815796846,
+							"parameters": {
+								"layout": "Rainbow.Destination"
+							}
+						}
+					],
+					"sid": 769689468716503
+				}
+			]
 		}
 	],
 	"sid": 148814219682973

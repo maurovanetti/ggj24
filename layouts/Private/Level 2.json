@@ -685,7 +685,9 @@
 						"DeltaY": -256,
 						"DownwardAdjustTime": 0.3,
 						"DeltaXAsViewportFraction": 0.2,
-						"MaxVerticalSpeed": 100
+						"MaxVerticalSpeed": 100,
+						"MirrorTransition": 1,
+						"MirrorTransitionDuration": 1
 					},
 					"behaviors": {
 						"Tween": {
