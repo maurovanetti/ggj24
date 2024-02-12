@@ -197,7 +197,9 @@
 							"FishCard",
 							"DogCard",
 							"StartCard",
-							"DebugCard"
+							"DebugCard",
+							"LockedCard",
+							"ScoreToUnlock"
 						],
 						"subfolders": [],
 						"name": "Cards"
@@ -237,6 +239,12 @@
 				"Fire",
 				"Guy"
 			]
+		},
+		{
+			"members": [
+				"LockedCard",
+				"ScoreToUnlock"
+			]
 		}
 	],
 	"families": {
@@ -270,7 +278,8 @@
 			"Scoring events",
 			"Card events",
 			"Health events",
-			"Title Screen events"
+			"Title Screen events",
+			"Level events"
 		],
 		"subfolders": []
 	},
@@ -482,7 +491,7 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "1.0.0.0",
+		"version": "1.1.0.0",
 		"author": "Mauro Vanetti & Francesco Di Pietro",
 		"authorEmail": "posta@maurovanetti.info",
 		"authorWebsite": "https://maurovanetti.itch.io/taof",

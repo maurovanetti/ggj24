@@ -711,6 +711,103 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "LockedCard",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 190,
+					"instanceVariables": {
+						"OriginalX": 0,
+						"OriginalY": 0,
+						"CardSpawnAreaUID": -1,
+						"Effect": ""
+					},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 854,
+						"y": 702,
+						"width": 128,
+						"height": 192,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ScoreToUnlock",
+					"properties": {
+						"text": "1000",
+						"enable-bbcode": true,
+						"font": "Buran USSR",
+						"size": 28,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"icon-set": -1,
+						"initially-visible": true,
+						"origin": "center",
+						"read-aloud": false
+					},
+					"uid": 191,
+					"instanceVariables": {
+						"Threshold": 0
+					},
+					"behaviors": {},
+					"world": {
+						"x": 854.4022962363814,
+						"y": 667.314715163513,
+						"width": 119.25497808950104,
+						"height": 46,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 449736934054648,

@@ -2,6 +2,10 @@
 	"name": "Card events",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "Level events"
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Draw Cards",
@@ -37,8 +41,8 @@
 							}
 						},
 						{
-							"type": "comment",
-							"text": "By default, the deck starts from 0, but this can be ovverriden by the Start object for testing purposes"
+							"callFunction": "LoadDeck",
+							"sid": 792339481455409
 						}
 					],
 					"sid": 131067983032678,
@@ -57,6 +61,10 @@
 							],
 							"actions": [
 								{
+									"type": "comment",
+									"text": "By default, the deck starts from 0, but this can be ovverriden by the Start object for testing purposes"
+								},
+								{
 									"id": "set-instvar-value",
 									"objectClass": "DeckArray",
 									"sid": 332172302821659,
@@ -67,55 +75,6 @@
 								}
 							],
 							"sid": 478921376452225
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 576206975491553,
-									"parameters": {
-										"first-value": "LayoutName",
-										"comparison": 0,
-										"second-value": "\"Level 1\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "request-project-file",
-									"objectClass": "AJAX",
-									"sid": 305982799206407,
-									"parameters": {
-										"tag": "\"Deck\"",
-										"file": "Deck1.json"
-									}
-								}
-							],
-							"sid": 277170886254106
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 182430070153914
-								}
-							],
-							"actions": [
-								{
-									"id": "request-project-file",
-									"objectClass": "AJAX",
-									"sid": 249758516012936,
-									"parameters": {
-										"tag": "\"Deck\"",
-										"file": "Deck0.json"
-									}
-								}
-							],
-							"sid": 697254889748534
 						}
 					]
 				},
@@ -153,6 +112,16 @@
 					"sid": 521739279925855
 				},
 				{
+					"eventType": "variable",
+					"name": "CardType",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 244692427411223
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -174,30 +143,82 @@
 					],
 					"actions": [
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 416748084177779,
+							"parameters": {
+								"variable": "CardType",
+								"value": "DeckArray.At(0, DeckArray.Index % DeckArray.Height, 0)"
+							}
+						},
+						{
 							"id": "create-object-by-name",
 							"objectClass": "System",
-							"sid": 276278491250568,
+							"sid": 504972387946421,
 							"parameters": {
-								"object-name": "DeckArray.At(0, DeckArray.Index % DeckArray.Height, 0)",
+								"object-name": "CardType",
 								"layer": "\"Top of GUI\"",
 								"x": "-100",
 								"y": "-100",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
-						},
-						{
-							"id": "add-to-instvar",
-							"objectClass": "DeckArray",
-							"sid": 575386206895660,
-							"parameters": {
-								"instance-variable": "Index",
-								"value": "1"
-							}
 						}
 					],
 					"sid": 361156894708575,
 					"children": [
+						{
+							"breakpoint": true,
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 838233316731586,
+									"parameters": {
+										"variable": "CardType",
+										"comparison": 0,
+										"value": "\"LockedCard\""
+									}
+								},
+								{
+									"id": "pick-last-created",
+									"objectClass": "System",
+									"sid": 734175338549642,
+									"parameters": {
+										"object": "LockedCard"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ScoreToUnlock",
+									"sid": 667209867895720,
+									"parameters": {
+										"instance-variable": "Threshold",
+										"value": "int(DeckArray.At(1, DeckArray.Index % DeckArray.Height, 0))"
+									}
+								}
+							],
+							"sid": 198999122143448
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "DeckArray",
+									"sid": 990357613755433,
+									"parameters": {
+										"instance-variable": "Index",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 441670645368879
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -618,6 +639,59 @@
 				}
 			],
 			"sid": 597653295021999
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Unlockables",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 430256791856220
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "ScoreToUnlock",
+							"sid": 329394249278884,
+							"parameters": {
+								"object": "LockedCard",
+								"image-point-optional": "\"Score\""
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "ScoreToUnlock",
+							"sid": 668277061924953,
+							"parameters": {
+								"layer": "\"Top of GUI\""
+							}
+						},
+						{
+							"id": "move-to-top",
+							"objectClass": "ScoreToUnlock",
+							"sid": 299371624261604
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ScoreToUnlock",
+							"sid": 918333383649971,
+							"parameters": {
+								"text": "ScoreToUnlock.Threshold - Score.Total"
+							}
+						}
+					],
+					"sid": 233647120354261
+				}
+			],
+			"sid": 689409671664945
 		},
 		{
 			"eventType": "group",

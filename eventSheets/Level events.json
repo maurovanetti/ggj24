@@ -1,0 +1,142 @@
+{
+	"name": "Level events",
+	"events": [
+		{
+			"functionName": "LoadDeck",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 502569100778555,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 227546062467166,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Debug\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 718196603491179,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck0.json"
+							}
+						}
+					],
+					"sid": 154775220995618
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 742484489938632
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 648132391522543,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 929204753699819,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1.json"
+							}
+						}
+					],
+					"sid": 414613044215103
+				},
+				{
+					"eventType": "comment",
+					"text": "Duplicate this block to add more levels. Replace the level name in the condition and the .json file argument in the action. Don't change the \"Deck\" tag."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 194573976879299
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 231153517216707,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"INSERT LEVEL NAME HERE\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 904906366283689,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1.json"
+							}
+						}
+					],
+					"sid": 445584441299844
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 535483335480689
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Default deck."
+						},
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 968425827860974,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck0.json"
+							}
+						}
+					],
+					"sid": 436156516832413
+				}
+			]
+		}
+	],
+	"sid": 148814219682973
+}

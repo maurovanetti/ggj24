@@ -1,0 +1,17 @@
+{
+	"name": "ScoreToUnlock",
+	"plugin-id": "Text",
+	"sid": 978810335733529,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Threshold",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 892237311992710
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

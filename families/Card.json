@@ -51,6 +51,7 @@
 		"FishCard",
 		"DogCard",
 		"StartCard",
-		"DebugCard"
+		"DebugCard",
+		"LockedCard"
 	]
 }
