@@ -145,7 +145,116 @@
 					}
 				}
 			],
-			"sid": 686372778323697
+			"sid": 686372778323697,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "ScoreChangeAsNumber",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 293493613652602
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 822492888357069,
+							"parameters": {
+								"variable": "ScoreChangeAsNumber",
+								"value": "ScoringMap.GetDefault(Text, 0)"
+							}
+						}
+					],
+					"sid": 200459227496571
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 959933630938445,
+							"parameters": {
+								"variable": "ScoreChangeAsNumber",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Guy",
+							"sid": 966446814654846,
+							"parameters": {
+								"object": "PositiveScoreEffect",
+								"layer": "\"In-World GUI\"",
+								"image-point": "\"Score\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"customAction": "Show",
+							"objectClass": "PositiveScoreEffect",
+							"customActionObjectClass": "ScoreEffect",
+							"sid": 617235189643304,
+							"parameters": [
+								"\"+\" & ScoreChangeAsNumber"
+							]
+						}
+					],
+					"sid": 942567142807377
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 234626238512741
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 666656602175521,
+							"parameters": {
+								"variable": "ScoreChangeAsNumber",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Guy",
+							"sid": 714519150944651,
+							"parameters": {
+								"object": "NegativeScoreEffect",
+								"layer": "\"In-World GUI\"",
+								"image-point": "\"Score\"",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"customAction": "Show",
+							"objectClass": "NegativeScoreEffect",
+							"customActionObjectClass": "ScoreEffect",
+							"sid": 819125614386647,
+							"parameters": [
+								"str(ScoreChangeAsNumber)"
+							]
+						}
+					],
+					"sid": 882759151954764
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -1126,6 +1235,72 @@
 					"sid": 149353321909156
 				}
 			]
+		},
+		{
+			"aceType": "action",
+			"aceName": "Show",
+			"objectClass": "ScoreEffect",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "ScoreChangeAsString",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 874882353487123
+				}
+			],
+			"eventType": "custom-ace-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "ScoreEffect",
+					"sid": 232117327831310,
+					"parameters": {
+						"x": "ScoreEffect.X - 25 + random(50)",
+						"y": "ScoreEffect.Y - 20 + random(40)"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "ScoreEffect",
+					"sid": 894611151430359,
+					"parameters": {
+						"angle": "10"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ScoreEffect",
+					"sid": 608910609645555,
+					"parameters": {
+						"text": "ScoreChangeAsString"
+					}
+				},
+				{
+					"id": "tween-one-property",
+					"objectClass": "ScoreEffect",
+					"sid": 569671809630128,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "offsetY",
+						"end-value": "ScoreEffect.Y - 25",
+						"time": "1",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no",
+						"repeat-count": "1"
+					}
+				}
+			],
+			"sid": 922342043442260
 		}
 	],
 	"sid": 759224197214942
