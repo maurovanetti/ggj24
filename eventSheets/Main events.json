@@ -848,9 +848,9 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
+							"id": "is-overlapping-another-object",
 							"objectClass": "Box",
-							"sid": 945581352867628,
+							"sid": 883601769470549,
 							"parameters": {
 								"object": "Dog"
 							}
@@ -1661,6 +1661,15 @@
 							"conditions": [],
 							"actions": [
 								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Box",
+									"sid": 939539926884168,
+									"parameters": {
+										"instance-variable": "OnFire",
+										"value": "false"
+									}
+								},
+								{
 									"id": "destroy",
 									"objectClass": "AltBox",
 									"sid": 544554371666338
@@ -1689,15 +1698,6 @@
 									"behaviorType": "Platform",
 									"parameters": {
 										"acceleration": "DefaultAcceleration"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "Box",
-									"sid": 547082064237441,
-									"parameters": {
-										"instance-variable": "OnFire",
-										"value": "false"
 									}
 								}
 							],
