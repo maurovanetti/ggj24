@@ -1712,6 +1712,28 @@
 							"sid": 116212773770361
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 141970675018648
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-double-jump",
+							"objectClass": "Box",
+							"sid": 467281371482035,
+							"behaviorType": "Platform",
+							"parameters": {
+								"double-jump-allowed": true
+							}
+						}
+					],
+					"sid": 600385522928161
 				}
 			],
 			"sid": 316166508963736

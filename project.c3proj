@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 36802,
+	"savedWithRelease": 37900,
 	"name": "The Art of Falling",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -492,6 +492,10 @@
 				"subfolders": []
 			}
 		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
 	},
 	"properties": {
 		"description": "",
