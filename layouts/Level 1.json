@@ -54,6 +54,7 @@
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
 					"color": [
 						1,
 						1,
@@ -127,6 +128,7 @@
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
 					"color": [
 						1,
 						1,
@@ -395,6 +397,7 @@
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
 					"color": [
 						1,
 						1,
@@ -542,6 +545,7 @@
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
 					"color": [
 						1,
 						1,
@@ -645,6 +649,7 @@
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
 					"color": [
 						1,
 						1,
@@ -723,6 +728,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
 			"color": [
 				1,
 				1,
@@ -1138,10 +1144,10 @@
 							"world": {
 								"x": 8843,
 								"y": 1098,
-								"width": 971,
-								"height": 256,
-								"originX": 0.6640625,
-								"originY": 0.33203125,
+								"width": 7278.70703125,
+								"height": 1024,
+								"originX": 0.5059927045336112,
+								"originY": 0.4990234375,
 								"color": [
 									1,
 									1,
@@ -1157,6 +1163,7 @@
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
 					"color": [
 						1,
 						1,
@@ -1481,6 +1488,7 @@
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
 					"color": [
 						1,
 						1,
@@ -1511,6 +1519,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
 			"color": [
 				1,
 				1,
@@ -1754,6 +1763,7 @@
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
 					"color": [
 						1,
 						1,
@@ -1787,6 +1797,7 @@
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
+					"isHTMLElementsLayer": false,
 					"color": [
 						1,
 						1,
@@ -1832,6 +1843,7 @@
 						"horizontal-alignment": "right",
 						"vertical-alignment": "center",
 						"wrapping": "word",
+						"text-direction": "ltr",
 						"icon-set": -1,
 						"initially-visible": true,
 						"origin": "top-right",
@@ -1898,6 +1910,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
 			"color": [
 				1,
 				1,
@@ -1931,6 +1944,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
 			"color": [
 				1,
 				1,

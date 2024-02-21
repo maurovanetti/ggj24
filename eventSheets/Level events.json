@@ -115,6 +115,326 @@
 						{
 							"id": "else",
 							"objectClass": "System",
+							"sid": 941087820472749
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 944176529800641,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 143303677973661,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_1.json"
+							}
+						}
+					],
+					"sid": 517303565454366
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 757659253963675
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 822980647923452,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 557103391618778,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_2.json"
+							}
+						}
+					],
+					"sid": 987295134996957
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 801123173101580
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 779612063543568,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 413562875817730,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_3.json"
+							}
+						}
+					],
+					"sid": 282918440430869
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 491021316400684
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 303754127745646,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_4\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 632456886246131,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_4.json"
+							}
+						}
+					],
+					"sid": 417251846885650
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 920110728285980
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 571111620403001,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_5\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 120565826718855,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_5.json"
+							}
+						}
+					],
+					"sid": 701878528273174
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 298300420505164
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 667342997427289,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_6\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 782783596854460,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_6.json"
+							}
+						}
+					],
+					"sid": 172130355765872
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 695437078502226
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 711262517821632,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_7\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 153903572137435,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_7.json"
+							}
+						}
+					],
+					"sid": 918577602677307
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 266357266675281
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 843055202466489,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_8\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 906124689262619,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_8.json"
+							}
+						}
+					],
+					"sid": 674557414014296
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 751456628919384
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 330831339246601,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_9\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 218887908401214,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_9.json"
+							}
+						}
+					],
+					"sid": 676918382326061
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 308281789672890
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 294193826004819,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Level 1_10\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 576926482694500,
+							"parameters": {
+								"tag": "\"Deck\"",
+								"file": "Deck1_10.json"
+							}
+						}
+					],
+					"sid": 768225093159294
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
 							"sid": 535483335480689
 						}
 					],
@@ -153,14 +473,14 @@
 				{
 					"id": "tween-one-property",
 					"objectClass": "Focus",
-					"sid": 436424999004022,
+					"sid": 637263308149012,
 					"behaviorType": "Tween",
 					"parameters": {
 						"tags": "\"adjust\"",
 						"property": "offsetY",
 						"end-value": "Box.Y + Focus.DeltaY",
 						"time": "Focus.DownwardAdjustTime * 3",
-						"ease": "easeoutbounce",
+						"ease": "easeinoutsine",
 						"destroy-on-complete": "no",
 						"loop": "no",
 						"ping-pong": "no",
@@ -196,6 +516,22 @@
 					"conditions": [],
 					"actions": [
 						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Rainbow",
+							"sid": 444323338521848,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Abyss",
+							"sid": 250402099061982,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
 							"id": "set-enabled",
 							"objectClass": "Box",
 							"sid": 225920800392796,
@@ -214,20 +550,25 @@
 							}
 						},
 						{
-							"id": "flash",
-							"objectClass": "Guy",
-							"sid": 301757516357064,
-							"behaviorType": "Flash",
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 277398981249608,
 							"parameters": {
-								"on-time": "0.1",
-								"off-time": "0.1",
-								"duration": "1.0"
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Guy",
+							"sid": 604024927905381,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						},
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 560185470825617,
+							"sid": 515485883623202,
 							"parameters": {
 								"seconds": "3"
 							}

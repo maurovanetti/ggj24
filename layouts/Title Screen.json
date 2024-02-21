@@ -136,7 +136,7 @@
 						"OriginalX": 0,
 						"OriginalY": 0,
 						"CardSpawnAreaUID": -1,
-						"Effect": "Level 1"
+						"Effect": "Level 1_1"
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -187,7 +187,7 @@
 						"OriginalX": 0,
 						"OriginalY": 0,
 						"CardSpawnAreaUID": -1,
-						"Effect": "Level 1"
+						"Effect": "Level 1_1"
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -238,7 +238,7 @@
 						"OriginalX": 0,
 						"OriginalY": 0,
 						"CardSpawnAreaUID": -1,
-						"Effect": "Debug"
+						"Effect": "Level 1_1"
 					},
 					"behaviors": {
 						"DragDrop": {
@@ -280,6 +280,7 @@
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
+			"isHTMLElementsLayer": false,
 			"color": [
 				1,
 				1,

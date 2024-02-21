@@ -262,7 +262,17 @@
 		"items": [
 			"Level 1",
 			"Title Screen",
-			"Debug"
+			"Debug",
+			"Level 1_1",
+			"Level 1_2",
+			"Level 1_3",
+			"Level 1_4",
+			"Level 1_5",
+			"Level 1_6",
+			"Level 1_7",
+			"Level 1_8",
+			"Level 1_9",
+			"Level 1_10"
 		],
 		"subfolders": [
 			{
@@ -474,6 +484,86 @@
 					"name": "Deck0.json",
 					"type": "application/json",
 					"sid": 892298518059435,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_1.json",
+					"type": "application/json",
+					"sid": 954897776628984,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_2.json",
+					"type": "application/json",
+					"sid": 422449152230668,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_3.json",
+					"type": "application/json",
+					"sid": 363266149572017,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_4.json",
+					"type": "application/json",
+					"sid": 212120101420082,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_5.json",
+					"type": "application/json",
+					"sid": 712345082991856,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_6.json",
+					"type": "application/json",
+					"sid": 477967783116776,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_7.json",
+					"type": "application/json",
+					"sid": 972807230899357,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_8.json",
+					"type": "application/json",
+					"sid": 440142106447425,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_9.json",
+					"type": "application/json",
+					"sid": 306597970926641,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deck1_10.json",
+					"type": "application/json",
+					"sid": 958696336090048,
 					"file-info": {
 						"purpose": "none"
 					}

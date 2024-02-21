@@ -678,6 +678,14 @@
 			"conditions": [],
 			"actions": [
 				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 837064845018038,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
 					"customAction": "New Event",
 					"objectClass": "ScoringTable",
 					"sid": 233710660122572,
@@ -701,6 +709,14 @@
 			"eventType": "custom-ace-block",
 			"conditions": [],
 			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 765014931149816,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
 				{
 					"customAction": "New Event",
 					"objectClass": "ScoringTable",
