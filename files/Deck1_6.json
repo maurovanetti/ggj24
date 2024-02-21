@@ -11,7 +11,7 @@
                 "LockedCard"
             ],
             [
-                "LockedCard"
+                "UnlockableCard"
             ],
             [
                 "CatCard"
@@ -61,7 +61,7 @@
                 500
             ],
             [
-                3000
+                ""
             ],
             [
                 ""

@@ -933,6 +933,57 @@
 						"angle": 0.17453292519943295,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "UnlockableCard",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Locked",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 209,
+					"instanceVariables": {
+						"OriginalX": 0,
+						"OriginalY": 0,
+						"CardSpawnAreaUID": -1,
+						"Effect": ""
+					},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": false
+							}
+						},
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 1,
+								"destroy": true,
+								"enabled": false,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 1086,
+						"y": 686,
+						"width": 128,
+						"height": 192,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 449736934054648,

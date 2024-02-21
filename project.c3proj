@@ -202,7 +202,8 @@
 							"StartCard",
 							"DebugCard",
 							"LockedCard",
-							"ScoreToUnlock"
+							"ScoreToUnlock",
+							"UnlockableCard"
 						],
 						"subfolders": [],
 						"name": "Cards"

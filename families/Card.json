@@ -52,6 +52,7 @@
 		"DogCard",
 		"StartCard",
 		"DebugCard",
-		"LockedCard"
+		"LockedCard",
+		"UnlockableCard"
 	]
 }

@@ -99,12 +99,9 @@
 					}
 				},
 				{
-					"id": "go-to-layout",
+					"id": "restart-layout",
 					"objectClass": "System",
-					"sid": 468431232656381,
-					"parameters": {
-						"layout": "Title Screen"
-					}
+					"sid": 961308918266789
 				}
 			],
 			"sid": 497094464534749

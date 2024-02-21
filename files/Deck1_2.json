@@ -8,10 +8,10 @@
     "data": [
         [
             [
-                "LockedCard"
+                "UnlockableCard"
             ],
             [
-                "LockedCard"
+                "UnlockableCard"
             ],
             [
                 "CatCard"
@@ -58,10 +58,10 @@
         ],
         [
             [
-                3000
+                ""
             ],
             [
-                3000
+                ""
             ],
             [
                 ""
