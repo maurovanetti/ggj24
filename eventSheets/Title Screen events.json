@@ -62,6 +62,51 @@
 				}
 			],
 			"sid": 402078881455043
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 281667767027148
+				}
+			],
+			"actions": [
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 327924967637797,
+					"parameters": {
+						"tag": "\"soundtrack\"",
+						"db": "-100",
+						"duration": "1",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 678793235909577,
+					"parameters": {
+						"audio-file": "SFX_JUMP",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"ouverture\""
+					}
+				},
+				{
+					"id": "set-playback-rate",
+					"objectClass": "Audio",
+					"sid": 924426019020959,
+					"parameters": {
+						"tag": "\"ouverture\"",
+						"playback-rate": "0.3"
+					}
+				}
+			],
+			"sid": 760239764149006
 		}
 	],
 	"sid": 167530721222815

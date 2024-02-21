@@ -238,7 +238,7 @@
 						"OriginalX": 0,
 						"OriginalY": 0,
 						"CardSpawnAreaUID": -1,
-						"Effect": "Level 1_1"
+						"Effect": "Debug"
 					},
 					"behaviors": {
 						"DragDrop": {

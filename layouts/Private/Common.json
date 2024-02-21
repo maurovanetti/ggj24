@@ -1715,6 +1715,64 @@
 								"angle": 0,
 								"zElevation": 0
 							}
+						},
+						{
+							"type": "Exit",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 211,
+							"instanceVariables": {},
+							"behaviors": {},
+							"world": {
+								"x": 1882,
+								"y": 46,
+								"width": 44.40560134100858,
+								"height": 37.35050580084834,
+								"originX": 0.5280373831775701,
+								"originY": 0.5777777777777777,
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "Exit",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 212,
+							"instanceVariables": {},
+							"behaviors": {},
+							"world": {
+								"x": 1880,
+								"y": 42,
+								"width": 44.40560134100858,
+								"height": 37.35050580084834,
+								"originX": 0.5280373831775701,
+								"originY": 0.5777777777777777,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
 						}
 					],
 					"sid": 956780275284989,

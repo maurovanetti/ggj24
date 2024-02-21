@@ -189,7 +189,8 @@
 					"TitleBackground",
 					"DragHere",
 					"PositiveScoreEffect",
-					"NegativeScoreEffect"
+					"NegativeScoreEffect",
+					"Exit"
 				],
 				"subfolders": [
 					{

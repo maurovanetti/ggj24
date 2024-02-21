@@ -2255,13 +2255,13 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 110799464905312,
+							"sid": 905936651196306,
 							"parameters": {
 								"audio-file": "soundtrack",
 								"loop": "looping",
 								"volume": "-10",
 								"stereo-pan": "0",
-								"tag-optional": "\"\""
+								"tag-optional": "\"soundtrack\""
 							}
 						}
 					],
