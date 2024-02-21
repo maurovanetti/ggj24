@@ -1,4 +1,4 @@
-# A game jam project
+# The Art of Falling
 
 Created in a couple of days by Mauro Vanetti, Francesco Di Pietro & Francesco Melchiorre.
 
