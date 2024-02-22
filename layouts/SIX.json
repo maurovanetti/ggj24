@@ -1,5 +1,5 @@
 {
-	"name": "Level 1_6",
+	"name": "SIX",
 	"layers": [
 		{
 			"name": "World",
@@ -964,7 +964,7 @@
 							},
 							"uid": 398,
 							"instanceVariables": {
-								"Destination": "Level 1_7"
+								"Destination": "SEVEN"
 							},
 							"behaviors": {},
 							"world": {

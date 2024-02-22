@@ -2,7 +2,7 @@
 	"name": "LevelName",
 	"plugin-id": "Text",
 	"sid": 370187714085575,
-	"isGlobal": true,
+	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": []

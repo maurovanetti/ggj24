@@ -13,12 +13,22 @@
 					"id": "layer-is-visible",
 					"objectClass": "System",
 					"sid": 180458829621748,
+					"disabled": true,
 					"parameters": {
 						"layer": "\"Curtain\""
 					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 884614692228670,
+					"parameters": {
+						"layer": "\"Curtain\"",
+						"visibility": "visible"
+					}
+				},
 				{
 					"id": "fade-volume",
 					"objectClass": "Audio",
@@ -207,11 +217,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 944176529800641,
+							"sid": 958542514760661,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_1\""
+								"second-value": "\"ONE\""
 							}
 						}
 					],
@@ -239,11 +249,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 822980647923452,
+							"sid": 162117103007909,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_2\""
+								"second-value": "\"TWO\""
 							}
 						}
 					],
@@ -271,11 +281,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 779612063543568,
+							"sid": 467948728847080,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_3\""
+								"second-value": "\"THREE\""
 							}
 						}
 					],
@@ -303,11 +313,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 303754127745646,
+							"sid": 852227588837909,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_4\""
+								"second-value": "\"FOUR\""
 							}
 						}
 					],
@@ -335,11 +345,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 571111620403001,
+							"sid": 589180682490508,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_5\""
+								"second-value": "\"FIVE\""
 							}
 						}
 					],
@@ -367,11 +377,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 667342997427289,
+							"sid": 305795421690816,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_6\""
+								"second-value": "\"SIX\""
 							}
 						}
 					],
@@ -399,11 +409,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 711262517821632,
+							"sid": 780697021991452,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_7\""
+								"second-value": "\"SEVEN\""
 							}
 						}
 					],
@@ -431,11 +441,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 843055202466489,
+							"sid": 233676477556554,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_8\""
+								"second-value": "\"EIGHT\""
 							}
 						}
 					],
@@ -463,11 +473,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 330831339246601,
+							"sid": 215910367992538,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_9\""
+								"second-value": "\"NINE\""
 							}
 						}
 					],
@@ -495,11 +505,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 294193826004819,
+							"sid": 490216300626772,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Level 1_10\""
+								"second-value": "\"TEN\""
 							}
 						}
 					],

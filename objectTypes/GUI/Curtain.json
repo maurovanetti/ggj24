@@ -2,7 +2,7 @@
 	"name": "Curtain",
 	"plugin-id": "Sprite",
 	"sid": 618232672974524,
-	"isGlobal": true,
+	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],

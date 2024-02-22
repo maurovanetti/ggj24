@@ -19,49 +19,90 @@
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 402078881455043,
+			"children": [
 				{
-					"id": "set-position-to-another-object",
-					"objectClass": "Card",
-					"sid": 956142583630188,
-					"parameters": {
-						"object": "CardSlot",
-						"image-point-optional": "\"Center\""
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Card",
+							"sid": 128034128783901,
+							"parameters": {
+								"instance-variable": "Effect",
+								"comparison": 1,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Card",
+							"sid": 791154860372255,
+							"parameters": {
+								"object": "CardSlot",
+								"image-point-optional": "\"Center\""
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Card",
+							"sid": 166338401934627,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "DragHere",
+							"sid": 863848865736342,
+							"parameters": {
+								"animation": "\"Dragged\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 233625995939141,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 565001510964400,
+							"parameters": {
+								"layout": "Card.Effect"
+							}
+						}
+					],
+					"sid": 119809122140506
 				},
 				{
-					"id": "start-fade",
-					"objectClass": "Card",
-					"sid": 284003555300089,
-					"behaviorType": "Fade"
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "DragHere",
-					"sid": 142988894411533,
-					"parameters": {
-						"animation": "\"Dragged\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 392606972336380,
-					"parameters": {
-						"seconds": "1.0"
-					}
-				},
-				{
-					"id": "go-to-layout-by-name",
-					"objectClass": "System",
-					"sid": 187782843875627,
-					"parameters": {
-						"layout": "Card.Effect"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 916546793634087
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Card",
+							"sid": 845991607173949,
+							"parameters": {
+								"x": "random(ViewportLeft(0), ViewportRight(0))",
+								"y": " random(ViewportTop(0), ViewportBottom(0))"
+							}
+						}
+					],
+					"sid": 733128720201926
 				}
-			],
-			"sid": 402078881455043
+			]
 		},
 		{
 			"eventType": "block",

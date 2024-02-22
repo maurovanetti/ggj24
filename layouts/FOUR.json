@@ -1,5 +1,5 @@
 {
-	"name": "Level 1_9",
+	"name": "FOUR",
 	"layers": [
 		{
 			"name": "World",
@@ -29,7 +29,7 @@
 								"blend-margin-x": 0.1,
 								"blend-margin-y": 0.1
 							},
-							"uid": 486,
+							"uid": 304,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -50,7 +50,7 @@
 							}
 						}
 					],
-					"sid": 350504967252072,
+					"sid": 391072991538776,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -103,7 +103,7 @@
 								"blend-margin-x": 0.1,
 								"blend-margin-y": 0.1
 							},
-							"uid": 487,
+							"uid": 314,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -124,7 +124,7 @@
 							}
 						}
 					],
-					"sid": 384330118124373,
+					"sid": 806568372270490,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -177,7 +177,7 @@
 								"blend-margin-x": 0.1,
 								"blend-margin-y": 0.1
 							},
-							"uid": 488,
+							"uid": 315,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -216,7 +216,7 @@
 								"blend-margin-x": 0.1,
 								"blend-margin-y": 0.1
 							},
-							"uid": 489,
+							"uid": 316,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -255,7 +255,7 @@
 								"blend-margin-x": 0.1,
 								"blend-margin-y": 0.1
 							},
-							"uid": 490,
+							"uid": 317,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -294,7 +294,7 @@
 								"blend-margin-x": 0.1,
 								"blend-margin-y": 0.1
 							},
-							"uid": 491,
+							"uid": 318,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -333,7 +333,7 @@
 								"blend-margin-x": 0.1,
 								"blend-margin-y": 0.1
 							},
-							"uid": 492,
+							"uid": 319,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -372,7 +372,7 @@
 								"blend-margin-x": 0.1,
 								"blend-margin-y": 0.1
 							},
-							"uid": 493,
+							"uid": 320,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -393,7 +393,7 @@
 							}
 						}
 					],
-					"sid": 220628853865910,
+					"sid": 281801266600313,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -436,7 +436,7 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 494,
+							"uid": 321,
 							"instanceVariables": {
 								"LastX": 0,
 								"DeltaX": 0,
@@ -480,10 +480,10 @@
 							},
 							"sceneGraphData": {
 								"parent-uid": null,
-								"uid": 494,
+								"uid": 321,
 								"children": [
 									{
-										"uid": 495,
+										"uid": 322,
 										"flags": {
 											"x": true,
 											"y": true,
@@ -541,7 +541,7 @@
 							}
 						}
 					],
-					"sid": 127083055275403,
+					"sid": 149529839216058,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -584,7 +584,7 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 495,
+							"uid": 322,
 							"instanceVariables": {},
 							"behaviors": {
 								"Flash": {
@@ -600,8 +600,8 @@
 								}
 							},
 							"sceneGraphData": {
-								"parent-uid": 494,
-								"uid": 495,
+								"parent-uid": 321,
+								"uid": 322,
 								"flags": {
 									"x": true,
 									"y": true,
@@ -645,7 +645,7 @@
 							}
 						}
 					],
-					"sid": 837730615779412,
+					"sid": 514105702515570,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -685,7 +685,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 477,
+					"uid": 291,
 					"instanceVariables": {
 						"DeltaY": -256,
 						"DownwardAdjustTime": 0.3,
@@ -724,7 +724,7 @@
 					}
 				}
 			],
-			"sid": 559805568377282,
+			"sid": 234436375768803,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -776,7 +776,7 @@
 								"tile-y-drawing-offset": 0,
 								"drawing-mode": "top-to-right"
 							},
-							"uid": 496,
+							"uid": 323,
 							"instanceVariables": {},
 							"behaviors": {
 								"Solid": {
@@ -806,7 +806,7 @@
 									"height": 23,
 									"max-width": 351,
 									"max-height": 52,
-									"data": "7x0,171,7x69,108,43x0,76,7x70,69,43x0,77,93,109,93,109,93,91,2x70,49x0,74,2x69,49x0,75,70,69,49x0,76,70,69,49x0,74,70,69,49x0,75,70,69,49x0,76,70,69,49x0,74,70,69,49x0,75,2x70,49x0,76,70,69,48x0,51,67,70,69,48x0,52,68,70,69,47x0,37,53,69,70,69,47x0,52,54,69,70,69,47x0,76,2x69,70,69,46x0,51,67,2x69,70,69,46x0,52,68,2x69,70,69,45x0,51,67,3x69,70,69,45x0,52,68,2x69,2x70,69,44x0,51,67,2x69,3x70,69,44x0,52,68,69,70,69,70,2x69,44x0,74,3x69,3x70,69,44x0,75,5x70,2x108,44x0,77,93,2x109,107,3x108,48x0,74,3x108,48x0,75,3x108,48x0,101,117,2x108,48x0,102,118,2x108,44x0,52,4x0,74,2x108,43x0,37,53,4x0,75,2x108,43x0,52,108,4x0,76,2x108,43x0,76,90,4x0,74,2x108,43x0,76,124,2x0,73,89,75,2x108,41x0,73,89,121,125,2x0,74,108,76,2x108,41x0,77,93,125,3x0,75,4x108,47x0,76,92,3x108,47x0,74,4x108,47x0,75,4x108,47x0,76,4x108,47x0,74,4x108,47x0,75,4x108,47x0,76,4x108,47x0,77,93,3x109,255x0,73,89,105,121,48x0,74,90,106,122,48x0,74,90,106,122,48x0,75,91,107,123,48x0,76,92,108,124,48x0,77,93,109,125,15429x0"
+									"data": "15x0,108,408x0,72,88,104,120,48x0,73,89,105,121,48x0,74,108,106,122,48x0,75,91,108,123,48x0,76,92,108,124,48x0,74,2x108,122,48x0,75,91,107,123,48x0,171,2x108,122,48x0,171,2x108,123,48x0,171,2x108,124,48x0,171,2x108,124,48x0,171,108,106,122,48x0,171,2x108,123,47x0,156,172,2x108,124,47x0,77,93,2x109,125,99x0,73,89,105,121,48x0,77,93,109,125,152x0,73,89,105,121,48x0,74,90,106,122,48x0,75,91,107,123,48x0,76,92,108,124,48x0,77,93,109,125,16577x0"
 								},
 								"tile-width": 128,
 								"tile-height": 128,
@@ -840,7 +840,7 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 497,
+							"uid": 324,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -869,14 +869,14 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 498,
+							"uid": 325,
 							"instanceVariables": {
 								"SkipCards": 0
 							},
 							"behaviors": {},
 							"world": {
-								"x": 480,
-								"y": 1664,
+								"x": 1568,
+								"y": 1024,
 								"width": 116,
 								"height": 119,
 								"originX": 0.4396551724137931,
@@ -900,7 +900,7 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 499,
+							"uid": 326,
 							"instanceVariables": {
 								"SkipCards": 4
 							},
@@ -931,7 +931,7 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 500,
+							"uid": 327,
 							"instanceVariables": {
 								"SkipCards": 0
 							},
@@ -962,14 +962,14 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 501,
+							"uid": 328,
 							"instanceVariables": {
-								"Destination": "Level 1_10"
+								"Destination": "FIVE"
 							},
 							"behaviors": {},
 							"world": {
-								"x": 7872,
-								"y": 1312,
+								"x": 5088,
+								"y": 800,
 								"width": 1919,
 								"height": 1024,
 								"originX": 0.5059927045336112,
@@ -985,7 +985,7 @@
 							}
 						}
 					],
-					"sid": 632750881000968,
+					"sid": 499664711667727,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -1028,11 +1028,40 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 503,
+							"uid": 335,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
-								"x": 4224,
+								"x": 2592,
+								"y": 1024,
+								"width": 128,
+								"height": 192,
+								"originX": 0,
+								"originY": 1,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
+						},
+						{
+							"type": "CardSlot",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 1",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 336,
+							"instanceVariables": {},
+							"behaviors": {},
+							"world": {
+								"x": 3840,
 								"y": 896,
 								"width": 128,
 								"height": 192,
@@ -1057,12 +1086,12 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 505,
+							"uid": 337,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
-								"x": 1024,
-								"y": 1664,
+								"x": 3200,
+								"y": 896,
 								"width": 128,
 								"height": 192,
 								"originX": 0,
@@ -1086,12 +1115,12 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 507,
+							"uid": 338,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
-								"x": 2976,
-								"y": 1024,
+								"x": 4064,
+								"y": 896,
 								"width": 128,
 								"height": 192,
 								"originX": 0,
@@ -1115,273 +1144,12 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 508,
+							"uid": 273,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
-								"x": 4864,
-								"y": 1408,
-								"width": 128,
-								"height": 192,
-								"originX": 0,
-								"originY": 1,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "CardSlot",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 509,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 6880,
-								"y": 1408,
-								"width": 128,
-								"height": 192,
-								"originX": 0,
-								"originY": 1,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "CardSlot",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 511,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 4544,
-								"y": 640,
-								"width": 128,
-								"height": 192,
-								"originX": 0,
-								"originY": 1,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "CardSlot",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 518,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 4192,
-								"y": 1664,
-								"width": 128,
-								"height": 192,
-								"originX": 0,
-								"originY": 1,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "CardSlot",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 519,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 4000,
-								"y": 1664,
-								"width": 128,
-								"height": 192,
-								"originX": 0,
-								"originY": 1,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "CardSlot",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 520,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 3456,
-								"y": 1536,
-								"width": 128,
-								"height": 192,
-								"originX": 0,
-								"originY": 1,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "CardSlot",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 521,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 5088,
-								"y": 1408,
-								"width": 128,
-								"height": 192,
-								"originX": 0,
-								"originY": 1,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "CardSlot",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 522,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 5312,
-								"y": 1408,
-								"width": 128,
-								"height": 192,
-								"originX": 0,
-								"originY": 1,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "CardSlot",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 523,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 5536,
-								"y": 1408,
-								"width": 128,
-								"height": 192,
-								"originX": 0,
-								"originY": 1,
-								"color": [
-									1,
-									1,
-									1,
-									1
-								],
-								"angle": 0,
-								"zElevation": 0
-							}
-						},
-						{
-							"type": "CardSlot",
-							"properties": {
-								"initially-visible": true,
-								"initial-animation": "Animation 1",
-								"initial-frame": 0,
-								"enable-collisions": true,
-								"live-preview": false
-							},
-							"uid": 504,
-							"instanceVariables": {},
-							"behaviors": {},
-							"world": {
-								"x": 3168,
-								"y": 1024,
+								"x": 2816,
+								"y": 896,
 								"width": 128,
 								"height": 192,
 								"originX": 0,
@@ -1397,7 +1165,7 @@
 							}
 						}
 					],
-					"sid": 652216663343185,
+					"sid": 210399664788553,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -1428,7 +1196,7 @@
 				}
 			],
 			"instances": [],
-			"sid": 186945954177427,
+			"sid": 538162934807614,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -1479,7 +1247,7 @@
 								"origin": "top-left",
 								"seams": "overlap"
 							},
-							"uid": 512,
+							"uid": 339,
 							"instanceVariables": {
 								"BoredomFirstInterval": 10,
 								"BoredomInterval": 7.5
@@ -1515,7 +1283,7 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 513,
+							"uid": 340,
 							"instanceVariables": {},
 							"behaviors": {},
 							"world": {
@@ -1548,7 +1316,7 @@
 								"origin": "center",
 								"seams": "overlap"
 							},
-							"uid": 514,
+							"uid": 341,
 							"instanceVariables": {
 								"Available": true
 							},
@@ -1583,7 +1351,7 @@
 								"origin": "center",
 								"seams": "overlap"
 							},
-							"uid": 515,
+							"uid": 342,
 							"instanceVariables": {
 								"Available": true
 							},
@@ -1618,7 +1386,7 @@
 								"origin": "center",
 								"seams": "overlap"
 							},
-							"uid": 516,
+							"uid": 343,
 							"instanceVariables": {
 								"Available": true
 							},
@@ -1649,7 +1417,7 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 517,
+							"uid": 344,
 							"instanceVariables": {
 								"HitPoints": 3
 							},
@@ -1672,7 +1440,7 @@
 							}
 						}
 					],
-					"sid": 840491509297544,
+					"sid": 134686205271189,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -1706,7 +1474,7 @@
 					"overriden": 1,
 					"subLayers": [],
 					"instances": [],
-					"sid": 667405972496332,
+					"sid": 622312859575977,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -1762,7 +1530,7 @@
 						"origin": "top-right",
 						"read-aloud": false
 					},
-					"uid": 485,
+					"uid": 297,
 					"instanceVariables": {
 						"Total": 0
 					},
@@ -1775,7 +1543,7 @@
 					},
 					"sceneGraphData": {
 						"parent-uid": null,
-						"uid": 485,
+						"uid": 297,
 						"flags": {
 							"x": true,
 							"y": true,
@@ -1819,7 +1587,7 @@
 					}
 				}
 			],
-			"sid": 227459669816899,
+			"sid": 196085132790049,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -1853,7 +1621,7 @@
 			"overriden": 1,
 			"subLayers": [],
 			"instances": [],
-			"sid": 390868789630373,
+			"sid": 222089407810812,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -1887,7 +1655,7 @@
 			"overriden": 1,
 			"subLayers": [],
 			"instances": [],
-			"sid": 697532007335548,
+			"sid": 189988249537176,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -1917,7 +1685,7 @@
 			"global": false
 		}
 	],
-	"sid": 425074033769373,
+	"sid": 796377709500246,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 10000,
