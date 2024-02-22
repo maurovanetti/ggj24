@@ -2,6 +2,93 @@
 	"name": "Level events",
 	"events": [
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 426889802751065
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 180458829621748,
+					"parameters": {
+						"layer": "\"Curtain\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 158277125255861,
+					"parameters": {
+						"tag": "\"soundtrack\"",
+						"db": "-200",
+						"duration": "1",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "set-object-time-scale",
+					"objectClass": "System",
+					"sid": 878983608006135,
+					"parameters": {
+						"object": "Box",
+						"time-scale": "0.0"
+					}
+				},
+				{
+					"id": "typewriter-text",
+					"objectClass": "LevelName",
+					"sid": 254701244371922,
+					"parameters": {
+						"text": "LayoutName",
+						"duration": "2"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 737453569301867,
+					"parameters": {
+						"seconds": "2.5"
+					}
+				},
+				{
+					"id": "restore-object-time-scale",
+					"objectClass": "System",
+					"sid": 990462660382065,
+					"parameters": {
+						"object": "Box"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 666872196877205,
+					"parameters": {
+						"layer": "\"Curtain\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 454029087326710,
+					"parameters": {
+						"audio-file": "soundtrack",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"soundtrack\""
+					}
+				}
+			],
+			"sid": 467729847685764
+		},
+		{
 			"functionName": "LoadDeck",
 			"functionDescription": "",
 			"functionCategory": "",

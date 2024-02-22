@@ -2238,36 +2238,6 @@
 					"sid": 370395813718218
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 987117948003951
-						}
-					],
-					"actions": [
-						{
-							"id": "stop-all",
-							"objectClass": "Audio",
-							"sid": 681085458105796
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 905936651196306,
-							"parameters": {
-								"audio-file": "soundtrack",
-								"loop": "looping",
-								"volume": "-10",
-								"stereo-pan": "0",
-								"tag-optional": "\"soundtrack\""
-							}
-						}
-					],
-					"sid": 791718065598551
-				},
-				{
 					"functionName": "LeapSFX",
 					"functionDescription": "",
 					"functionCategory": "",

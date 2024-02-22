@@ -190,7 +190,9 @@
 					"DragHere",
 					"PositiveScoreEffect",
 					"NegativeScoreEffect",
-					"Exit"
+					"Exit",
+					"Curtain",
+					"LevelName"
 				],
 				"subfolders": [
 					{
@@ -249,6 +251,12 @@
 			"members": [
 				"LockedCard",
 				"ScoreToUnlock"
+			]
+		},
+		{
+			"members": [
+				"Curtain",
+				"LevelName"
 			]
 		}
 	],
